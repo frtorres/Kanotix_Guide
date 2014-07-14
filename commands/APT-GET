@@ -1,0 +1,10 @@
+Kanotix Linux Guide Text Files
+debian apt-get:
+-------------------------------
+
+To put a package to hold:
+echo "package_name hold"|dpkg --set-selections
+
+to 'unhold' it:
+echo "package_name install"|dpkg --set-selecions 
+

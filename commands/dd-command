@@ -1,0 +1,31 @@
+Kanotix Linux Guide Text Files
+dd-command:
+http://www.debianhelp.co.uk/ddcommand.htm
+-------------------------------
+full hard disk copy
+
+dd if=/dev/hdx of=/dev/hdy
+dd if=/dev/hdx of=/path/to/image
+dd if=/dev/hdx | gzip > /path/to/image.gz
+
+Hdx could be hda, hdb etc. In the second example gzip is used to compress the image if it is really just a backup.
+
+Restore Backup of hard disk copy
+
+dd if=/path/to/image of=/dev/hdx
+
+gzip -dc /path/to/image.gz | dd of=/dev/hdx
+
+MBR backup
+
+In order to backup only the first few bytes containing the MBR and the partition table you can use dd as well.
+
+dd if=/dev/hdx of=/path/to/image count=1 bs=512
+
+MBR restore
+
+dd if=/path/to/image of=/dev/hdx
+
+Add "count=1 bs=446" to exclude the partition table from being written to disk. You can manually restore the table.
+
+
