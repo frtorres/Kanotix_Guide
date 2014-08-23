@@ -1,0 +1,35 @@
+#!/bin/sh
+exec tail -n +3 $0
+# Kanotix Hellfire 2in1 fromiso
+
+set isopart=/dev/sdxY
+set isopath=complete/path
+set isoname=kanotix-hellfire-2.6.38rc6.iso
+
+menuentry "Kanotix Live - DE" {
+	search -sf /${isopath}/${isoname}
+	loopback iso /${isopath}/${isoname}
+	linux (iso)/live/vmlinuz fromiso=${isopart}/${isopath}/${isoname} boot=live config utc=no timezone=Europe/Berlin locales=de keyboard-layouts=de keyboard-variant=nodeadkeys quiet splash
+	initrd (iso)/live/initrd.img
+}
+
+menuentry "Kanotix Live - EN" {
+	search -sf /${isopath}/${isoname}
+	loopback iso /${isopath}/${isoname}
+	linux (iso)/live/vmlinuz fromiso=${isopart}/${isopath}/${isoname} boot=live config utc=yes locales=us quiet splash
+	initrd (iso)/live/initrd.img
+}
+
+menuentry "Kanotix 64 Live - DE" {
+	search -sf /${isopath}/${isoname}
+	loopback iso /${isopath}/${isoname}
+	linux (iso)/live64/vmlinuz fromiso=${isopart}/${isopath}/${isoname} live-media-path=live64 boot=live config utc=no timezone=Europe/Berlin locales=de keyboard-layouts=de keyboard-variant=nodeadkeys quiet splash
+	initrd (iso)/live64/initrd.img
+}
+
+menuentry "Kanotix 64 Live - EN" {
+	search -sf /${isopath}/${isoname}
+	loopback iso /${isopath}/${isoname}
+	linux (iso)/live64/vmlinuz fromiso=${isopart}/${isopath}/${isoname} live-media-path=live64 boot=live config utc=yes locales=us quiet splash
+	initrd (iso)/live64/initrd.img
+}
