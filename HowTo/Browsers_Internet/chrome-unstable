@@ -1,0 +1,11 @@
+Howtos: Install Chrome Unstable
+Kanotix_Guide
+Fri Aug 22 17:37:02 EST 2014
+=============================
+
+you can try chrome-unstable 
+http://dl.google.com/dl/linux/direct/google-chrome-unstable_current_amd64.deb
+
+
+hints:
+- use about:plugins and disable the flash from .mozilla/plugins there

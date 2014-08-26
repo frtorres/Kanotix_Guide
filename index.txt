@@ -1,0 +1,9 @@
+#Index for Kankotix_Guide
+#References: 
+#
+# http://www.linuxquestions.org/questions/linux-newbie-8/formatting-find-output-817438/
+# http://superuser.com/questions/236601/how-do-i-execute-multiple-commands-when-using-find
+# http://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/
+
+find . -type f -name "_*" -printf '%32f-:' -exec head -1 {} \;
+
