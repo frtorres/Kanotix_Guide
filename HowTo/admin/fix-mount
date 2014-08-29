@@ -1,0 +1,18 @@
+Howtos: fix fstab after hal problems
+Kanotix_Guide
+Fri Aug 29 13:47:55 EST 2014
+=============================
+
+1.  so the fix is: clean up fstab from all usb drive entries!
+when you do:  mount -a
+with no usb drive attached remove em, so that mount -a does not show any error
+then usb drives will work fine
+
+2. Only when you put the kanotix iso the preffered way onto usb drive it is excluded from fstab
+
+3. in it would be: chkdsk /f X:
+if you have it here thats possible or using linux you use
+    fsck -r /dev/sdb1
+
+
+

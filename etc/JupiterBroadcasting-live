@@ -1,0 +1,9 @@
+etc: Jupiter Broadcasting links live.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+mplayer -cache 1000 http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8
+
+irc://irc.geekshed.net/#jupiterbroadcasting
+

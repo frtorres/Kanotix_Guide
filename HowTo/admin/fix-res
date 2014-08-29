@@ -1,0 +1,8 @@
+Howtos: fix screen resolution from command line
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+wget -N http://kanotix.com/files/fix-res.sh
+sh fix-res.sh 1280x1024
+ 

@@ -1,0 +1,54 @@
+Commands: Favorite Linux Commands.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+Source: Internet.
+Reference: http://webupd8.blogspot.com/2009/06/10-linux-unix-useful-commands.html
+
+1. Show installed but unused linux headers, image, or modules:
+
+dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d'
+
+If you would also like to purge them too:
+
+dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
+
+
+2. Rip audio from a video file:
+mplayer -ao pcm -vo null -vc dummy -dumpaudio -dumpfile <output-file> <input-file>
+
+You can also extract the sound from a flv and make an mp3 with:
+ffmpeg -i input.flv -f mp3 -vn -acodec copy ouput.mp3
+
+3. Stream YouTube URL directly to mplayer:
+
+mplayer -fs $(echo "http://youtube.com/get_video.php?$(curl -s $youtube_url | sed -n "/watch_fullscreen/s;.*\(video_id.\+\)&title.*;\1;p")")
+
+(Replace $youtube_url with any youtube URL)
+
+4. Download all images from a site:
+
+wget -r -l1 --no-parent -nH -nd -P/tmp -A".gif,.jpg" http://example.com/images
+
+5. Create a nifty overview of the hardware in your computer:
+lshw -html > hardware.html
+
+6. Cut a part of a video:
+
+ffmpeg -vcodec copy -acodec copy -i orginalfile -ss 00:01:30 -t 0:0:20 newfile
+
+Where 00:01:30 is the start time (replace with your own) and 0:0:20 is the length of the video you want to cut out (replace with the length you desire).
+
+7. Purge configuration files of removed packages on debian based systems:
+sudo aptitude purge `dpkg --get-selections | grep deinstall | awk '{print $1}'`
+
+8. Play high-res video files on a slow processor:
+mplayer -framedrop -vfm ffmpeg -lavdopts lowres=1:fast:skiploopfilter=all
+
+9. Convert images to a multi-page pdf:
+convert -adjoin -page A4 *.jpeg multipage.pdf
+
+10. Find the 20 biggest directories on the current filesystem:
+du -xk | sort -n | tail -20
+
+
