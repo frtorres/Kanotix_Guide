@@ -1,0 +1,30 @@
+Howtos: encrypt install 
+Kanotix_Guide
+Mon Sep  1 00:10:06 EST 2014
+=============================
+
+Taken from acritox video
+
+parted /dev/sda print
+
+sda1= 211Mb ext2  primary
+sda2= 1GB  	  primary  (Not Formatted)
+
+cryptsetup -c aes-xts-plain -s 512 luksformat /dev/sda2
+cryptsetup luksOpen /dev/sda2 lukslvm
+pvcreate /dev/mapper/lukslvm   				/*physical volume created*/
+vgcreate vgkanotix /dev/mapper/lukslvm			/*volume group created*/
+lvcreate -L 1500M -n swap vgkanotix			/*logical volume swap created */
+lvcreate -L 10G -n root vgkanotix
+mkswap /dev/mapper/vgakanotix-swap
+mkfs.ext2 /dev/sda1 
+
+
+blkid /dev/sda2						/*TYPE="crypto_LUKS" */
+echo lukslvm UUID="XXX" none luks >> /etc/crypttab
+
+===> RUN acritox installer.
+
+
+
+
