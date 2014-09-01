@@ -1,0 +1,64 @@
+Howto: git basics
+Kanotix_Guide
+Sun Aug 31 23:46:15 EST 2014
+-----------------------------
+
+reference: http://stackoverflow.com/questions/13036064/git-syncing-a-github-repo-with-a-local-one
+
+1.- Clone locally Remote Repository.
+
+    git clone https://github.com/frtorres/Kanotix_Guide.git
+
+2. Update repo locally.  Adding files... making changes, et.
+
+3. Notify of changes.
+
+    git add /path/file1 /path/file2
+
+4. git status shows what has been modified,
+    git status
+
+5. Commit Changes,
+
+git commit -am "commit message" or git commit (an editor is invoqued)
+
+6. Updating Remote Repo
+
+git push
+git pull
+
+-------------------------------ORIGINAL INFO------------------------------------
+
+You can use SmartGit for a GUI for git on Linux: http://www.syntevo.com/smartgit/index.html
+
+    But learning git first on the command line is generally a good idea:
+
+    Below are some basic examples assuming you are only working from the master branch:
+
+    Example for starting a local repo based on what you have from github:
+
+    git clone https://github.com/sampson-chen/sack.git
+
+    To see the status of the repo, do:
+
+    git status
+
+    Example for syncing your local repo to more recent changes on github:
+
+    git pull
+
+    Example for adding new or modified files to a "stage" for commit
+
+    git add /path/file1 /path/file2
+
+    Think of the stage as the files that you explicitly tell git to keep track of for revision control. git will see the all the files in the repo (and changes to tracked files), but it will only do work on the files that you add to a stage to be committed.
+
+    Example for committing the files in your "stage"
+
+    git commit
+
+    Example for pushing your local repo (whatever you have committed to your local repo) to github
+
+    git push
+
+
