@@ -1,0 +1,19 @@
+Kanotix Linux Guide Text Files
+sed-command:
+http://stackoverflow.com/questions/4881930/bash-remove-the-last-line-from-a-file
+-------------------------------
+
+1. delete last line of a text file.
+
+sed -i '$ d' foo.txt
+
+The -i option does not exist in older versions, so you have to use it as a filter with a temporary file:
+
+cp foo.txt foo.txt.tmp
+sed '$ d' foo.txt.tmp > foo.txt
+rm -f foo.txt.tmp
+
+Of course, in that case you could also use head -n -1 instead of sed.
+----------------------------------------------------------------------
+
+
