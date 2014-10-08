@@ -1,0 +1,62 @@
+Feb 19,2013. HB Muneca
+
+Upgrading to a DB schema > 8.
+
+requires tzinfo:
+
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -uroot -p mysql
+pwd=lola
+
+Get mythconverg password from .mythtv/mysql.txt
+DBPassword=0gTbrZ06
+
+FAILED ALLL ABOVE
+
+FIXED. Feb 21,2013
+
+Uninstall mythtv-database and mythtv-common and installed 02.6 versions from !mm
+see mythtv-db for the command
+
+mysql xxxxxxx <  xxxxx
+
+after run, mythtv-backend run ok. I had to run mythtv-setup before mythtv-frontend. There were a segfault
+
+IO had to recompile no output option during compilation
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+August 11th,2012
+
+mythtv manual install.
+
+- Compilation went fine. See script for some additional changes in prerequisites.
+- mythtv-hbackend script changed the way it makes logging now. start up scrupt was changed.
+- Database setup was the problem.
+
+-Installed mythtv-database 
+
+Seem a mysql plugin was installed.
+
+see
+ 
+http://www.mythtv.org/wiki/Frequently_Asked_Questions
+http://wiki.qnap.com/wiki/How_to_install_MythTV#Database
+
+
+apt-get install libqt4-sql-mysql
+
+I got problems with user rights accessing the database
+
+see
+http://www.mythtv.org/wiki/User_Manual:Initial_Installation#MythTV_database_setup
+
+but instead of that i run dpkg-reconfigure myth-database and I was done.
+
+
+Sun Aug 12 18:07:00 EST 2012
+FATR.
+
+	

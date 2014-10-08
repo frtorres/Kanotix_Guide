@@ -1,0 +1,61 @@
+#!/bin/sh
+# Configured and revised  FATR
+# Panama - Jan 11,2011
+
+echo mythtv local uninstalling. 
+
+#mythversion=mythtv-0.24.1
+mythversion=mythtv-0.23
+
+echo working on mythtv version: $mythversion
+echo target is: $target
+target=$HOME/$mythversion
+
+
+#dpkg --purge $(dpkg -l|awk '/030200rc/{print $2}')
+
+echo uninstalling mythtv from source make file
+echo
+cd $HOME
+cd $target/mythtv
+sudo make uninstall
+sudo make clean
+make distclean
+
+echo uninstalling mythplugins from source make file
+echo
+cd $HOME
+cd $target/mythplugins
+make distclean
+sudo make clean
+sudo make uninstall
+
+echo uninstalling myththemes from source make file
+echo
+cd $HOME
+cd $target/myththemes
+sudo make uninstall
+
+echo deleting database.
+echo
+
+cat <<EOF
+*** Note this to remove the Database
+mysql -u root
+mysql> DROP DATABASE IF EXISTS mythconverg;
+mysql> quit
+EOF
+
+#mysql -u root
+#mysql -u [username] -p [password] mythconverg DROP DATABASE;
+mysql -u root mythconverg DROP DATABASE;
+
+echo removing local sources
+rm /etc/init.d/mythbackend
+rm /var/log/mythbackend.log
+#rm -rf /var/log/mythtv
+#rm -rf $mythversion
+
+echo revisar y eliminar mythtv source dir
+echo ============ Script Finished ===================
+

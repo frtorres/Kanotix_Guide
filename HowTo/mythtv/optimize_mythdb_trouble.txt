@@ -1,0 +1,6 @@
+
+change ip for backend server on .mythtv/config.xml
+
+after I got cannot connect to database on the script
+
+
