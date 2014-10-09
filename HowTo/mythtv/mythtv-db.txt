@@ -1,8 +1,4 @@
-Howtos: mythtv
-Kanotix_Guide
-Tue Oct  7 19:08:28 EST 2014
-=============================
-
+#
 # Copyright 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
 #
@@ -25,9 +21,9 @@ Tue Oct  7 19:08:28 EST 2014
 #
 #  Francisco Torres <pacho.torres.reyes@gmail.com>.
 #  V 1.0 - Original.
+#  Tue Oct  7 22:11:32 EST 2014
 # ----------------------------------------------------------------
                            
-
 sudo apt-get install mysql-server
 #as user
 mysql -u root < /var/lib/mythtv/mythtv-0.24.1/mythtv/database/mc.sql

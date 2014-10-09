@@ -1,7 +1,4 @@
-#Howtos: mythtv scripts
-#Kanotix_Guide
-#Fri Aug 22 17:38:02 EST 2014
-#=============================
+#!/bin/sh
 #
 # Copyright 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
@@ -25,9 +22,8 @@
 #
 #  Francisco Torres <pacho.torres.reyes@gmail.com>.
 #  V 1.0 - Original.
+#  Tue Oct  7 22:04:44 EST 2014
 # ----------------------------------------------------------------
-#
-#!/bin/sh
 #
 # Dec 12,2010 updated dependencies for some mythth-plugins.
 # apt-get install libmp3lame-dev libqt4-opengl libqt4-opengl-dev libqt4-sql-mysql qt4-dev-tools libqt4-dev libcdaudio-dev libtag1-dev python-pycurl libxml-xpath-perl libimage-size-perl libdatetime-format-iso8601-perl libxml-simple-perl python-oauth python-lxml python-mysqldb libnet-upnp-perl

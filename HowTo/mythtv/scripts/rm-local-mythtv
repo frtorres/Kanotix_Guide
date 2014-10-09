@@ -1,4 +1,5 @@
 #!/bin/sh
+#
 # Copyright 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
 #
@@ -19,43 +20,67 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#  Tue Oct  7 18:11:29 EST 2014
-#
 #  Francisco Torres <pacho.torres.reyes@gmail.com>.
 #  V 1.0 - Original.
-#  Install Dropbox.
-#  see: https://www.dropbox.com/en/help/246
+#  Tue Oct  7 22:04:44 EST 2014
 # ----------------------------------------------------------------
+# Configured and revised  FATR
+# Panama - Jan 11,2011
+
+echo mythtv local uninstalling. 
+
+#mythversion=mythtv-0.24.1
+mythversion=mythtv-0.23
+
+echo working on mythtv version: $mythversion
+echo target is: $target
+target=$HOME/$mythversion
+
+
+#dpkg --purge $(dpkg -l|awk '/030200rc/{print $2}')
+
+echo uninstalling mythtv from source make file
 echo
-echo $0: to install dropbox.
+cd $HOME
+cd $target/mythtv
+sudo make uninstall
+sudo make clean
+make distclean
 
-if [ $(id -u) != 0 ]; then
- echo "Error: You must be root to run this script!" >&2
- exit 1
-fi
+echo uninstalling mythplugins from source make file
+echo
+cd $HOME
+cd $target/mythplugins
+make distclean
+sudo make clean
+sudo make uninstall
 
-DISTRIB_CODENAME=wheezy
-grep -q jessie /etc/apt/sources.list && DISTRIB_CODENAME=jessie
+echo uninstalling myththemes from source make file
+echo
+cd $HOME
+cd $target/myththemes
+sudo make uninstall
 
-echo "current linux distribution code name: -- $DISTRIB_CODENAME --"
-echo setting repos
+echo deleting database.
+echo
 
-[ "$DISTRIB_CODENAME" = "wheezy" ] && cp -v dropbox.list.wheezy /etc/apt/sources.list.d/dropbox.list
+cat <<EOF
+*** Note this to remove the Database
+mysql -u root
+mysql> DROP DATABASE IF EXISTS mythconverg;
+mysql> quit
+EOF
 
-[ "$DISTRIB_CODENAME" = "jessie" ] && cp -v dropbox.list.jessie /etc/apt/sources.list.d/dropbox.list
+#mysql -u root
+#mysql -u [username] -p [password] mythconverg DROP DATABASE;
+mysql -u root mythconverg DROP DATABASE;
 
-echo getting keys
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+echo removing local sources
+rm /etc/init.d/mythbackend
+rm /var/log/mythbackend.log
+#rm -rf /var/log/mythtv
+#rm -rf $mythversion
 
-apt-get update
-apt-get install python-gpgme
-apt-get install dropbox
-
-echo now as user: dropbox start -i
-echo to install propietary daemon
-
-
-
-
-
+echo revisar y eliminar mythtv source dir
+echo ============ Script Finished ===================
 
