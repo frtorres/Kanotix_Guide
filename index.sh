@@ -5,5 +5,5 @@
 # http://superuser.com/questions/236601/how-do-i-execute-multiple-commands-when-using-find
 # http://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/
 
-find . -type f -name "_*" -printf '%32f-:' -exec head -1 {} \;
+find . -type f -name "*.txt" -printf '%32f-:' -exec head -1 {} \;
 
