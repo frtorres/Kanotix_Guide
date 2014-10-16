@@ -1,10 +1,15 @@
-Kanotix Linux Guide Text Files
-debian apt-get:
--------------------------------
+Commands: apt-get debian info
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
 
-To put a package to hold:
+1. To put a package to hold:
 echo "package_name hold"|dpkg --set-selections
 
-to 'unhold' it:
+2. to 'unhold' it:
 echo "package_name install"|dpkg --set-selecions 
+
+3. to upgrade just one package. Security Priority for bandwidth's sake):
+
+apt-get update && apt-get install --only-upgrade bash
 

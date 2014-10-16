@@ -1,0 +1,25 @@
+HowTo: admin - kanotix keys error workaround at apt-get 
+Kanotix_Guide
+Fri Oct 10 12:44:04 EST 2014
+=============================
+
+Sometimes apt-get update, shows errors on kanotix old keys (thorhammer) ...weird.
+
+
+apt-get clean
+rm -vf /var/cache/apt/*bin
+
+if fails:
+
+rm /etc/apt/sources.list
+
+to test, run: apt-get again.
+
+wget -NP /etc/apt http://kanotix.com/files/dragonfire/sources.list
+
+or use sources.list for spitfire
+
+wget -NP /etc/apt http://kanotix.com/files/spitfire/sources.list;rm -vf /etc/apt/preferences;apt-get update
+
+
+

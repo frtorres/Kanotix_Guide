@@ -1,5 +1,8 @@
-Kanotix Linux Guide Text Files
-dd-command:
+Commands: dd info
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
 http://www.debianhelp.co.uk/ddcommand.htm
 -------------------------------
 full hard disk copy

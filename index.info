@@ -50,6 +50,7 @@
    what_todo_afterhd_install.txt-:Install: Recommended Steps after a new Install.
                        Links.txt-:Kanotix Guide Text Files
                  sed-command.txt-:Kanotix Linux Guide Text Files
+                         tar.txt-:Commands: tar 
                     APT-FILE.txt-:Kanotix Linux Guide Text Files
                      APT-GET.txt-:Kanotix Linux Guide Text Files
                   dd-command.txt-:Kanotix Linux Guide Text Files
@@ -58,3 +59,5 @@
     JupiterBroadcasting-live.txt-:etc: Jupiter Broadcasting links live.
                          3G+.txt-:Hardware: Modem 3G USB.
            Lenovo-gfx-driver.txt-:Howtos: gfx driver for Lenovo - Hellfire
+                    flash-DF.txt-:[16:56:17] <DrNefario> frtorres-LDF: "flash" could be (#1) wget -qO- http://kanotix.com/files/install-flash-local.sh|sh, or (#2) for excalibur: just run as USER (not root!): install-flash-local.sh, or (#3) use update-scripts-kanotix.sh as root to update and to run it on kde start as USER: ln -fsv /usr/local/bin/install-flash-local.sh ~/.kde/Autostart/
+                  shred-disk.txt-:#handling of spaces in filenames
