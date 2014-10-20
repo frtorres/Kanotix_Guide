@@ -219,3 +219,6 @@ body>#side_derecho {width:168px;}
 	text-align: left; 
 	clear: both;
 	}
+
+#CommandBox { color: lightgrey; background: black; padding: 4px; border: ridge; width:90%; margin-top: .2em; margin-bottom: .6em; }
+#Command { color: yellow; font-size: 1.15em; };
