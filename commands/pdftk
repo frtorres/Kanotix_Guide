@@ -1,0 +1,83 @@
+from: https://www.pdflabs.com/docs/pdftk-cli-examples/
+
+PDFtk Server Examples
+
+These examples show you how to perform common PDF tasks from the command-line using pdftk.
+
+1. Collate scanned pages
+
+    pdftk A=even.pdf B=odd.pdf shuffle A B output collated.pdf
+               
+or if odd.pdf is in reverse order:
+
+    pdftk A=even.pdf B=odd.pdf shuffle A Bend-1 output collated.pdf
+
+2. Decrypt a PDF
+
+    pdftk secured.pdf input_pw foopass output unsecured.pdf
+
+3. Encrypt a PDF using 128-bit strength (the default), withhold all permissions (the default)
+
+    pdftk 1.pdf output 1.128.pdf owner_pw foopass
+
+Same as above, except password baz must also be used to open output PDF
+
+    pdftk 1.pdf output 1.128.pdf owner_pw foo user_pw baz
+
+Same as above, except printing is allowed (once the PDF is open)
+
+    pdftk 1.pdf output 1.128.pdf owner_pw foo user_pw baz allow printing
+
+Join in1.pdf and in2.pdf into a new PDF, out1.pdf
+
+    pdftk in1.pdf in2.pdf cat output out1.pdf
+
+or (using handles):
+
+    pdftk A=in1.pdf B=in2.pdf cat A B output out1.pdf
+
+or (using wildcards):
+
+    pdftk *.pdf cat output combined.pdf
+
+Remove page 13 from in1.pdf to create out1.pdf
+
+    pdftk in.pdf cat 1-12 14-end output out1.pdf
+
+or:
+
+    pdftk A=in1.pdf cat A1-12 A14-end output out1.pdf
+
+Apply 40-bit encryption to output, revoking all permissions (the default). Set the owner PW to foopass.
+
+    pdftk 1.pdf 2.pdf cat output 3.pdf encrypt_40bit owner_pw foopass
+
+Join two files, one of which requires the password foopass. The output is not encrypted.
+
+    pdftk A=secured.pdf 2.pdf input_pw A=foopass cat output 3.pdf
+
+Uncompress PDF page streams for editing the PDF in a text editor (e.g., vim, emacs)
+
+    pdftk doc.pdf output doc.unc.pdf uncompress
+
+Repair a PDF’s corrupted XREF table and stream lengths, if possible
+
+    pdftk broken.pdf output fixed.pdf
+
+Burst a single PDF document into pages and dump its data to doc_data.txt
+
+    pdftk in.pdf burst
+
+Burst a single PDF document into encrypted pages. Allow low-quality printing
+
+    pdftk in.pdf burst owner_pw foopass allow DegradedPrinting
+
+Write a report on PDF document metadata and bookmarks to report.txt
+
+    pdftk in.pdf dump_data output report.txt
+
+                                                                                                Rotate the first PDF page to 90 degrees clockwise
+    pdftk in.pdf cat 1east 2-end output out.pdf
+                                                                                                    Rotate an entire PDF document to 180 degrees
+                                                                                                 pdftk in.pdf cat 1-endsouth output out.pdf
+

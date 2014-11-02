@@ -31,4 +31,16 @@ dd if=/path/to/image of=/dev/hdx
 
 Add "count=1 bs=446" to exclude the partition table from being written to disk. You can manually restore the table.
 
+-------------------------------------------------------
+http://blog.bravi.org/?p=856#more-856
+
+The following command is used to back-up MBR stored on /dev/sdX on a file:
+
+dd if=/dev/sdX of=/tmp/sda-mbr.bin bs=512 count=1
+
+The following command will restore partition table to disk:
+
+dd if= sda-mbr.bin of=/dev/sdX bs=1 count=64 skip=446 seek=446
+
+
 

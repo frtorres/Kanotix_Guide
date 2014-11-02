@@ -1,0 +1,28 @@
+Howtos: Disks - Maintenance tasks.
+Kanotix_Guide
+Tue Oct  7 19:03:34 EST 2014
+=============================
+
+Checking a hard disk inside an enclosure (USB).
+
+hdparm -I /dev/sda|head -7
+
+well you can fix a certain number of bad sectors with lowlevel format tools as well. Maybe you have to remove it from the case
+hdparm -I /dev/sda|grep Number
+
+you have to wipe the content anyway with a vendor tool, usually you have to mention the error code that does not work with usb
+
+hddtemp /dev/sd?
+
+low speed is better. 7200 is much hotter
+
+/dev/sdd: Hitachi HDT721010SLA360:  drive supported, but it doesn't have a temperature sensor.
+
+because of usb. Better use a 7k hd internally and not in the enclosure,
+
+Image with vendor SW: http://www.hitachigst.com/support/downloads/#DFT
+
+Put only 1 hd internally, let it fully test. It will wipe the data
+
+http://www.hitachigst.com/hdd/support/downloads/dft32_v416_b00.iso
+
