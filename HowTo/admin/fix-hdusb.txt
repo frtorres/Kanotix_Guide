@@ -1,6 +1,6 @@
 Howtos: Favorite Linux Commands.
 Kanotix_Guide
-Fri Aug 22 17:38:02 EST 2014
+Mon Nov  3 07:35:25 EST 2014
 =============================
 
 fix a partition used by OS. Mounted cannot be fixed so a live install is needed.

@@ -1,6 +1,6 @@
 Kanotix_Guide
 Howtos:ntfs backup
-Fri Aug 22 18:13:49 EST 2014
+Mon Nov  3 07:34:34 EST 2014
 =============================
 
 1. NTFS is better to store movies and dvds. 10% savings in space.
