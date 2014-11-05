@@ -1,4 +1,4 @@
-HowTo: admin script to update flash
+Howtos: admin script to update flash
 Kanotix_Guide
 Fri Oct 10 12:44:04 EST 2014
 =============================

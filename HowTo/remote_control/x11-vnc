@@ -1,0 +1,6 @@
+[21:23:02] <Kano> conenct with x11vnc
+[21:23:18] <Kano> but when i disconnect you usually lose your mouse
+[21:23:19] <frtorres> only internal audio analog stereo on top
+[21:23:35] <Kano> x11vnc -connect 188.194.22.140:443
+[21:23:46] <frtorres> ok
+[21:23:57] <Kano> as user that command 

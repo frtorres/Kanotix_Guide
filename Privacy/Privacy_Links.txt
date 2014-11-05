@@ -1,6 +1,9 @@
-Kanotix Guide Text Files
+Privacy: set of useful links (browser addons).
+Kanotix Guide 
+Wed Nov  5 13:26:24 EST 2014
+----------------------------
+
 Mozilla addons for privacy
----------------------------
 
 Ghostery
 --------

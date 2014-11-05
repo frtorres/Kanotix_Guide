@@ -1,0 +1,15 @@
+Howtos: remote mount (client) cifs/samba shares
+Kanotix_Guide
+Wed Nov  5 13:05:37 EST 2014
+=============================
+
+sudo mount -t cifs //192.168.1.2/Music /home/dbott/Music -o iocharset=utf8,file_mode=0777,dir_mode=0777
+
+sudo mount -t cifs //192.168.10.232/share-names /media/nasdisk -o iocharset=utf8,file_mode=0777,dir_mode=0777,user=user_name 
+
+mount -t cifs //192.168.10.232/share-name /media/nasdisk --verbose -o user=user_name
+
+smbmount //192.168.10.232/share-name /media/nasdisk -o username=user_name,password=PASS
+
+see man mount.cifs
+

@@ -1,3 +1,7 @@
+Howtos: grub recover grub for a SD Card.
+Kanotix Guide
+Wed Nov  5 13:45:59 EST 2014
+----------------------------------------
 
 fdisk -l
 mkdir -p /media/sdb1
@@ -7,7 +11,6 @@ reboot
 update-grub
 cp /boot/grub/grub.cfg /media/sdb1
 
-
-            
+       
 
 

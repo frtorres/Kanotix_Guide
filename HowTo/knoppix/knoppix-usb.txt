@@ -1,5 +1,5 @@
-Howto: install knkoppix on a usb
-Kanotix_Guide
+Howtos: knoppix install knoppix on a usb
+Kanotix Guide
 Sun Aug 31 23:03:14 EST 2014
 --------------------------------
 source: http://superuser.com/questions/649253/create-a-linux-knoppix-bootable-usb-with-multiple-partitions-with-linux-or-m

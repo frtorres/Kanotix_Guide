@@ -1,4 +1,4 @@
-disk: wipe disk. taking into account filenames with problematic spaces
+Howtos: disk wipe disk. taking into account filenames with problematic spaces
 Kanotix_Guide
 Fri Oct 10 12:54:57 EST 2014
 =============================

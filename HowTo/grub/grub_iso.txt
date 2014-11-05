@@ -1,5 +1,5 @@
-Kanotix_Guide
-Howtos: booting a kanotix iso live image from disk.
+Howtos: grub booting a kanotix iso live image from disk.
+Kanotix Guide
 Fri Aug 22 20:45:07 EST 2014
 =============================
 

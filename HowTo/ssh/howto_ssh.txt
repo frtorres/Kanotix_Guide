@@ -1,4 +1,4 @@
-Howto: Configure an set up ssh.
+Howtos: ssh configure and set up ssh.
 Kanotix_Guide
 Sun Aug 31 23:25:15 EST 2014
 -------------------------------

@@ -1,0 +1,107 @@
+[17:25:09] <frtorres> Hi Kano
+[17:25:12] <Kano> hi
+[17:25:55] <frtorres> If you have time. I appreciate again your help and advice in buying a cheap PC within a US$200 budget
+[17:26:10] <frtorres> with the best ratio performance price
+[17:26:21] <frtorres> http://www.yoytec.com/index.php/cPath/26_33
+[17:26:26] <Kano> $200?
+[17:26:33] <Kano> including what?
+[17:26:45] <frtorres> and processor 
+[17:26:46] <frtorres> http://www.yoytec.com/index.php/cPath/26_34
+[17:26:59] <frtorres> $200 motherboard plus processor plus memory
+[17:27:06] <frtorres> possible?
+[17:27:06] <Kano> ok
+[17:27:16] <Kano> sure
+[17:27:21] <Kano> ram is cheap
+[17:27:26] <frtorres> yes.
+[17:28:00] <Kano> two ways, i3 with better single core performance
+[17:28:02] <Kano> or
+[17:28:17] <Kano> phenom x4 965
+[17:28:25] <Kano> with better quad performance
+[17:28:31] <Kano> for the first you can use h61 board
+[17:29:02] <frtorres> I allways prefer Intel processor. Not sure about fiability of phenom
+[17:29:19] <Kano> for the 2nd you would use amd 970
+[17:29:34] <Kano> the onboard gfx speed is a bit higher with amd
+[17:30:07] <frtorres> If you have to decide between both?
+[17:30:10] <Kano> but intel can use vaapi on linux for video acc
+[17:30:15] <Kano> in xbmc
+[17:30:56] <Kano> depends on use case
+[17:31:14] <frtorres> mmm xbmc is important for multimedia playback
+[17:31:42] <Kano> do you use your i5 with intel oss drivers now or not
+[17:32:08] <frtorres> not yet. I have the i5 in Colombia and I am now in Panama :)
+[17:32:19] <Kano> well thats bad
+[17:32:28] <Kano> as you could have tested that before
+[17:32:33] <Kano> if it suits your needs
+[17:32:36] <frtorres> Have that pending. why?
+[17:32:38] <frtorres> mmm ok 
+
+
+----------------------------------------------------------------------------------------------------------
+
+phenom x4 965  US$149.95.  3.4Ghz
+Gigabyte GA-970A-D3 - USB 3.0, SATA3 $119.90.
+http://www.yoytec.com/product_info.php/cPath/26_33_142/products_id/7005  $119.90 
+
+
+
+Intel Core i3-2100 a 3.1Ghz (Sandy Bridge) - Doble Núcleo, Socket LGA1155  $139.90
+Intel Core i3-2120 a 3.3Ghz (Sandy Bridge) - Doble Núcleo, Socket LGA1155  $171.10
+ASRock H61M/U3S3 - Socket LGA1155, Chipset Intel H61, $93.80.
+ASRock H61M-S - Socket LGA1155, Chipset Intel H61, USB2  $69.90
+
+----------------------------------------------------------------------------------------------------------
+
+[18:07:32] <frtorres> Kano, both options with memory gets more than $300. 
+[18:07:50] <frtorres> what do yoy think about this boards with processor?
+[18:07:51] <frtorres> http://www.yoytec.com/index.php/cPath/26_33_155
+[18:08:04] <Kano> forget it
+[18:08:13] <Kano> well maybe use athlon x4 then
+[18:08:22] <Kano> and only 2 gb ram
+[18:08:28] <frtorres> ok
+
+
+[18:08:49] <Kano> how much is the board?
+[18:09:00] <Kano> 870 might be working too if 970 is to expensive
+
+[18:09:17] <frtorres> http://www.yoytec.com/product_info.php/cPath/26_33_142/products_id/7005
+[18:09:23] <frtorres> for phenom you mentioned
+[18:09:29] <frtorres> US$120
+[18:09:50] <frtorres> For i3. US$97 with USB3
+
+[18:10:06] <Kano> 97 is the cheapest?
+[18:10:49] <frtorres> there is a $69.90 one but no USB3 ports only USB2
+[18:11:08] <Kano> thats clear, do you want it cheap or not
+[18:11:22] <frtorres> yes.
+[18:11:58] <frtorres> :) I browse this i3.Intel Core i3-2100 a 3.1Ghz (Sandy Bridge) $139.90
+[18:12:28] <frtorres> US$200 in that case without memory. Seems to be the best option then no_
+
+[18:12:52] <Kano> phenom x4 955 would be the same
+[18:13:07] <Kano> from the price but faster when you use 4 cores
+[18:13:12] <frtorres> phenom x4 965  US$149.95.
+
+[18:13:20] <Kano> well use 955 then
+[18:13:22] <frtorres> Gigabyte GA-970A-D3 - USB 3.0, SATA3 $119.90.
+[18:13:51] <frtorres> abiut US$270 without memory
+
+[18:16:12] <Kano> http://www.yoytec.com/product_info.php/cPath/26_33_142/products_id/6687
+[18:16:17] <Kano> if you dont need usb3
+[18:17:30] <frtorres> ok, kano, that one with the phenom x4 965
+[18:17:56] <Kano> or the 955 would be 200 mhz diff only
+[18:19:07] <frtorres> I browsed amd 970 boards being more expensive.
+[18:19:45] <Kano> you can get it even cheaper when you would not use a quad
+[18:20:19] <Kano> http://www.yoytec.com/product_info.php/cPath/26_35_135/products_id/5595
+[18:20:22] <Kano> a bit ram
+[18:21:00] <frtorres> yes. anyway seems that quad is at good and with that memory
+[18:21:42] <Kano> phenom x2 555 instead of 955 would be most likely 200$
+[18:21:42] <frtorres> US$10 more compared to i3. and get quad. seems much better.
+[18:22:36] <Kano> you can get a usb 3 card later too for pci-e
+[18:22:47] <frtorres> yes that is true
+[18:25:34] <frtorres> x2 555 if you could compare, is it like an intel core 2 duo?
+[18:26:01] <Kano> no idea
+[18:26:11] <frtorres> ok
+[18:26:11] <Kano> in theory you can unlock 2 cores
+[18:26:21] <Kano> but if you really want 4 use the x4
+[18:27:21] <frtorres> ok, Kano, thank you very much.. will consult my pocket then... I appreciate ypur help. Maybe I will get the x4. Not much$$ diff.
+[18:27:41] <frtorres> with a chep board usb2
+[18:29:55] <Kano> today a new fglrx driver came out btw
+[18:30:23] <frtorres> ok
+

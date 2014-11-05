@@ -1,4 +1,4 @@
-Howto: Wipe USB sticks
+Howtos: disk wipe USB sticks
 Kanotix_Guide
 Sun Aug 31 23:21:32 EST 2014
 ----------------------------

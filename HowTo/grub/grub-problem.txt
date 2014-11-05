@@ -1,5 +1,5 @@
-Kanotix_Guide
 Howtos: manage grub with new installs on other partitions.
+Kanotix Guide
 Fri Aug 22 18:31:36 EST 2014
 =============================
 

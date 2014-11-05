@@ -1,4 +1,4 @@
-Howtos: usb U3
+Howtos: disk usb U3
 Kanotix_Guide
 Mon Sep  1 00:10:06 EST 2014
 =============================
@@ -16,7 +16,6 @@ that goes only as root
 
 mbr of sda?
 well check it all the time
-
 
 strange when the boot is not, grub does not even come?
 

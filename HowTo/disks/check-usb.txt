@@ -1,4 +1,4 @@
-Howto: Check USB stick
+Howtos: disk check USB stick
 Kanotix_Guide
 Sun Aug 31 23:11:06 EST 2014
 ----------------------------

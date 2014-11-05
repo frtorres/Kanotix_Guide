@@ -1,5 +1,5 @@
-Kanotix_Guide
 Howtos: reordering grub menu item list.
+Kanotix Guide
 Fri Aug 22 18:31:36 EST 2014
 =============================
 author: acritox

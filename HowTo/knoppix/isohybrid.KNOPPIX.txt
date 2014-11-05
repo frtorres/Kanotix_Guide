@@ -1,5 +1,5 @@
-Kanotix_Guide
-Howtos: make KNOPPIX ISO DVD Hybrid.
+Howtos: knoppix make KNOPPIX ISO DVD Hybrid.
+Kanotix Guide
 Fri Aug 22 22:57:54 EST 2014
 =============================
     

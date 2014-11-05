@@ -1,5 +1,5 @@
-Kanotix_Guide
-Howtos:ntfs backup
+Howtos: ntfs backup
+Kanotix Guide
 Mon Nov  3 07:34:34 EST 2014
 =============================
 

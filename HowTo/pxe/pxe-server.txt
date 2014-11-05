@@ -1,5 +1,5 @@
-Kanotix_Guide
-Howtos: pxe-server
+Howtos: pxe pxe-server
+Kanotix Guide
 Fri Aug 22 18:19:29 EST 2014
 =============================
 

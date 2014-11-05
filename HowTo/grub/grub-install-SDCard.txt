@@ -1,5 +1,5 @@
-Kanotix_Guide
 Howtos: Installing grub on a SD card to boot linux from HD.
+Kanotix Guide
 Fri Aug 22 20:54:31 EST 2014
 =============================
 

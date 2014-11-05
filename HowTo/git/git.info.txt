@@ -1,4 +1,4 @@
-Howto: git basics
+Howtos: git basics
 Kanotix_Guide
 Sun Aug 31 23:46:15 EST 2014
 -----------------------------
