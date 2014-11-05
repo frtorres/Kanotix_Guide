@@ -53,7 +53,7 @@ apt-get install dropbox
 
 echo now as user: dropbox start -i
 echo to install propietary daemon
-
+echo Ok.
 
 
 
