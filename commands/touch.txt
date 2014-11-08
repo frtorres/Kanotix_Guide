@@ -1,0 +1,25 @@
+Commands: apt-get debian info
+Kanotix_Guide
+Sat Nov  8 01:15:23 EST 2014
+=============================
+
+Info touch.
+see:  http://www.unix.com/shell-programming-scripting/147067-change-time-stamp-file.html
+see:  http://www.thegeekstuff.com/2012/11/linux-touch-command/
+
+touch -t YYYYMMDDHHMM.SS file_name/dir_name
+
+touch -t 201002171050.00  abcd
+
+
+ls -l --time-style="+%b %d %R" abcd
+
+
+By default ls displays Mon dd ccyy format for files modified more than 6 months ago - Use  suggested --time-style to show regular date and time
+
+
+touch -a -m -t 203801181205.09 tgs.txt
+
+touch -d '2013-07-20 8:46:26' webex.trouble 
+
+

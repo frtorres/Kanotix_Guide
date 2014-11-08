@@ -1,4 +1,4 @@
-Howtos: Change font size at boot
+Install: Change font size at boot
 Kanotix_Guide
 Fri Aug 22 17:38:02 EST 2014
 =============================

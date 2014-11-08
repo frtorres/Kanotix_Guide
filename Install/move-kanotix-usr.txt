@@ -1,4 +1,4 @@
-Howtos: Move or reuse kanotix user from default install
+Install: Move or reuse kanotix user from default install
 Kanotix_Guide
 Fri Aug 22 17:38:02 EST 2014
 =============================
