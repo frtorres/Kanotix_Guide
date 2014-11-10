@@ -1,0 +1,18 @@
+Commands: vi editor picks
+Kanotix_Guide
+Mon Nov 10 23:00:50 UTC 2014
+=============================
+
+1.-  error- opening a root owned file with another sudo account
+    
+    For some reason the file you are writing to cannot be created or overwritten.
+    The reason could be that you do not have permission to write in the directory
+    or the file name is not valid.
+
+    :w !sudo tee % > /dev/null
+
+    will save the file.
+
+1.- HELP
+
+Vim has a builtin help system, I just quoted what it says to :h E212. 
