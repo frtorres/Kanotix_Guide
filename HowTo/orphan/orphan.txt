@@ -1,0 +1,29 @@
+Howtos: deborphan
+Kanotix_Guide
+Wed Nov 19 12:53:07 EST 2014
+=============================
+
+apt-get remove --purge $(deborphan)
+
+source: http://www.linuxjournal.com/content/tech-tip-removing-unnecessary-packages-debian-systems
+
+If you get:
+
+"deborphan: The status file is in an improper state.
+One or more packages are marked as half-installed, half-configured,
+unpacked, triggers-awaited or triggers-pending. Exiting."
+
+then:
+
+    dpkg --configure -a
+
+Before identify what happend but DO NOT proceed unless you know what you are doing...
+
+
+    aptitude purge ~c
+
+Or as an alternative to show problematic packages:
+
+egrep '^Status: |^Package: ' /var/lib/dpkg/status | egrep -B 1 'half-installed|half-configured|unpacked|triggers-awaited|triggers-pending'
+
+
