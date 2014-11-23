@@ -1,0 +1,8 @@
+Commands: find 
+Kanotix_Guide
+Sun Nov 23 18:04:55 EST 2014
+=============================
+
+Find all *.bak files in the current directory and removes them with confirmation from user:
+$ find . -type f -name "*.bak" -exec rm -i {} \;
+  
