@@ -1,0 +1,10 @@
+Howtos: Default Browsers
+Kanotix_Guide
+Tue Dec 16 18:14:23 EST 2014
+=============================
+
+update-alternatives --config x-www-browser
+
+
+
+
