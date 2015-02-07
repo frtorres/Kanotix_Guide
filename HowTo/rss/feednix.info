@@ -1,0 +1,41 @@
+Howto feednix -  ncurses front end for feedly
+Kanotix Guide
+Fri Feb  6 20:25:40 EST 2015
+-------------------------------------------
+
+sources:
+
+for user and token generation
+https://feedly.com/v3/auth/dev
+
+howto:
+http://xmodulo.com/feedly-rss-feed-command-line-linux.html
+
+
+$ sudo apt-get install git automake g++ make libncursesw5-dev libjsoncpp-dev libcurl4-gnutls-dev w3m
+$ git clone -b Ubuntu-stable https://github.com/Jarkore/Feednix.git
+$ cd Feednix
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install 
+
+
+then
+$ feednix 
+
+for the first time to configure, copy user and token for dev interface.
+
+From:
+
+Congratulations, you have successfully generated a developer token.
+
+Your user id is 
+de50e53b-2e76-4401-bdf2-98cb3af9ea52
+
+Token:
+AjENAKd7ImEiOiJGZWVkbHkgRGV2ZWxvcGVyIiwiZSI6MTQzMTA0NzA0NDYyMSwiaSI6ImRlNTBlNTNiLTJlNzYtNDQwMS1iZGYyLTk4Y2IzYWY5ZWE1MiIsInAiOjYsInQiOjEsInYiOiJwcm9kdWN0aW9uIiwidyI6IjIwMTQuMzAiLCJ4Ijoic3RhbmRhcmQifQ:feedlydev
+
+Your token expires on 2015-05-07
+Do NOT share this token!
+
