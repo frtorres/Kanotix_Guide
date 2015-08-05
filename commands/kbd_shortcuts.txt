@@ -1,0 +1,20 @@
+Commands: keyboard shortcuts
+Kanotix_Guide
+Sun Jun 28 20:50:54 EST 2015
+=============================
+
+source: http://www.improgrammer.net/11-linux-terminal-commands-that-will-rock-your-world/
+
+The following keyboard shortcuts are incredibly useful and will save you loads of time:
+
+CTRL + U – Cuts text up until the cursor.
+CTRL + K – Cuts text from the cursor until the end of the line
+CTRL + Y – Pastes text
+CTRL + E – Move cursor to end of line
+CTRL + A – Move cursor to the beginning of the line
+ALT + F – Jump forward to next space
+ALT + B – Skip back to previous space
+ALT + Backspace – Delete previous word
+CTRL + W – Cut word behind cursor
+Shift + Insert – Pastes text into terminal
+
