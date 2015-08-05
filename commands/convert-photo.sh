@@ -1,3 +1,7 @@
+Commands: conver_photos command 
+Kanotix_Guide
+Wed Aug  5 18:27:06 EST 2015
+================================
 
 for a in `ls`; do echo $a && convert $a -resize <Width>x<Height> $a; done
 
