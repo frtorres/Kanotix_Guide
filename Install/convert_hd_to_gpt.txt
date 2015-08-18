@@ -1,0 +1,43 @@
+[13:39:55] <frtorres> Hi kano
+[13:40:06] <frtorres> booted the Image I generated
+[13:40:13] <frtorres> cmd: Host/Kernel/OS  "Kanotix" running Linux 3.8.0-6-generic x86_64 [ Kanotix Dragonfire 20130220-23:37 ]
+[13:40:13] <frtorres> cmd: CPU Info        (1) Intel Pentium G860 @ clocked at [ 2400.000 MHz ]
+[13:40:13] <frtorres> cmd:                 (2) Intel Pentium G860 @ clocked at [ 3000.000 MHz ]
+[13:40:13] <frtorres> cmd: Videocard       Intel 2nd Generation Core Processor Family Integrated Graphics Controller  X.Org 1.12.4  [ 1920x1080 ]
+[13:40:13] <frtorres> cmd: Processes 137 | Uptime 18min | Memory 648.8/7688.4MB | HDD Size 1002GB (0%used) | Client Shell wrapper | Infobash v2.67.2
+[13:40:30] <Kano> fine
+[13:40:42] <Kano> did you execute the isohybrid command?
+[13:40:53] <frtorres> booted on this box with the ivtv card. The patched kernel was pulled. ok
+[13:40:56] <frtorres> Yes kano
+[13:41:16] <frtorres> and booted on this box by means of UEFI boot
+[13:41:32] <Kano> when you booted it via efi
+[13:41:45] <frtorres> yes
+[13:41:46] <Kano> then you need a gpt or primare fat partition in case you want to install it
+[13:41:57] <Kano> mounted in custom mode to /boot/efi
+[13:42:17] <frtorres> ok I will test that. As you remember it did not work some weeks ago.
+[13:42:33] <frtorres> Persistent is working.
+[13:42:35] <Kano> well you dont have got  a primary partition
+[13:42:44] <Kano> or you use
+[13:42:47] <Kano> gdisk
+[13:42:50] <frtorres> we tested it froma usb
+[13:42:51] <Kano> and convert your hd to gpt
+[13:42:58] <frtorres> ahh ok
+[13:43:09] <Kano> gdisk is not preinstalled
+[13:43:21] <Kano> as you can not got back that easy
+[13:43:27] <Kano> before you use it do
+[13:43:46] <Kano> dd if=/dev/sda of=backup.mbr count=1
+[13:43:46] <frtorres> ok
+[13:43:58] <Kano> but basically you can not go back
+[13:44:08] <Kano> also you should have got
+[13:44:19] <Kano> fdisk -l > mbr-partitions.txt
+[13:44:21] <frtorres> ok. I will test that in a spare disk I have
+[13:44:25] <Kano> with that disk
+[13:46:36] <frtorres> kano, I made some personalizations on config files as you teached me some months ago. Basically kde for spanish... and included xbmc. personalization to spanish did not work. I have to chek, maybe I did something wrong
+[13:46:55] <frtorres> xbmc is ok. With persisten is very useful.
+[13:47:16] <frtorres> I mean personalizations before I generate the ISO.
+[13:48:10] <frtorres> Kano, google  chrome for example can be installed? becuase it is not installable thru apt-get
+[13:49:24] <Kano> !chrome
+[13:49:30] <Kano> you forgot?
+[13:50:33] <frtorres> yes kano. I mean how may I change the config files to ionclude google chrome in thio iso image
+[13:51:09] <frtorres> before I generate it. Or I have to do it in live mode
+[13:51:52] <frtorres> with !chrome
