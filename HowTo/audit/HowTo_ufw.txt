@@ -1,0 +1,25 @@
+HowTos: Audit Linux Systems - ufw firewall
+Kanotix_Guide
+Sun Aug  9 05:45:39 UTC 2015
+-----------------------------
+
+source: http://unix.stackexchange.com/questions/2546/debian-which-firewall-for-a-newbie
+
+
+    Convienient Syntax: ufw allow 22 or ufw allow ssh is all that is required to allow inbound ssh traffic if your default policy is DENY.
+
+    Easy Logging: ufw logging on will turn on fairly reasonable logging. The nice thing about the logging is that by default it drops particularly noisy services (port 137 anyone?).
+
+    Ability to implement complicated policies: On my home machine I use ufw and am currently running a fairly complicated policy.
+
+    Ability to add your own iptable rules. Pretty much any policy can still be implemented with ufw even if the default interface doesn't provide a mechanism because you can always add your own rules.
+
+    Great Documentation: man ufw is often all you need to solve some problem or answer some question--which is great if you are setting up your firewall when offline.
+
+This is not a "click one button and you will be secure" firewall. 
+
+
+At the end of the day what it really does is provide an easy to use rule-creation syntax, some abstraction around iptables-save and iptables-restore and brings some default rules and practice that a newbie might not know about
+
+
+---
