@@ -1,0 +1,201 @@
+Kanotix_Guide INSTALL
+BIOS UEFI TEST INSTALL
+Tue Sep  1 19:59:04 EST 2015
+----------------------------------
+
+dmidecode -t system
+dmidecode -t bios|
+<Kano>	dmidecode -t bios
+<Kano>	the begining only
+<Kano>	do you have 2.22A already
+<Kano>	http://download.asrock.com/bios/1155/H61MU3S3(L2.22A)ROM.zip
+<Kano>	also i want to know if flashrom works
+<Kano>	its a 4 mb file, only saw it working for 8mb files, but lets try it
+<Kano>	as root
+<Kano>	apt-get install subversion
+<Kano>	apt-get build-dep
+<Kano>	apt-get build-dep flashrom
+<Kano>	cd /tmp
+<Kano>	we will not flash, but just read
+<Kano>	svn co svn://flashrom.org/flashrom/trunk flashrom
+
+<Kano>	cd flashrom
+<Kano>	ok, extract 2.22A to your usb key
+<Kano>	but lets try to compile flashrom
+<Kano>	make -j2
+<Kano>	./flashrom -p internal -r backup.rom
+<Kano>	i want to know if that works
+<Kano>	you should read out the bios before and after flashing the 2.22A update
+<Kano>	with the intergrated tool if flashrom does not do the job
+<Kano>	also i need output of
+<Kano>	ifconfig -a
+<Kano>	and the 2 bios files
+<Kano>	for checking em
+<Kano>	use /back
+<Kano>	it worked in seconds for me
+<Kano>	is the bios download done
+<Kano>	you can create the backup with the integrated flash tool as well
+<FATR>	seem compiled ok. make install?
+<Kano>	no
+<Kano>	just try it
+<Kano>	./flashrom -p internal -r backup.rom
+<Kano>	and use /back here
+
+	Reading flash... Transaction error!
+	Read operation failed!
+	FAILED.
+	and at the beginning> 
+	Found chipset "Intel H61". Enabling flash write... Warning: SPI Configuration Lockdown activated.
+	FREG0: Warning: Flash Descriptor region (0x00000000-0x00000fff) is read-only.
+	FREG2: Warning: Management Engine region (0x00001000-0x0017ffff) is locked.
+<Kano>	ok
+<Kano>	i always see that with 4mb models
+<Kano>	the 8 mb chips usually work...
+<Kano>	use the board integrated tool. 
+<Kano>	make a back of 2.21F
+<Kano>	write the new 2.22A
+<Kano>	backup 2.22A from your board
+	you mean: back up current bios with integrated tool in the bios?
+	ok
+<Kano>	pout both files in a zip together with output of
+<Kano>	ifconfig -a > asrock-H61M-U3S3-ifconfig.txt
+<Kano>	then mail em to me for reference
+<Kano>	and
+<Kano>	dmidecode > asrock-H61M-U3S3-dmidecode.txt
+<Kano>	but maybe from the new bios as well
+<Kano>	old and new
+<Kano>	dmidecode > asrock-H61M-U3S3-dmidecode-2.21F.txt
+<Kano>	right now and then 2.22A
+<Kano>	ifconfig usually does not change
+<Kano>	if we have got all backups
+<Kano>	then we can go on to test uefi boot
+<Kano>	the difference between your bios and the one from the net is that you have got values like serial or at least mac adresses hardcoded in ther
+[Wednesday, January 09, 2013] [09:47:58 PM] <Kano>	e
+ 
+<Kano> ok
+<Kano> it didnt have a backup feature?
+
+O.E.M./H61M/U3S3, BIOS L2.22A 09/27/2012
+no it did not
+Worked only with an f6 option. I recognized the bios on the usb and proceeded to update
+after a reboot
+ther is a instant flash utility but it did not worked
+It did not recognized the update file
+
+<Kano> ah,thats interesting
+<Kano> mount the usb key
+<Kano> then show me the output of
+<Kano> mount
+<Kano> with it
+<Kano> http://kanotix.com/files/fix/efi/install-efi-gummiboot.sh
+
+output::::    /dev/sdb1 on /media/KINGSTON type vfat (rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0077,codepage=cp437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,errors=remount-ro,uhelper=udisks)
+
+<Kano> ok
+<Kano> cd /tmp
+<Kano> wget -N http://kanotix.com/files/fix/efi/install-efi-gummiboot.sh
+ok
+Kano I have not resized and defined the fat partition yet
+
+<Kano> sed -i s#/boot/efi#/media/KINGSTON# install-efi-gummiboot.sh 
+<Kano> sh install-efi-gummiboot.sh
+
+is it a prerrequisiteto run that?
+
+<Kano> then boot in uefi mode from usb key
+ok
+
+<Kano> well thats the simple way to test without hd change
+
+ok good
+ok script done
+
+
+
+kano f11 -> boot menu. I Choose UEFI but did not boot
+
+<Kano>	did it show Linux 
+<Kano>	did you run the script as root?
+
+	there was antoher uSB boot option and showed a message stating that It did not find a partition table
+
+<Kano>	if not try again as root
+	yes as root
+
+<Kano>	you can use start efi shell from filesystem as well
+<Kano>	mount it then show me
+	I have a EFI dir in muy usb stick
+<Kano>	ls /media/KINGSTON/*efi
+	created  bye the script
+Error	media/KINGSTON/shellx64.ef: Unknown command.
+	output: /media/KINGSTON/shellx64.ef
+<Kano>	ok
+<Kano>	you can go inside the bios
+	aha
+<Kano>	and select start efi shell from filesystem
+	yes I saw that option
+<Kano>	that should do it as well when you dont see UEFI: kingston or so
+	and then? I got a shell? or boot to linux?
+<Kano>	the shell is gummiboot
+<Kano>	will directly boot
+	ok
+	perfect
+	I got a boot menu
+	linux, windows, uefi
+<Kano>	did it show Linux
+<Kano>	windows and shell is the same
+<Kano>	linux is the way to go
+	first otion linux when choosed says it did not find a file en /EFI/.....  capital letters
+<Kano>	ls -l /vml*
+<Kano>	ls -l /init*
+<Kano>	show me this
+	
+	/media/KINGSTON/EFI:
+	Boot  gummiboot  Linux  Microsoft
+	/media/KINGSTON/EFI/Boot:
+	bootx64.efi
+	/media/KINGSTON/EFI/gummiboot:
+	gummiboot.efi
+	/media/KINGSTON/EFI/Linux:
+	/media/KINGSTON/EFI/Microsoft:
+	Boot
+	/media/KINGSTON/EFI/Microsoft/Boot:
+	bootmgfw.efi
+	ok 
+<Kano>	well what is missing is the kernel itself
+<Kano>	show me the 2 ls commands
+	ls -l /vml*
+	ls: cannot access /vml*: No such file or directory
+	ls -l /init*
+	ls: cannot access /init*: No such file or directory
+<Kano>	hmm weird
+<Kano>	well
+<Kano>	cp /boot/vmlinuz-$(uname -r) /media/KINGSTON/EFI/Linux/linux.efi
+<Kano>	as root
+<Kano>	and
+<Kano>	cp /boot/initrd.img-$(uname -r) /media/KINGSTON/EFI/Linux/initrd.img
+<Kano>	then try again
+	done
+<Kano>	this time you have got a kernel
+	ok bbl
+<Kano>	i dont get why you dont have got symlinkx
+
+<Kano>	and now
+<Toshi-TV>	kano. It worked!
+<Kano>	show me output of
+	booted  this install
+<Kano>	efibootmgr -v
+<Kano>	show me the output
+	efibootmgr -v
+	Timeout: 1 seconds
+	BootOrder: 0001,0002,0003,0004
+	Boot0001* Hard Drive    BIOS(2,0,00)AMGOAMNO........m.H.i.t.a.c.h.i. .H.D.T.7.2.1.0.1.0.S.L.A.3.6.0....................A.........................>..Gd-.;.A..MQ..L. . . . . . .T.S.6.F.7.0.H.M.9.3.8.K.K.P......AMBO
+	Boot0002* CD/DVD Drive  BIOS(3,0,00)AMGOAMNO........m.T.S.S.T.c.o.r.p. .C.D.D.V.D.W. .S.H.-.S.2.0.3.D....................A.........................>..Gd-.;.A..MQ..L. . . . . . . . . . . . . . . . . . . . ......AMBO
+	Boot0003* USB   BIOS(5,0,00)AMGOAMNO..........K.i.n.g.s.t.o.n.D.a.t.a.T.r.a.v.e.l.e.r. .2...0.P.M.A.P....................A.............................N..Gd-.;.A..MQ..L.K.i.n.g.s.t.o.n.D.a.t.a.T.r.a.v.e.l.e.r. .2...0.P.M.A.P......AMBO
+	Boot0004* UEFI: KingstonDataTraveler 2.0PMAP    ACPI(a0341d0,0)PCI(1a,0)USB(1,0)USB(4,0)HD(1,1f80,1df080,eaf247b7)AMBO
+<Kano>	with f11 it should be the 4th option
+	yes
+	that is the one I choosed
+<Kano>	well basically it can boot in uefi
+<Kano>	but will do the rest another day
+<Kano>	bye for now

@@ -1,0 +1,8 @@
+Install: bios information.
+Kanotix_Guide
+Thu Aug 20 17:22:30 EST 2015
+=============================
+
+cat /sys/class/dmi/id/{bios_*,board_*} 2>/dev/null
+
+
