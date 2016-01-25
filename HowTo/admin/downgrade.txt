@@ -1,9 +1,11 @@
 Howtos: downgrade packages.
 Kanotix_Guide
-Tue Dec 29 13:51:28 EST 2015
+Sun Jan 24 21:01:40 EST 2016
 =============================
 
-<Kano> https://kanotix.com/files/fix/downgrade.sh
+<Kano> http://kanotix.com/files/fix/downgrade.sh
+
+you should use that from time to time, if I removed packages from the repo
 run that script and reboot
 
 you can always remove a repo and run it again. will downgrade the packages
