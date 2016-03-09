@@ -1,0 +1,19 @@
+Howtos: downgrade packages.
+Kanotix_Guide
+Sun Jan 24 21:01:40 EST 2016
+=============================
+
+<Kano> http://kanotix.com/files/fix/downgrade.sh
+
+you should use that from time to time, if I removed packages from the repo
+run that script and reboot
+
+you can always remove a repo and run it again. will downgrade the packages
+sometimes i have to remove some packages from the repo, then you get the default ones with it
+
+like if you remove the mesa repo it would downgrade
+
+you might need
+apt-get autoremove --purge
+remove-orphans
+apt-get clean
