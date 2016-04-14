@@ -16,6 +16,8 @@ https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/
 chrome://bprivacy/content/BetterPrivacy.html
 
 
-Addblock
---------
+Add blockers
+------------
+Forget about the traditional ones..
+As of April, 2016 -- ublock Origin
 
