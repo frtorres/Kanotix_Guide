@@ -1,6 +1,4 @@
-#!/bin/sh                                                                                                                            
-#                                                                                                                                 
-# Copyright 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
+#!/bin/sh                                                                                      # Copyleft 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -20,7 +18,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#  Francisco Torres <pacho.torres.reye at gmail.com>.
+#  Francisco Torres <pacho.torres.reyes at gmail.com>.
 #  V 1.0 - Original.
 #  
 # ----------------------------------------------------------------
