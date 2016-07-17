@@ -1,9 +1,9 @@
-HowTo docker
+HowTos docker - Installation fixes and tips
 Kanotix_Guide
 Sun Dec  7 15:59:17 EST 2014
--------------------------------
+-------------------------------------------
 
-2 Problemas at install on SpitFire:
+2 Problem at install on SpitFire:
 
 a) ERROR: Your kernel does not support cgroup swap limit.
 
@@ -27,12 +27,11 @@ apt-get install apparmor
 Hint: check /etc/init.d/docker status
 
 
-
-Pendiong to try if this works.
+Pending to try if this works.
 
 from: https://github.com/docker/docker/issues/4743
 
-try to run the daemon with 
+try to run the daemon with
 
 docker -d -g /var/lib/docker-new ?
 

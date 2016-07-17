@@ -1,7 +1,7 @@
-howtos: remote mount (client) cifs/samba shares
+Howtos: remote mount (client) cifs/samba shares
 Kanotix_Guide
 Wed Nov  5 13:05:37 EST 2014
-=============================
+================================================
 
 mount -o soft,intr,rsize=8192,wsize=8192 192.168.10.232:/DataVolume/Public /media/nasdisk
 

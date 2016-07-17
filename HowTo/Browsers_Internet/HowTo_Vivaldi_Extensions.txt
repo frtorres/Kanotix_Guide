@@ -1,7 +1,7 @@
-HowTo: vivaldi browser hacking
+HowTos: vivaldi browser hacking tips and tasks
 Kanotix Guide
 Thu May 26 07:53:28 EST 2016
----------------------------
+---------------------------------------------
 
 uBlock Origin ad stopper.
 

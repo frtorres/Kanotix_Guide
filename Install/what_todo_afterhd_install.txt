@@ -1,7 +1,7 @@
 Install: Recommended Steps after a new Install.
 Kanotix_Guide
 Fri Aug 22 17:38:02 EST 2014
-=============================
+===============================================
 
 What to do after install to HD: l 
 

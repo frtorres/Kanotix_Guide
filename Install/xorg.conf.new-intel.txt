@@ -1,3 +1,8 @@
+Install: X configuration file as reference.
+Kanotix_Guide
+Sun Jul 17 17:53:04 AST 2016
+============================================
+
 Section "ServerLayout"
 	Identifier     "X.org Configured"
 	Screen      0  "Screen0" 0 0

@@ -1,30 +1,18 @@
+Install: Convert a DISK to gpt.
+Kanotix_Guide
+Sun Jul 17 17:54:28 AST 2016
+===============================================
 
+1.- Execute the isohybrid command
+2.- When you booted it via efi, then you need a gpt or primare fat partition in case you want to install it /boot/efi
 
+3.- If you dont have got  a primary partition, then use gdisk and convert your hd to gpt. gdisk is not preinstalled.
 
+4.- As you can not got back that easy, before you use it do:
+    dd if=/dev/sda of=backup.mbr count=1
 
-[13:40:30] <Kano> fine
-[13:40:42] <Kano> did you execute the isohybrid command?
+also you should have got
 
-
-[13:41:32] <Kano> when you booted it via efi
-[13:41:46] <Kano> then you need a gpt or primare fat partition in case you want to install it
-[13:41:57] <Kano> mounted in custom mode to /boot/efi
-
-[13:42:17] <frtorres> ok I will test that. As you remember it did not work some weeks ago.
-[13:42:33] <frtorres> Persistent is working.
-
-[13:42:35] <Kano> well you dont have got  a primary partition
-[13:42:44] <Kano> or you use
-[13:42:47] <Kano> gdisk
-
-[13:42:50] <frtorres> we tested it froma usb
-[13:42:51] <Kano> and convert your hd to gpt
-[13:42:58] <frtorres> ahh ok
-[13:43:09] <Kano> gdisk is not preinstalled
-[13:43:21] <Kano> as you can not got back that easy
-[13:43:27] <Kano> before you use it do
-[13:43:46] <Kano> dd if=/dev/sda of=backup.mbr count=1
-[13:44:08] <Kano> also you should have got
-[13:44:19] <Kano> fdisk -l > mbr-partitions.txt
-[13:44:25] <Kano> with that disk
+    fdisk -l > mbr-partitions.txt
+with that disk
 

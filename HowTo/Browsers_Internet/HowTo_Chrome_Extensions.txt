@@ -1,7 +1,7 @@
-HowTo: Google Chrome hacking
+HowTos: Google Chrome hacking tips
 Kanotix Guide
 Tue Aug 18 01:56:45 UTC 2015
----------------------------
+----------------------------------
 
 Google Chrome Settings location: ~/.config/google-chrome
 
