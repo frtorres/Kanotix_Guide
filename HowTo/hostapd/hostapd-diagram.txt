@@ -1,0 +1,15 @@
+Howtos: hostapd - connectivity diagram.
+Kanotix Guide
+Fri Aug 22 22:57:54 EST 2014
+========================================
+
+see: https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint#Install_Ubuntu_Server
+
+
+                                                                 -> Android smartphone
+                                                                /
+[ISP Device] <----------> [WiFi Adapter][Computer][WiFi Adapter]--> Kanotix/Mac/Windows Clients
+                              (wlan1)                 (wlan0)   \
+                                                                 -> iPhone
+
+

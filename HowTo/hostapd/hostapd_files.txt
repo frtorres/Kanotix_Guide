@@ -1,0 +1,6 @@
+#
+echo "hostapd moving files.. to destinations"
+echo need to be root to proceed.
+cp interfaces /etc/network/interfaces
+cp NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+
