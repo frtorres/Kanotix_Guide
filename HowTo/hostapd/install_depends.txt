@@ -1,0 +1,3 @@
+apt-get install dnsmasq
+apt-get install hostapd
+
