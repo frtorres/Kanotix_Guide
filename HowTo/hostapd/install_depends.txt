@@ -17,7 +17,7 @@
 
 apt-get install dnsmasq
 apt-get install hostapd
-apt-get bash
+apt-get install bash
 apt-get install util-linux
 apt-get install iproute2
 apt-get install iw
