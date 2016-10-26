@@ -29,3 +29,24 @@ Mount the LUKS Partition
 
 umount -l /mnt/sdX for a race conditioin happenning (device busy error)
 
+
+
+[Tuesday, October 25, 2016] [03:37:55 PM] <Kano>        fine
+[Tuesday, October 25, 2016] [03:37:58 PM] <frtorres-i7> I want to have some partition "open" no encrtptioin. And another partition encripted (sensitive info).  Is ir possible to have it that waY?
+[Tuesday, October 25, 2016] [03:38:34 PM] <Kano>        sure, why not
+[Tuesday, October 25, 2016] [03:38:38 PM] <Kano>        you have to use gpt
+[Tuesday, October 25, 2016] [03:38:47 PM] <Kano>        just dont format one partition with gparted
+[Tuesday, October 25, 2016] [03:38:52 PM] <frtorres-i7> so in every box I connectted the disk I use ir accordingly
+[Tuesday, October 25, 2016] [03:38:53 PM] <Kano>        leave it empty
+[Tuesday, October 25, 2016] [03:38:54 PM] <frtorres-i7> ok
+[Tuesday, October 25, 2016] [03:39:03 PM] <Kano>        and use cryptsetup with it
+[Tuesday, October 25, 2016] [03:39:30 PM] <Kano>        cryptsetup -c aes-xts-plain -s 512 luksFormat /dev/sdX1
+[Tuesday, October 25, 2016] [03:39:32 PM] <Kano>        cryptsetup luksOpen /dev/sdX1 luks
+[Tuesday, October 25, 2016] [03:39:33 PM] <Kano>        mkfs.ext4 /dev/mapper/luks 
+[Tuesday, October 25, 2016] [03:39:35 PM] <Kano>        like that
+[Tuesday, October 25, 2016] [03:39:42 PM] <Kano>        n8
+[Tuesday, October 25, 2016] [03:39:44 PM] <frtorres-i7> mmm ok
+[Tuesday, October 25, 2016] [03:39:46 PM] <frtorres-i7> thanks!!!
+[Tuesday, October 25, 2016] [03:40:12 PM] <frtorres-i7> good sleep WE have to work tomorrow! :)
+~
+

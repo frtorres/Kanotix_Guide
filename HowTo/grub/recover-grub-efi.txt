@@ -32,3 +32,48 @@ See: https://help.ubuntu.com/community/Grub2/Installing
 cant just run grub-install from the live session and point to --boot-directory=
 see via the LiveCD terminal
 
+
+------------------------------------------------------------------------------------------------
+
+
+Fri Oct 14 19:50:46 AST 2016
+Recovery and install acritox install on EFI. SeaGate External 1TB Disk
+
+EFI did not install>
+
+sources:
+https://wiki.debian.org/GrubEFIReinstall
+http://superuser.com/questions/376470/how-to-reinstall-grub2-efi
+
+STEPS:
+as root:
+
+/dev/sdXy is partition with / mounted.
+/dev/sdZn is partition for EFI boot.
+
+mount /dev/sdXy /mnt
+mount /dev/sdZn /mnt/boot/efi #
+for i in /dev /dev/pts /proc /sys; do sudo mount -B $i /mnt/$i; done
+
+cp /etc/resolv.conf /mnt/etc/ #makes the network available after chrooting
+modprobe efivars # make sure this is loaded
+sudo chroot /mnt
+
+apt-get install --reinstall grub-efi  ; to reinstall efi grub
+grub-install /dev/sdX ; disk /dev/sdc, for example to install efi grub
+update-grub; Re create a grub config file based on your disk partitioning schema
+ 
+--> finally check that /boot/efi/EFI  has a bootloader.
+
+efibootmgr --verbose 
+
+To END:
+
+;type Ctrl+D to exit chroot, unmount everything and reboot:
+
+for i in /sys /proc /dev/pts /dev; do sudo umount /mnt/$i; done
+
+umount /mnt/boot/efi #please do this. Corrupted efi partitions are not nice
+umount /mnt
+reboot
+
