@@ -26,11 +26,9 @@
 #
 # install tv addons live!
 #
-TMP=$(mktemp -d /tmp/spmc.XXXXXX)
 ADDON=$(wget -qO- http://fusion.tvaddons.ag/start-here/|awk -F\" '/plugin.video.hubwizard-/{print $8}')
-mkdir -p $TMP/addons/packages
-echo $ADDON|wget -NP $TMP/addons/packages -B http://fusion.tvaddons.ag/start-here/ -i-
-unzip -d $TMP/addons $TMP/addons/packages/$ADDON
-cp $TMP/addons ~/.xbmc/addons
-echo now run install script inside kodi
+mkdir -p ~/.xbmc/addons/packages
+echo $ADDON|wget -NP ~/.xbmc/addons/packages -B http://fusion.tvaddons.ag/start-here/ -i-
+	unzip -d ~/.xbmc/addons ~/.xbmc/addons/packages/$ADDON
+echo hint: now run under program main menu run config wizard for kodi
 
