@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Copyright 2013-2016  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
 #
@@ -23,34 +23,23 @@
 #
 #  Francisco Torres <pacho.torres.reyes@gmail.com>.
 #  V 1.0 - Original.
-#  Install hostapd.
-#  see: https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint#Install_Ubuntu_Server
 # ----------------------------------------------------------------
 echo
 echo $0: to setup an access point (live).
+
+
+if [ "$#" -eq 1 ];
+ echo "Error: must be 2 parameters:(SSID and password), $# provided!." >&2
+ exit 1
+fi
+
 if [ $(id -u) != 0 ]; then
  echo "Error: You must be root to run this script!" >&2
  exit 1
 fi
 
-apt-get update
-apt-get install iw
-echo "checking wifi hardware capabilities (check AP, and managed are shown)"
-iw list|grep AP
-iw list|grep managed
+bash create_ap.bash --no-virt wlan0 eth0 $1 $2
 
-echo "installing dependencies..."
-apt-get install dnsmasq
-apt-get install hostapd
-apt-get install bash
-apt-get install util-linux
-apt-get install iproute2
-apt-get install iw
-apt-get install haveged
-apt-get install iwconfig
-apt-get install iptables
-apt-get install bridge-utils
-
-echo "now, activate an access point, check results, leaving terminal to see logs and key exchange..."
+echo $0: ending...
 
 
