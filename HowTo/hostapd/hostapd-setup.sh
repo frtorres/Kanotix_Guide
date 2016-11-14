@@ -19,25 +19,58 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#  Mon Aug  8 20:56:35 UTC 2016
+#  Mon Nov 14 23:36:13 UTC 2016
 #
 #  Francisco Torres <pacho.torres.reyes@gmail.com>.
 #  V 1.0 - Original.
-#  Install hostapd.
+#  
 #  see: https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint#Install_Ubuntu_Server
 # ----------------------------------------------------------------
 echo
 echo $0: to setup an access point (live).
 if [ $(id -u) != 0 ]; then
  echo "Error: You must be root to run this script!" >&2
- exit 1
+	 exit 1
+fi
+
+RED=`ifconfig | grep eth`
+if ifconfig | grep eth > /dev/null
+then
+   echo "$0: ethernet found: $RED"
+else
+   echo "- No eth card found." >&2
+   exit 1
+fi
+
+WLAN=`ifconfig | grep wlan`
+if ifconfig | grep wlan > /dev/null
+then
+   echo "$0: wifi found: $WLAN"
+else
+   echo "- No wifi card found." >&2
+   exit 1
 fi
 
 apt-get update
 apt-get install iw
+
 echo "checking wifi hardware capabilities (check AP, and managed are shown)"
-iw list|grep AP
-iw list|grep managed
+
+if iw list|grep AP > /dev/null
+then
+   echo "- AP functionality supported."
+else
+   echo "$WLAN:- AP functionality NOT supported, exiting." >&2
+   exit 1
+fi
+
+if iw list|grep managed > /dev/null
+then
+   echo "- managed functionality supported."
+else
+   echo "$WLAN:- managed functionality NOT supported, exiting." >&2
+   exit 1
+fi
 
 echo "installing dependencies..."
 apt-get install dnsmasq
@@ -53,4 +86,11 @@ apt-get install bridge-utils
 
 echo "now, activate an access point, check results, leaving terminal to see logs and key exchange..."
 
+# FOUND=`fgrep -c "FOUND" $VALIDATION_FILE`
+#  if [ $FOUND -eq 0 ]; then
+#    echo "Not able to find"
+#  else
+#    echo "able to find"     
+#  fi  
+# grep -E "(string)" /path/to/file || echo "no match found"
 

@@ -4,7 +4,9 @@ http://www.cyberciti.biz/faq/debian-ubuntu-linux-setting-wireless-access-point/
 
 https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
 
-#an arch script.
+#
+# arch script used here
+#
 
 https://bbs.archlinux.org/viewtopic.php?id=162895
 
