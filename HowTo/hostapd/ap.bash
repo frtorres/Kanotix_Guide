@@ -25,10 +25,9 @@
 #  V 1.0 - Original.
 # ----------------------------------------------------------------
 echo
-echo $0: to setup an access point (live).
+echo $0 ": to setup an access point (live)."
 
-
-if [ "$#" -eq 1 ];
+if [ "$#" -eq 2 ]; then
  echo "Error: must be 2 parameters:(SSID and password), $# provided!." >&2
  exit 1
 fi
