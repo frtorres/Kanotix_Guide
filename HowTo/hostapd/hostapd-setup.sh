@@ -27,7 +27,7 @@
 #  see: https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint#Install_Ubuntu_Server
 # ----------------------------------------------------------------
 echo
-echo $0: to setup an access point (live).
+echo $0 ":to setup an access point (live)."
 if [ $(id -u) != 0 ]; then
  echo "Error: You must be root to run this script!" >&2
 	 exit 1
@@ -51,6 +51,11 @@ else
    exit 1
 fi
 
+echo
+echo "enter to continue..."
+read dummy
+echo
+
 apt-get update
 apt-get install iw
 
@@ -71,6 +76,11 @@ else
    echo "$WLAN:- managed functionality NOT supported, exiting." >&2
    exit 1
 fi
+
+echo
+echo "enter to continue..."
+read dummy
+echo
 
 echo "installing dependencies..."
 apt-get install dnsmasq
