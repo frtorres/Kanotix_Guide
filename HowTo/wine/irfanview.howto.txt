@@ -12,4 +12,16 @@ Oct 16,201 -- from: http://www.boekhoff.info/?pid=linux&tip=install-irfan-view-o
 5. Click with the right mouse button on the downloaded file and choose the option "Open with 'wine'"
 
 
+Thu Nov 17 17:36:19 EST 2016
+---------------------------
+Testing Irfanview 4.4.2
+
+1. Seems that dll is zero sized on Win10.
+
+FIX, run this: winetricks mfc42
+
+2. Download zip with plugins 64 bits and place the whole plugin32 under plugin dir at .wine/Drive....
+
+** move content not dir!.
+
 
