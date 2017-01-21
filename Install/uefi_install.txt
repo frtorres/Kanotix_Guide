@@ -6,7 +6,7 @@ Fri Aug 22 17:38:02 EST 2014
 
 1. Inside windows 8: 
 
-use powercfg -h hoff
+use powercfg -h off
 
 as admin cmd and disable secure boot
 
