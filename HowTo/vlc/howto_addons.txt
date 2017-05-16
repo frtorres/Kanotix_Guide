@@ -1,0 +1,8 @@
+Howtos: vlc addons
+Kanotix_Guide
+Sun Apr 23 22:48:55 EST 2017
+-------------------------------
+
+1. Tested tunein script-
+
+
