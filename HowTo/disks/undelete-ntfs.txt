@@ -1,0 +1,16 @@
+Howtos: disk undelete files (NTFS)
+Kanotix_Guide
+Mon May 29 00:09:33 EST 2017
+----------------------------
+
+Reference: https://www.howtogeek.com/howto/13706/recover-deleted-files-on-an-ntfs-hard-drive-from-a-ubuntu-live-cd/
+
+  1. umount /dev/sdXXX  NTFS PARTITION
+  2. ntfsundelete /dev/sdxx|less   To check recoverable files
+  3. filter accordingly  ntfsundelete /dev/sdxx|grep "2017-05-28 23"
+  4. ntfsundelete /dev/sdb2 -u -m Links.txt  
+     or use wildcards. 
+  5. ntfsundelete /dev/sdXX -u -i 7537
+     to recover by inode (first report column)
+ 
+

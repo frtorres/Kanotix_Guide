@@ -1,0 +1,6 @@
+#
+# passwd can be changed from vlc interfase (advance settings)
+# see: 
+#
+cvlc --extraintf=http --http-password=vlcdirect
+
