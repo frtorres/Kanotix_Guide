@@ -1,2 +1,8 @@
 https://validator.w3.org/feed/docs/rss2.html
+http://www.rssboard.org/rss-specification#sampleFiles
+
+http://www.rssboard.org/media-rss#media-thumbnails
+
+https://fanart.tv/fanart/music/b0d037e8-00c8-4e37-aeec-58422ed345aa/artistbackground/spagna-5933367a17f88.jpg
+
 
