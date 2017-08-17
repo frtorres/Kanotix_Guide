@@ -22,4 +22,18 @@ echo deb http://http.debian.net/debian jessie-backports main >/etc/apt/sources.l
 
 update-java-alternatives -s java-1.8.0-openjdk-amd64
 
+3. steps 1-2 do not install openjfx 
+
+See tese urls to install dependencies (backports)
+
+https://packages.debian.org/jessie-backports/libopenjfx-jni
+https://packages.debian.org/jessie-backports/libopenjfx-java
+https://packages.debian.org/jessie-backports/openjfx
+
+Files:
+
+libopenjfx-jni_8u102-b14-1~bpo8+1_amd64.deb
+libopenjfx-java_8u102-b14-1~bpo8+1_all.deb
+openjfx_8u102-b14-1~bpo8+1_amd64.deb
+
 

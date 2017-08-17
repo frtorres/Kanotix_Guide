@@ -15,5 +15,9 @@ find /Documents -type f -exec grep -H Milledgeville "{}" \;
 
 
 
-
+2. grep option:
+grep --exclude-dir={.cache,.mozilla,dist} -rnw '/home/xxx/' -e 'ffmpeg'
   
+see:https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux
+
+ 
