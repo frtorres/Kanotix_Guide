@@ -36,6 +36,7 @@ fi
 
 DISTRIB_CODENAME=wheezy
 grep -q jessie /etc/apt/sources.list && DISTRIB_CODENAME=jessie
+grep -q stretch /etc/apt/sources.list && DISTRIB_CODENAME=stretch
 
 echo "current linux distribution code name: -- $DISTRIB_CODENAME --"
 echo setting repos
@@ -43,6 +44,8 @@ echo setting repos
 [ "$DISTRIB_CODENAME" = "wheezy" ] && cp -v dropbox.list.wheezy /etc/apt/sources.list.d/dropbox.list
 
 [ "$DISTRIB_CODENAME" = "jessie" ] && cp -v dropbox.list.jessie /etc/apt/sources.list.d/dropbox.list
+
+[ "$DISTRIB_CODENAME" = "stretch" ] && cp -v dropbox.list.stretch /etc/apt/sources.list.d/dropbox.list
 
 echo getting keys
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
