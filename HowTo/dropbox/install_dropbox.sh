@@ -34,6 +34,8 @@ if [ $(id -u) != 0 ]; then
  exit 1
 fi
 
+# stretch seems not havieng repo. As of Oct2017.
+
 DISTRIB_CODENAME=wheezy
 grep -q jessie /etc/apt/sources.list && DISTRIB_CODENAME=jessie
 grep -q stretch /etc/apt/sources.list && DISTRIB_CODENAME=stretch
