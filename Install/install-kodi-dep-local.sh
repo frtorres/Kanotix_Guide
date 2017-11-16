@@ -1,3 +1,9 @@
+#!/bin/sh
+if [ "$(id -u)" != "0" ]; then
+ echo "Error: Run the script as root!" >&2
+ exit 1
+fi
+
 # -----------
 echo -n $0:
 #
@@ -9,8 +15,4 @@ read dummy
 apt-get update
 apt-get dist-upgrade
 apt-get install git ranger kodi
-cd 
-git config --global user.email "pacho.torres.reyes@gmail.com"
-git config --global user.name "frtorres"
-#git clone https://github.com/frtorres/Kanotix_Guide.git
 

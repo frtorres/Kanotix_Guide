@@ -26,9 +26,10 @@
 #
 # install tv addons live!
 #
-ADDON=$(wget -qO- http://fusion.tvaddons.co/begin-here/|awk -F\" '/plugin.program.indigo-/{print $9}')
+ADDON=$(wget -qO- http://fusion.tvaddons.co/begin-here/|awk -F\" '/plugin.program.indigo-/{print $4}')
 mkdir -p ~/.kodi/addons/packages
 echo $ADDON|wget -NP ~/.kodi/addons/packages -B http://fusion.tvaddons.co/begin-here/ -i-
 unzip -d ~/.kodi/addons ~/.kodi/addons/packages/$ADDON
-echo hint: now run under program main menu run config wizard for kodi
+echo hint: now run under program main menu run config wizard for kodi.
+
 
