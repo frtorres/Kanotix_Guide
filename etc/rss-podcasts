@@ -52,5 +52,16 @@
                 <media:thumbnail url="http://www.wradio.com.co/images/2015090351036a4b.jpg" />
                 <fanart>http://www.wradio.com.co/images/3408039_n_vir1.jpg</fanart>
         </item>
+
+        <item>
+                <title>A vivir que son dos dias</title>
+                <link>rss://feeds.feedburner.com/A-Vivir-Que-Son-Dos-Dias</link>
+                <description>Andres Lopez presenta mi banda sonora</description>
+                <media:thumbnail url="http://blogs.caracol.com.co/avivir/files/2013/11/cabezote.png" />
+                <fanart>http://blogs.caracol.com.co/avivir/files/2014/04/cabe-concurso1.jpg</fanart>
+        </item>
+
+
+
 </channel>
-	</rss>
+</rss>
