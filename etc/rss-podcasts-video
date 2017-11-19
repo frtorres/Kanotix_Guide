@@ -74,7 +74,7 @@
 </item>
 <item>
         <title>do it yourseelf videos</title>
-        <link>rss://www.nasa.gov/rss/dyn/NASAcast_vodcast.rss</link>
+        <link>rss://feeds.feedburner.com/diyvideoguytv</link>
         <description>do it ypurself video guy tv</description>
         <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
         <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
@@ -87,9 +87,9 @@
         <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
 </item>
 <item>
-        <title>twit code video</title>
-        <link>rss://feeds.twit.tv/code_video_hd.xml</link>
-        <description>teit code video.</description>
+        <title>geeks news central</title>
+        <link>rss://geeknewscentral.com/video.xml</link>
+        <description>geeks news central info.</description>
         <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
         <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
 </item>
@@ -102,9 +102,9 @@
 </item>
 
 <item>
-        <title>android videos</title>
-        <link>rss://feeds.twit.tv/aaa_video_large.xml</link>
-        <description>android videos.</description>
+        <title>code video</title>
+        <link>rss://feeds.twit.tv/code_video_hd.xml</link>
+        <description>code video information.</description>
         <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
         <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
 </item>
@@ -131,8 +131,8 @@
 </item>
 <item>
         <title>millonaries histories</title>
-        <link>rss://l</link>
-        <description>wired magazine science articules.</description>
+        <link>rss://eventualmillionaire.com/feed/case-studies-millionaire-business-owners/</link>
+        <description>millonaries histories.</description>
         <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
         <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
 </item>
