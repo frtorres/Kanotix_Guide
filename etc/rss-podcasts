@@ -33,7 +33,7 @@
         </item>
 	<item>
 		<title>Historia del Mundo con Diana Uribe </title> 
-		<link>rss://www.caracol.com.co/feed.aspx/?id=PROG_320899</link>
+		<link>rss://feeds.feedburner.com/HistoriaMundoCaracol</link>
 		<description>Historia del Mundo en narraciones.</description>
  		<media:thumbnail url="http://www.elpais.com.co/files/article_main/uploads/2017/01/31/589164ede8d86.jpeg" />
                 <fanart>http://www.lacasadelahistoria.com/wp-content/uploads/22042327_1578899108832939_4962407367673384363_o-1.jpg</fanart>
@@ -52,7 +52,6 @@
                 <media:thumbnail url="http://www.wradio.com.co/images/2015090351036a4b.jpg" />
                 <fanart>http://www.wradio.com.co/images/3408039_n_vir1.jpg</fanart>
         </item>
-
         <item>
                 <title>A vivir que son dos dias</title>
                 <link>rss://feeds.feedburner.com/A-Vivir-Que-Son-Dos-Dias</link>
@@ -60,8 +59,33 @@
                 <media:thumbnail url="http://blogs.caracol.com.co/avivir/files/2013/11/cabezote.png" />
                 <fanart>http://blogs.caracol.com.co/avivir/files/2014/04/cabe-concurso1.jpg</fanart>
         </item>
-
-
-
+        <item>
+                <title>Cafe Caracol</title>
+                <link>rss://www.caracol.com.co/feed.aspx/?id=PROG_539701</link>
+                <description>Conversaciones de Futbol con un cafe</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/417.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/417.jpg</fanart>
+        </item>
+        <item>
+                <title>El pulso del Futbol</title>
+                <link>rss://feeds.feedburner.com/El-Pulso-Del-Futbol</link>
+                <description>Dia a dia del Futbol con Ivan Mejia</description>
+                <media:thumbnail url="http://caracol.com.co/especiales/podcasts/images/pc-pulsofutbol2.jpg"/>
+                <fanart>http://caracol.com.co/especiales/podcasts/images/pc-pulsofutbol2.jpg</fanart>
+        </item>
+        <item>
+                <title>La Luciernaga</title>
+                <link>rss://feeds.feedburner.com/La-Luciernaga</link>
+                <description>Realidad hecha ficción</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg</fanart>'
+        </item>
+        <item>
+                <title>Radio Red</title>
+                <link>rss://feeds.feedburner.com/radioredco</link>
+                <description>Radio Red Colombia</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg</fanart>'
+        </item>
 </channel>
 </rss>
