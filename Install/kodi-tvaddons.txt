@@ -1,3 +1,4 @@
+
 #
 # Copyleft 2013-2014  Francisco Torres R (frtorres), Panama, RepPanama, C.America
 # All rights reserved.
@@ -26,6 +27,13 @@
 #
 # install tv addons live!
 #
+
+if ! type -P kodi >/dev/null; then
+ echo "$0 Warning: kodi not installed, installing now..." >&2
+ apt-get install kodi
+#exit 1
+fi
+
 ADDON=$(wget -qO- http://fusion.tvaddons.co/begin-here/|awk -F\" '/plugin.program.indigo-/{print $4}')
 mkdir -p ~/.kodi/addons/packages
 echo $ADDON|wget -NP ~/.kodi/addons/packages -B http://fusion.tvaddons.co/begin-here/ -i-
