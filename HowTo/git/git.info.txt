@@ -2,6 +2,16 @@ Howtos: git basics
 Kanotix_Guide
 Sun Aug 31 23:46:15 EST 2014
 -----------------------------
+References to learn:
+https://git-scm.com/book/en/v2
+
+Git Reference:
+http://git-scm.com/
+http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
+http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+https://www.kernel.org/pub/software/scm/git/docs/giteveryday.html
+
+-----
 
 reference: http://stackoverflow.com/questions/13036064/git-syncing-a-github-repo-with-a-local-one
 

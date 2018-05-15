@@ -1,0 +1,12 @@
+HowTo gpg
+Tue Feb  6 15:35:19 EST 2018
+----------------------------
+
+howto renew a key after expiration
+
+https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key
+
+
+
+
+

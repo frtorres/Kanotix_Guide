@@ -1,0 +1,11 @@
+Kanotix_Guide
+HowTo kdeconnect  ufw enable
+Mon Jan 29 00:25:02 UTC 2018
+----------------------------
+
+If you are using the ufw firewall and is enabled, open KDE Connect's ports with these commands:
+
+    sudo ufw allow 1714:1764/udp 
+    sudo ufw allow 1714:1764/tcp 
+    sudo ufw reload
+

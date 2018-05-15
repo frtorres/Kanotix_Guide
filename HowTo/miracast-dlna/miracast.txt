@@ -1,0 +1,13 @@
+Howtos: miracast
+Kanotix_Guide
+Thu Jan 11 20:05:13 EST 2018
+-----------------------------
+
+references: 
+
+https://www.pcworld.com/article/2907520/streaming-media/how-to-use-miracast-to-mirror-your-devices-screen-wirelessly-on-your-tv.html
+
+https://01.org/wds
+
+https://github.com/intel/wds/blob/master/README.md
+
