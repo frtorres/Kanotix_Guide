@@ -1,0 +1,66 @@
+Howtos: Removing broken kernels.
+Kanotix_Guide
+Sun May 20 00:31:56 EST 2018
+=============================
+
+Sun May 20 12:10:49 EST 2018
+
+Kano directions.
+
+1. <Kano> define what is broken
+<frtorres-i7> dpkg: error processing package linux-image-4.15.0-20-generic (--configure):
+<frtorres-i7>  subprocess installed post-installation script returned error exit status 127
+<Kano> did you ever use !fix-firm
+<frtorres-i7> Package 'firmware-bnx2' is not installed
+<Kano> apt-get install -f
+<Kano> remove-orphans
+<frtorres-i7> I get same above messages
+<Kano> ls -ld /vm*
+<frtorres-i7> lrwxrwxrwx 1 root root 30 May 17 17:38 /vmlinuz -> boot/vmlinuz-4.4.0-124-generic
+<Kano> is generic installed completely?
+<frtorres-i7> yes
+<Kano> use !clean first
+<Kano> then !generic
+<frtorres-i7> depmod: ERROR: could not open directory /lib/modules/4.15.0-20-generic: No such file or directory
+<frtorres-i7> depmod: FATAL: could not search modules: No such file or directory
+<Kano> it should be just deleted
+<Kano> not installed
+<frtorres-i7> !clean removed entries in '/lib/modules/4.15.0-20-generic/
+<Kano> i know
+<Kano> dpkg -l|grep linux-im
+<frtorres-i7> 
+linux-image-4.15.0-20-generic                     4.15.0-20.21kanotix1                       i386         Linux kernel image for version 4.15.0 on 32 bit x86 SMP
+ii  linux-image-4.4.0-124-generic                     4.4.0-124.148kanotix1                      amd64        Linux kernel image for version 4.4.0 on 64 bit x86 SMP
+
+<Kano> man, you installed i386! well, i think i remove !4.15
+
+<Kano> ls /var/lib/dpkg/info/linux-image-4.15*.postinst
+<frtorres-i7> /var/lib/dpkg/info/linux-image-4.15.0-20-generic.postinst
+<Kano> rm /var/lib/dpkg/info/linux-image-4.15.0-20-generic.postinst
+<Kano> then !clean again
+<frtorres-i7> I got this after rm and clean:
+<frtorres-i7> /var/lib/dpkg/info/linux-image-4.15.0-20-generic.prerm: 11: /var/lib/dpkg/info/linux-image-4.15.0-20-generic.prerm: linux-check-removal: not found
+<Kano> rm /var/lib/dpkg/info/linux-image-4.15.0-20-generic.prerm
+<Kano> then !clean you got it
+
+--------------------------------------
+# another tested solution.
+# reference: https://askubuntu.com/questions/1030043/unable-to-upgrade-kernel-after-4-16-3
+#
+
+!4.15 had problems using !clean
+got an error: linux-check-removal: not found kernel dpkg: error processing package (--configure):  subprocess installed post-installation script returned error exit status 1
+
+# tried: dpkg --remove --force-remove-reinstreq linux-modules-4.15.0-20-generic
+
+This worked:
+
+1. vi /var/lib/dpkg/info/linux-image-4.15.0-20-generic.prerm
+   Just below the first line #!/bin/sh insert a new line:
+   exit 0
+   Save the file and rerun the failed command:
+2. dpkg --purge linux-image-4.15.0-20-generic
+3. dpkg --purge linux-modules-4.15.0-20-generic
+4. dpkg -l|grep 4.15
+
+
