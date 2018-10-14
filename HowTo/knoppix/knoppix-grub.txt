@@ -1,0 +1,21 @@
+Howtos: make iso KNOPPIX image boot HD
+Kanotix Guide
+Sat Aug 25 12:59:29 EST 2018
+----------------------------
+
+see: https://unix.stackexchange.com/questions/102529/booting-a-knoppix-iso-from-grub-device-uri-madness
+
+see: http://knoppix.net/forum/threads/30358-Boot-from-Knoppix-ISO-in-HDD-using-grub
+
+took an entry from here.. changed bootfrom parameter
+
+see: https://www.linuxjournal.com/content/grub-boot-iso
+see: https://help.ubuntu.com/community/Grub2/ISOBoot/Examples
+
+----------------------------
+
+1. Review the  bootfrom parameter. Requires a double slash or the system will never boot. 
+
+2. Adjusted grub entry from original kanotix grub code to identify and run KNOPPIX
+
+

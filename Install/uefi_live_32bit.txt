@@ -1,0 +1,187 @@
+Kanotix_Guide
+Install GRUB on a USB stick to boot kanotix.
+Remote session by kano
+--------------------------------------------
+/boot/grub/i386-efi/vbe.mod not found
+/boot/grub/i386-efi/vga.mod not found
+
+
+<Kano> basically you could disable the gfx menu
+       just remove the if loadfont... to fi section
+       in boot/grub/grub.cfg
+
+[16:16:19] <Kano> !ps2
+
+[16:16:20] <help-me> Kano: "ps2" could be http://www.amazon.de/Digitus-DA-70118-USB-Adapter-Mini-DIN/dp/B000M0461M
+
+!alps: "alps" could be sed -i 's/\(^GRUB_CMDLINE_LINUX_DEFAULT=\).*/\1"quiet splash i8042.notimeout i8042.nomux"/;s/\(^GRUB_CMDLINE_LINUX=\).*/\1""/' /etc/default/grub;update-grub
+
+[16:16:45] <Kano> frtorres-i7: try: i8042.notimeout
+[16:16:49] <Kano> add this into grub.cfg
+
+
+-------------------------------------------
+
+!grub-mbr: "grub-mbr" could be grub-install --force --target=i386-pc /dev/sdX
+!grub-efi-32: "grub-efi-32" could be grub-install --target=i386-efi --removable
+!grub-efi-64
+
+input: http://kanotix.com/files/fix/.clt/boot.tar.gz
+
+
+[14:52:42] <help-me> frtorres-steel: "grub-mbr" could be grub-install --force --target=i386-pc /dev/sdX
+[14:53:22] <Kano64> !grub-efi-32
+[14:53:23] <help-me> Kano64: "grub-efi-32" could be grub-install --target=i386-efi --removable
+[14:55:52] <Kano64> !grub-efi-64
+[15:03:08] <-- Kano64 (~kano@unaffiliated/kano) has left this channel ("Konversation terminated!").
+[15:07:36] <-- leszek (
+
+-------------------------------------------
+
+-------------------------------------------
+
+
+
+
+commands session:
+
+USB stick required fat32 partitioned
+
+fdisk -l //dev/sd?
+
+  258  mount|grep sdb
+  259  mount /dev/sdb1 /mnt
+  260  ls /mnt/
+
+  261  grub-install --root-directory=/mnt --force --target=i386-pc /dev/sdb
+
+  263  grub-install --root-directory=/mnt --target=i386-efi --removable
+  264  grub-install --root-directory=/mnt --removable
+  265  grub-install --root-directory=/mnt --target=x86_64-efi --removable
+  266  efibootmgr 
+
+NOT FOUND so downloaded boot.tar.gz
+
+  267  cd /mnt/
+  268  ls
+  269  unp /home/frtorres-i7/boot.tar.gz 
+  270  less boot/grub/grub.cfg 
+  271  mkdir ISO
+  272  cd ISO
+  273  cd
+  274  cp /home/live/kanotix32-steelfire-nightly-KDE.iso /mnt/ISO
+  275  exit
+  276  history
+
+as USER:
+ 1992  ls -lah ubuntu-mate-17.10.1-desktop-i386.iso
+ 1993  su
+ 1994  ls /home/live
+ 1995  su
+ 1996  wget -N http://kanotix.com/files/fix/.clt/boot.tar.gz
+ 1997  find -name  \*iso
+ 1998  ls -l /home/live
+ 1999  find /home/live -name  \*iso
+
+
+
+-------------------------------------------
+delete from here
+
+
+[14:52:32] <frtorres-steel> !grub-pc
+[14:52:40] <frtorres-steel> !grub-mbr
+[14:52:42] <help-me> frtorres-steel: "grub-mbr" could be grub-install --force --target=i386-pc /dev/sdX
+[14:53:22] <Kano64> !grub-efi-32
+[14:53:23] <help-me> Kano64: "grub-efi-32" could be grub-install --target=i386-efi --removable
+[14:55:52] <Kano64> !grub-efi-64
+
+
+
+------------------------------------------
+input: http://kanotix.com/files/fix/.clt/boot.tar.gz
+
+9] <Kano64> i dont see kanotix there
+[14:59:51] <Kano64> copy a steelfire 64 bit iso into the iso dir
+[14:59:58] <Kano64> be sure that secure boot is disabled
+[15:00:38] <Kano64> thats not 64 bit
+[15:02:17] <Kano64> umount /mnt
+[15:02:18] <Kano64> then
+[15:02:23] <Kano64> but i would add a 64 bit ios
+[15:02:27] <Kano64> 32 bit is wrong
+[15:02:36] <Kano64> just put any kanotix iso in that dir
+[15:02:42] <Kano64> you can start it anywhere
+[15:02:47] <Kano64> just efi secureboot must be disabled
+[15:02:54] <Kano64> this install is wrong btw.
+[15:02:59] <Kano64> it was not installed in efi mode
+[15:03:06] <Kano64> but i dont fix this now
+[15:04:08] <frtorres-steel> ok kano
+[15:04:10] [Error] Kano64: No such nick/channel.
+
+[14:48:48] <frtorres-steel> there is a usb stick mountted 8gb with one partition fat32
+[15:12:14] <Kano> you should see grub
+[15:12:46] <Kano> if you dont
+[15:13:05] <Kano> rename the 32 iso io .off
+[15:13:21] <Kano> and. just put in a 64 bit one
+[15:13:32] <Kano> you
+[15:13:43] <frtorres-steel> yes kano
+[15:13:54] <frtorres-steel> I am downloading one 64bit now..
+[15:14:24] <Kano> can change default lang in boot/grub/grub.cfg
+[15:15:04] <frtorres-steel> ok
+[15:15:48] <Kano> after copy try stick
+[15:15:55] <frtorres-steel> you said abive "if I do not see grub, rename the 32 iso to????"???
+[15:16:04] <Kano> umount it first
+[15:16:13] <frtorres-steel> ok
+[15:16:34] <Kano> you can move it out of the iso folder too
+[15:19:40] <frtorres-steel> ok
+[15:19:57] <Kano> but check grub
+[15:20:14] <Kano> it should boot anywhere
+[15:22:35] <frtorres-steel> ok
+[15:22:45] <frtorres-steel> thanks for your kind helpkano
+[15:23:20] <frtorres-steel> I am also saving the commands you made to do it mysalf later
+[15:26:12] <Kano> you dont need that to do a hd install
+[15:26:36] <Kano> just to prepare an universal usb boot key
+[15:26:57] <Kano> it could even start acronis iso ;)
+[15:28:37] <frtorres-steel> yes... that is better
+[15:34:56] <Kano> if it does not boot add a kanotix folder inside ISO
+[15:35:13] <Kano> and move it there
+[15:35:43] <frtorres-steel> ok
+
+
+[14:52:32] <frtorres-steel> !grub-pc
+[14:52:40] <frtorres-steel> !grub-mbr
+[14:52:42] <help-me> frtorres-steel: "grub-mbr" could be grub-install --force --target=i386-pc /dev/sdX
+[14:53:22] <Kano64> !grub-efi-32
+[14:53:23] <help-me> Kano64: "grub-efi-32" could be grub-install --target=i386-efi --removable
+[14:55:52] <Kano64> !grub-efi-64
+[15:03:08] <-- Kano64 (~kano@unaffiliated/kano) has left this channel ("Konversation terminated!").
+[15:07:36] <-- leszek (~leszek@
+
+
+
+
+-----------------------------------------
+
+
+
+
+[14:49:25] <Kano64> you dont need steelfire but give me tv id and pw
+[14:50:40] <Kano64> apt-get install -f
+[14:56:52] <Kano64> why did you install without efi?
+[14:57:30] <Kano64> http://kanotix.com/files/fix/.clt/boot.tar.gz
+[14:59:39] <Kano64> i dont see kanotix there
+[14:59:51] <Kano64> copy a steelfire 64 bit iso into the iso dir
+[14:59:58] <Kano64> be sure that secure boot is disabled
+[15:00:38] <Kano64> thats not 64 bit
+[15:02:17] <Kano64> umount /mnt
+[15:02:18] <Kano64> then
+[15:02:23] <Kano64> but i would add a 64 bit ios
+[15:02:27] <Kano64> 32 bit is wrong
+[15:02:36] <Kano64> just put any kanotix iso in that dir
+[15:02:42] <Kano64> you can start it anywhere
+[15:02:47] <Kano64> just efi secureboot must be disabled
+[15:02:54] <Kano64> this install is wrong btw.
+[15:02:59] <Kano64> it was not installed in efi mode
+[15:03:06] <Kano64> but i dont fix this now
+[15:04:08] <frtorres-steel> ok kano
+[15:04:10] [Error] Kano64: No such nick/channel.

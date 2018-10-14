@@ -7,6 +7,6 @@ there is now a findiso version
 
 see:  http://kanotix.com/files/fix/.linuxpro/linuxpro/isolinux/kanotix.cfg
 
-instead of append initrd the intird is in the 2nd line.
+instead of append initrd the initrd is in the 2nd line.
 
 
