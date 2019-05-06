@@ -3,7 +3,7 @@ Kanotix Guide
 Wed Nov  5 13:55:16 EST 2014
 ---------------------------------
 
-This is wha happens:
+This is what happens:
 
 cd path to/dropbox$ dropbox start -i
 Starting Dropbox...Attempt to unlock mutex that was not locked
