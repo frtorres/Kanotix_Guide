@@ -3,6 +3,29 @@ Kanotix_Guide
 Sun Nov 23 18:04:55 EST 2014
 =============================
 
+Good sources:
+
+-*** Find duplicates ***
+https://unix.stackexchange.com/questions/71176/find-duplicate-files/71178#71178
+fdupes
+fslint
+
+-printf options: 
+https://unix.stackexchange.com/questions/215234/explanation-of-directives-in-find-printf
+
+-25 Examples.
+https://www.binarytides.com/linux-find-command-examples/
+
+-find duplicate files.
+https://stackoverflow.com/questions/19551908/finding-duplicate-files-according-to-md5-with-bash
+
+
+
+-------------------------------------------------------------------------------
+
+Good Examples:
+--------------
+
 Find all *.bak files in the current directory and removes them with confirmation from user:
 $ find . -type f -name "*.bak" -exec rm -i {} \;
 

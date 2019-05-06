@@ -1,0 +1,9 @@
+Howtos: git commands
+Kanotix Guide
+Sat Oct 13 23:11:47 EST 2018
+=============================
+#https://stackoverflow.com/questions/1792838/how-do-i-enable-the-ident-string-for-a-git-repository
+# commits log: shown with most.
+git log --pretty=format:"%h %an %s" 
+
+

@@ -1,0 +1,25 @@
+Howtos: zsync
+Kanotix Guide
+Mon 04 Mar 2019 07:40:30 PM EST
+=============================
+
+source: https://help.ubuntu.com/community/ZsyncCdImage
+
+zsync is a wonderful piece of software that downloads only the parts of a file that are changed, so as to avoid downloading a full copy every time.
+
+zsync problem symptom:
+
+could not read control file from URL https://kanotix.com/files/fix/silverfire/isos/kanotix64-kanotix-kde-master-buster.iso.zsync
+
+
+see: https://mxlinux.org/forum/viewtopic.php?t=43211
+
+alternative:
+-----------
+zsync -i <input_file> $(wget -nv --spider <URL_of_zsync_file>/download 2>&1 | grep -Eo https.*iso.zsync | sed 's/https/http/')
+
+an example:
+----------
+zsync -i MX-17.a5_x64.iso $(wget -nv --spider https://sourceforge.net/projects/mx-linux/files/Testing/MX17/beta1/MX-17.b1_x64.iso.zsync/download 2>&1 | grep -Eo https.*iso.zsync | sed 's/https/http/')
+
+

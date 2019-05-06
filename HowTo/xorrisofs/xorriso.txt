@@ -1,0 +1,27 @@
+Howtos: xorriso
+Kanotix Guide
+Sat Oct 27 21:48:28 EST 2018
+=============================
+sources: 
+https://superuser.com/questions/180744/how-do-i-extract-an-iso-on-linux-without-root-access/1180728#1180728
+https://unix.stackexchange.com/questions/70738/what-is-the-fastest-way-to-extract-an-iso
+https://wiki.debian.org/genisoimage
+
+interesting tool: http://linuxiumcomau.blogspot.com/2017/06/customizing-ubuntu-isos-documentation.html
+
+THE PROBLEM: bootx64.efi and grubx64.efi from Ubuntu 18.04 to PhoenixOS
+I needed to change 2 files from .iso file.
+
+
+1. Uncompress .iso file with:
+xorriso -osirrox on -indev PhoenixOSInstaller_v3.0.5.469_x86_x64.iso -extract / Phoenix/
+
+extract to Phoenix Dir...
+
+
+2. Compress, generate a .iso file
+xorrisofs -v -J -r -V Phoenix -o Phoenix-FATR.iso Phoenix
+
+last parameter is the input base dir to commpress.
+
+

@@ -1,0 +1,15 @@
+Kanotix_Guide
+HowTo kde4 recover desktop
+Mon Oct 15 20:48:10 EST 2018
+--------------------
+"Windows + S" makes all windows dissapear - how to revert
+#see: https://forum.kde.org/viewtopic.php?f=66&t=117639
+
+WIN key + S key  stops activity 
+META + S   key
+
+1.-First Fix:
+meta + s stops the activity if you select meta + q to bring up your activities you will see little stop squares on all the activities that are running. The activity you stopped will have the triangle "play" button press that and your activity will start. You applications should be right where you left off. There might be some applications that can't restart when you stop them and place them in memory but I haven't run across any yet. 
+
+2.- Second Fix: (follow this order)
+System Settings - Shortcuts and Gestures - Global Keyboard Shortcuts - KDE component: Plasma Desktop Shell - Stop Current Activity 

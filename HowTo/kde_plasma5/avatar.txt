@@ -1,0 +1,17 @@
+Howto kde_plasma5
+changing avatar.
+Thu 07 Mar 2019 06:48:50 PM EST
+-------------------------------
+
+apt-get install user-manager
+
+change avatar in system settings.
+
+can be uninstalled later... then use 
+
+~/.face.icon
+
+as an avatar.
+
+see: https://www.youtube.com/watch?v=QJu4qwgP5_k
+
