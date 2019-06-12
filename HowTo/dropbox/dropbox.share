@@ -1,0 +1,45 @@
+Howtos: dropbox share base directory
+Kanotix Guide
+Sat 25 May 2019 11:47:23 AM EST
+-----------------------------------
+0. Install Dropbox on first user (regular and common user)
+1. make a ln -s to /home/Dropbox
+2. To share that dir witha second local user:
+#add second user to first user group
+   -sudo usermod -a -G groupName userName
+   -sudo chmod -R ug+rwx Dropbox/
+exec bit is needed to allow Dropbox access folder.
+
+Error when updating Dropbox again.. seems +x propagates...
+
+1. copied dropox dir to a backup dir
+2. uninstall and reinstall nautilus-dropbox.
+3. run daemon and Dropox dir will be recreated with foreign files.
+4. rsync old copy
+
+File permissions:
+Had on problematic files: 
+Access: (0770/-rwxrwx---)  Uid: ( 1000/frtorres)   Gid: ( 1000/frtorres)
+
+changed to:
+Access: (0755/-rwxr-xr-x)  Uid: ( 1000/frtorres)   Gid: ( 1000/frtorres)
+
+-------------------------------------------------------------------------------
+
+from: https://help.dropbox.com/syncing-uploads/stuck-syncing
+
+
+Linux
+
+    Quit Dropbox by right-clicking on the Dropbox menu from the menu bar and selecting Quit
+    Open a terminal window and copy and paste the following line into the terminal (exactly as written below):
+
+    sudo chown "$USER" "$HOME"
+    sudo chown -R "$USER" ~/Dropbox ~/.dropbox
+    sudo chattr -R -i ~/Dropbox
+    sudo chmod -R u+rw ~/Dropbox ~/.dropbox
+
+    If your Dropbox folder is not ~/Dropbox, make sure you modify all the commands above to point to the correct location.
+    Restart Dropbox by going to the Internet menu under Applications.
+
+

@@ -1,0 +1,27 @@
+Howtos: grub local customization via 40_custom entry 
+Kanotix Guide
+Sun 19 May 2019 01:10:32 PM EST
+====================================================
+
+see: https://alien.slackbook.org/blog/how-to-create-a-slackware-live-usb-stick-if-you-are-not-using-slackware
+
+1. Open the grub local customization file in an ASCII editor (as root!): “/etc/grub.d/40_custom”. We will add our custom entry here, and afterwards we run “grub-update” to update the GRUB2 bootmenu.
+    To the bottom of that file, add these lines (mind the backslashes – you should remove them, they are only added for better readability on this blog page):
+
+2 insert  menuentry “Customized Grub Option” {
+    }
+
+3.  Run “update-grub2” to re-generate the Grub master configuration.
+    If you get a “update-grub: command not found” error, that is easily fixed. In some distro’s the “update-grub” script was added, and some others like Slackware do not have it. The content of that “update-grub” script is:
+
+    #!/bin/sh
+    set -e
+    exec grub-mkconfig -o /boot/grub/grub.cfg "$@"
+
+    You can easily create a new file “/sbin/update-grub” as root, copy the above lines into it, and after saving this file you run “chmod +x /sbin/update-grub” to make the script executable.
+
+    Note that there may be distributions that rename “grub-mkconfig” to “grub2-mkconfig”. In that case, adjust the contents of your new “update-grub” script accordingly.
+
+After rebooting your Linux computer you will see “Customized Grub Option” as a new selectable option in your GRUB boot menu. Select that, and watch your computer boot into Slackware Live Edition. 
+
+

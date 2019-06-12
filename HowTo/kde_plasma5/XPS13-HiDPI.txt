@@ -1,0 +1,41 @@
+Howto kde_plasma5
+changing avatar.
+Sat 11 May 2019 03:51:43 PM -05
+-------------------------------
+
+
+1. Settings.
+
+Scale display 2.5.
+
+
+Force Fonts DPI=240.
+Icon Sizes:
+  Desktop:32
+  Tool bar: 32 
+  Main tool bar: 22
+  Small icons: 16
+  Panel: 32.
+  Dialogs: 64
+  
+apt-get install sddm-theme-breeze
+apt-get install kde-config-sddm
+
+
+
+2. Configs.
+
+https://bbs.archlinux.org/viewtopic.php?id=244819
+
+
+Add the following 'script' to ${HOME}/.config/plasma-workspace/env/
+
+
+
+2- Console setup
+
+apt-get install console-data
+apt-get install console-setup
+dpkg-reconfigure console-setup
+showconsolefont
+

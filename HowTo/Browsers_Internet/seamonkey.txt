@@ -4,6 +4,8 @@ Wed Sep 24 23:46:42 EST 2014
 =============================
 
 It is not available on Debian repos. Not present on jesse repos.
+	
+https://www.seamonkey-project.org/
 
 See: 
 
@@ -11,7 +13,7 @@ http://www.linuxquestions.org/questions/debian-26/no-seamonkey-no-iceape-either-
 
 Download 64 bit version from:
 
-ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/releases/2.29/contrib/seamonkey-2.29.en-US.linux-x86_64.tar.bz2
+https://ftp.mozilla.org/pub/seamonkey/releases/2.29/contrib/seamonkey-2.29.en-US.linux-x86_64.tar.bz2
 
 Default download is a 32 bit version, got problems: Couldn't load XPCOM 
 

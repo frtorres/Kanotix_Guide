@@ -31,6 +31,13 @@
 	<fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
 </item>
 <item>
+	<title>All CNET video podcasts</title>
+	<link>rss://http://feed.cnet.com/feed/podcast/all/hd.xml</link>
+	<description>CNET Technology video podcasts.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+	<fanart>http://pluto.tv.s3.amazonaws.com/assets/images/channels/7cd92dbc-3121-2ec3-774e-a46148805439-CNET-channel-feature.jpg</fanart>
+</item>
+<item>
 	<title>nasa video cast</title>
 	<link>rss://www.nasa.gov/rss/dyn/NASAcast_vodcast.rss</link>
 	<description>nasa space videos.</description>

@@ -1,0 +1,5 @@
+HowTo install Chromium
+
+Thu 09 May 2019 11:20:53 AM -05
+-------------------------
+see:https://wiki.debian.org/Chromium 
