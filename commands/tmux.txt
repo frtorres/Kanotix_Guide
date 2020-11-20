@@ -1,0 +1,7 @@
+Commands: tmux 
+Kanotix_Guide
+Wed 08 Jul 2020 11:12:04 PM EST
+=============================
+
+https://tmuxcheatsheet.com/
+

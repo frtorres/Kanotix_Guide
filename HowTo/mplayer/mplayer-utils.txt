@@ -1,0 +1,8 @@
+Howtos: mplayer - Utils.
+Kanotix_Guide
+Mon 05 Oct 2020 08:16:47 PM EST
+--------------------------------
+
+http://mplayer-tools.sourceforge.net/README.html
+https://www.linuxtv.org/wiki/index.php/MPlayer#Usage_with_more_complex_DVB_device_configurations
+
