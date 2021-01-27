@@ -1,0 +1,23 @@
+Howtos: stremripper
+Sat Jan  9 18:30:40 EST 2021
+=============================
+
+Reference:https://myubuntutech.blogspot.com/2009/05/how-to-record-streaming-net-radio-in.html
+
+1. Install
+   apt install streamripper
+
+2. Rip Music from an icecast Radio Station
+
+streamripper http://178.128.145.30:8000/stream -s r
+
+Connecting...
+stream: Navidad en casa
+server name: Icecast 2.4.0-kh12
+declared bitrate: 128
+meta interval: 16000
+
+[skipping...   ] Eterna - Navidad2020-Arre-Borriquito [   48kb]
+[ripping...    ] Andrea Bocelli - Santa Claus Is Coming to Town [  1.62M]
+
+

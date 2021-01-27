@@ -1,0 +1,13 @@
+Silverfire: HowTo Upgrade REPO
+Kanotix_Guide
+Thu 17 Dec 2020 04:24:53 PM EST
+=============================
+
+Kanotix Buster:
+
+Sympthon: "N: Repository 'http://ftp.de.debian.org/debian buster InRelease' changed its 'Version' value from '10.6' to '10.7'
+"
+
+Fix:
+apt-get update --allow-releaseinfo-change
+
