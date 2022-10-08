@@ -1,0 +1,47 @@
+Howtos: ssh configure and set up ssh.
+Kanotix_Guide
+Sun Aug 31 23:25:15 EST 2014
+-------------------------------
+
+Notations:
+
++------------+       +------------+
+| ssh CLIENT | <-->  | ssh SERVER |
++------------+       +------------+
+
+openssh-client       openssh-server
+
+user: 
+.ssh
+
+0.- apt-get install openssh-server on ssh server
+
+1. - on local ssh  client machine, check  .ssh dir
+
+generate key pair for user: user-l
+
+ssh-keygen -t rsa -b 4096
+
+2.- move the key pair to server
+
+ssh-copy-id user-l@192.xxx.x.xxx
+
+use ssh-copy-id to add or create? autorized pub keys on server
+
+3.- Manual way. ---> File:  ~/authorized_keys
+contains key pair generated.
+
+I had to do it manually boucause of no -p option apparently
+
+to add first the first time pub keys of client in server:
+
+scp -P2293 ~/.ssh/id_rsa.pub user-l@192.xxx.x.xxx:.ssh/authorized_keys
+
+to connect:
+
+ssh -p2293 user-l@192.xxx.x.xxx
+
+others:
+
+ scp -P2293 user-l@192.xxx.x.xxx:sshdir/* .
+

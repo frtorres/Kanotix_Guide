@@ -1,0 +1,11 @@
+Howtos: Virtual Machines
+Kanotix_Guide
+Sat Oct 13 17:50:34 EST 2018
+----------------------------
+
+apt-get install virt-viewer
+remote-viewer spice://dev.siduction.org:7350
+
+dat is just a dynamically generated KVM engine and spice
+
+

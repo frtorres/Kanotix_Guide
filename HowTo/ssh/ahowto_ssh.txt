@@ -1,0 +1,17 @@
+Howtos: ssh configure and set up ssh.
+Kanotix_Guide
+Wed Feb 11 17:07:19 EST 2015
+-------------------------------
+
+Notations:
+
++------------+       +------------+
+| ssh CLIENT | <-->  | ssh SERVER |
++------------+       +------------+
+
+openssh-client       openssh-server
+
+ssh -vvv -pxxxx root@xxx.yyy.z.nnn
+cat ~/.ssh/id_rsa.pub | ssh -pxxxx root@xxx.yyy.z.nnn "cat >> ~/.ssh/authorized_keys"
+
+

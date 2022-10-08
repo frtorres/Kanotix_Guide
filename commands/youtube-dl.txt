@@ -1,0 +1,76 @@
+Commands: youtube-dl 
+Kanotix_Guide
+Tue May 16 15:47:41 EST 2017
+=============================
+
+DOC: https://github.com/rg3/youtube-dl/blob/master/README.md#readme
+
+1. To install and update:
+
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+Try git repository: https://github.com/rg3/youtube-dl
+-----------------
+
+To install it right away for all UNIX users (Linux, OS X, etc.), type:
+
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+If you do not have curl, you can alternatively use a recent wget:
+
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+
+2. To extract audio only:
+
+# youtube-dl --extract-audio --audio-format mp3 https://www.youtube.com/watch?v=jwD4AEVBL6Q
+
+3.to have a cover art for the mp3 file,
+
+# youtube-dl -x --embed-thumbnail --audio-format mp3 https://www.youtube.com/watch?v=jwD4AEVBL6Q
+
+4. Download Multiple MP3 Tracks from YouTube Playlist
+
+# youtube-dl -x --audio-format mp3 --playlist-start 1 --playlist-end 5 https://www.youtube.com/playlist?list=PL9LUD5Kp855InMnKTaRy3LH3kTIYJyBzs
+
+Where:
+
+--playlist-start NUMBER – Playlist video to start at (default is 1)
+--playlist-end NUMBER – Playlist video to end at (default is last)
+
+Where "NUMBER" is the starting and ending point of the playlist. 
+
+The command above will download the first 5 songs from the given playlist:
+
+
+5. Uninstalled: apt-get remove --purge youtube-dl
+
+6. mv /usr/local/bin/youtube-dl /usr/bin/youtube-dl
+
+To check signature.
+--------------------
+
+$ gpg --verify youtube-dl.sig /usr/local/bin/youtube-dl
+gpg: Signature made Sun 18 Sep 2016 02:59:36 PM EST using RSA key ID 18A9236D
+gpg: Can't check signature: public key not found
+
+Retrieve public key by ID (see above)  prefix 0x
+
+gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x18A9236D
+gpg: requesting key 18A9236D from hkp server keyserver.ubuntu.com
+gpg: key 18A9236D: public key "Sergey M. <dstftw@gmail.com>" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+
+$ gpg --verify youtube-dl.sig /usr/local/bin/youtube-dl  gpg: Signature made Sun 18 Sep 2016 02:59:36 PM EST using RSA key ID 18A9236D
+gpg: Good signature from "Sergey M. <dstftw@gmail.com>"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: ED7F 5BF4 6B3B BED8 1C87  368E 2C39 3E0F 18A9 236D
+
+*** SAME fingerprint as stated on original site.
+

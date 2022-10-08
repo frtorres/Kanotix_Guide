@@ -1,0 +1,50 @@
+Commands: xclip cliboard command info.
+Kanotix_Guide
+Mon 20 May 2019 10:16:51 AM EST
+======================================
+
+see: https://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard
+
+
+1. First install a 16 kB program called xclip:
+
+sudo apt-get install xclip
+
+2. You can then pipe the output into xclip to be copied into the clipboard:
+
+cat file | xclip
+
+# copy to global clipboard.
+cat file | xclip -sel c
+
+3. To paste the text you just copied, you shall use:
+
+xclip -o
+
+#use with proper type of clipboard used before:
+xclip -sel c -o
+
+To simplify life, you can set up an alias in your .bashrc file as I did:
+
+alias "c=xclip"
+alias "v=xclip -o"
+
+To see how useful this is, imagine I want to open my current path in a new terminal window (there may be other ways of doing it like Ctrl+T on some systems, but this is just for illustration purposes):
+
+Terminal 1:
+pwd | c
+
+Terminal 2:
+cd `v`
+
+Notice the ` ` around v. This executes v as a command first and then substitutes it in-place for cd to use.
+
+Only copy the content to the X clipboard
+
+cat file | xclip
+
+If you want to paste somewhere else other than a X application, try this one:
+
+cat file | xclip -selection clipboard
+
+

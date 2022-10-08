@@ -1,0 +1,90 @@
+Howtos: disk usb U3
+Kanotix_Guide
+Mon Sep  1 00:10:06 EST 2014
+=============================
+
+swap of stick is still miserably lame
+have grub on the stick?
+not normal
+
+dd if = / dev / sdb count = 1 | strings
+
+stands grub?
+or as wise as you have to install grub to sda
+can try the same command also times with / dev / sda
+that goes only as root
+
+mbr of sda?
+well check it all the time
+
+strange when the boot is not, grub does not even come?
+
+2.- U3:
+
+is the stick with U3?
+ie simultaneously with dvd?
+sudo-i
+apt-get update
+apt-get install u3-tool
+u3-tool-D / dev / sdc
+
+let's see
+after
+! Paste
+then show just fdisk-l
+of the stick
+there too
+
+can also fdisk-ul
+for usb it with / sbin / fdisk-l
+as user
+get along?
+aha
+
+dd if = / dev / sdc count = 1 | strings
+
+stands grub
+naja 5th line may be too
+check other times dei
+you have grub on the wrong board I think times
+probiers with sdb to sda or with sudo
+I can later - now I'm using dvd on - catch up?
+yes, if you have provided to xp hd should also re-NEN "normal" slip on mbr
+either NEN syslinux mbr
+or fixmbr from xp cd and boot in recovery mode
+from cd so it would go with
+sudo apt-get update
+sudo apt-get install syslinux
+
+sudo dd if = / usr / lib / syslinux / mbr.bin of = / dev / sda
+if it is on sda
+checks stop times
+or have it installed in the root partition?
+then if it were to sdc2
+somewhere must be dug, find it out where
+it can normally only sdb, sda or sdc2 be
+well as many opportunities are still ned
+with sudo in front
+yes
+where isses now sdc2?
+then'd have to put only one boot flag
+without digging one can not install normal
+'ve checked sdc2?
+
+you're chroot ned in
+or did not properly applied, effectively doing just
+mount / dev/sdc2 / mnt
+and then
+
+for x in sys proc dev, Thu mount - bind / $ x / mnt / $ x; done
+chroot / mnt
+update-grub
+grub-install - recheck / dev / sdc
+exit
+
+for x in sys proc dev, Thu umount / mnt / $ x; done
+umount / mnt
+but you?
+missing something because when you dolphin?
+
+

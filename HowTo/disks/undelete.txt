@@ -1,0 +1,15 @@
+Howtos: disk undelete files
+Kanotix_Guide
+Tue May 23 20:37:20 EST 2017
+----------------------------
+
+Reference: http://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step
+
+For lost/deleted partitions or deleted files from a FAT or NTFS file system, try TestDisk first 
+
+http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step
+
+good for jpg.!!
+
+ 
+

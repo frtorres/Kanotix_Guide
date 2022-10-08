@@ -1,0 +1,38 @@
+Commands:  sed info. delete last line of a text file
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
+#source: http://stackoverflow.com/questions/4881930/bash-remove-the-last-line-from-a-file
+-------------------------------
+#source: https://linuxhint.com/sed_remove_whitespace/
+0.- whitespaces.
+Remove All Leading Whitespaces (Including Spaces and Tabs)
+$ cat testfile | sed 's/^[ \t]*//'
+Remove All Leading Whitespaces ONLY
+$ cat testfile | sed 's/^[ ]*//'
+
+
+
+1. delete last line of a text file.
+
+sed -i '$ d' foo.txt
+
+The -i option does not exist in older versions, so you have to use it as a filter with a temporary file:
+
+cp foo.txt foo.txt.tmp
+sed '$ d' foo.txt.tmp > foo.txt
+rm -f foo.txt.tmp
+
+Of course, in that case you could also use head -n -1 instead of sed.
+
+----------------------------------------------------------------------
+
+How can I extract a predetermined range of lines from a text file on Unix?
+
+source: https://stackoverflow.com/questions/83329/how-can-i-extract-a-predetermined-range-of-lines-from-a-text-file-on-unix
+
+to extract all lines from a file between say line 16224 and 16482 and then redirect them into a new file?
+
+sed -n '16224,16482p;16483q' filename > newfile
+

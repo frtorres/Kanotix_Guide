@@ -1,0 +1,6 @@
+Howtos: Picard Music organizer
+Kanotix_Guide
+Mon Feb 15 10:42:50 EST 2021
+=============================
+https://picard.musicbrainz.org/quick-start/
+https://forums.plex.tv/t/howto-music-organizing-with-musicbrainz-picard/218734/6

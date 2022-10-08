@@ -1,0 +1,29 @@
+HowTos: Google Chrome hacking tips
+Kanotix Guide
+Tue Aug 18 01:56:45 UTC 2015
+----------------------------------
+
+Google Chrome Settings location: ~/.config/google-chrome
+
+
+Source:http://lizzarde.blogspot.com/2011/03/google-chrome-session-manager-extension.html
+
+Extension: session manager,
+
+1. Goto Manage Extension option and click on developer mode. Then you can see the actual ID of the extension.
+
+2. ID corresponds to the beginning of name of the file under:
+
+/home/frtorres-i7/.config/google-chrome/Default/Local Storage
+
+For Session manager:
+
+ID: bbcnbpafconjjigibnhbfmmgdbbkcjfi
+
+So choose the file:
+
+chrome-extension_bbcnbpafconjjigibnhbfmmgdbbkcjfi_0.localstorage-journal
+
+3. Restore that file (an SQL lite file).
+
+

@@ -1,0 +1,4 @@
+Host/Kernel/OS  "Kanotix" running Linux 5.9.0-0.bpo.2-amd64 x86_64 [ Kanotix buster KDE KANOTIX-Build 20190315-05:46 ]
+CPU Info        6x Intel Core i5-8500 @ clocked at Min:1178.767Mhz Max:2314.171Mhz
+Videocard       NVIDIA GP107GL [Quadro P600]  X.Org 1.20.4  [ 1920x1080 ]
+Processes 254 | Uptime 0min | Memory 1685.2/15938.9MB | HDD Size 1960GB (87%used) | GLX Renderer Quadro P600/PCIe/SSE2 | GLX Version 4.6.0 NVIDIA 455.45.01 | Client Shell wrapper | Infobash v2.67.2

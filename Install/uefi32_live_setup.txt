@@ -1,0 +1,51 @@
+tput setaf 4;echo "$0:setting up usb/msd to uefi32 with a kanotix64 image."
+echo grub.cfg patched.
+echo only for nextbook
+echo -----------------------
+tput setaf 5
+
+echo "validating credentials..."
+if [ "$(id -u)" != "0" ]; then
+ tput setaf 1; echo "Error: Run the script as root!"; tput setaf 7
+ echo "Error: Run the script as root!" >&2
+ tput setaf 7
+ exit 1
+fi
+
+echo
+lsblk|grep mmcblk
+tput setaf 5;echo "make sure TARGET is ready to be mounted."
+tput setaf 7;echo "press a key to continue..."; read dummy
+
+mount /dev/mmcblk0p1 /mnt
+mount
+echo "ready to grub-install????"
+tput setaf 7;echo "press a key to continue..."
+echo
+ls /mnt/
+grub-install --root-directory=/mnt --force --target=i386-pc /dev/mmcblk0
+grub-install --root-directory=/mnt --target=i386-efi --removable
+grub-install --root-directory=/mnt --removable
+grub-install --root-directory=/mnt --target=x86_64-efi --removable
+echo
+tput setaf 7;echo "press a key to continue..."
+echo
+cd  
+wget -N http://kanotix.com/files/fix/.clt/boot.tar.gz
+cd /mnt/
+ls
+unp ~/boot.tar.gz
+cp boot/grub/grub.cfg boot/grub/grub.cfg.orig
+cp /home/frtorres-i7/Kanotix_Guide/Install/uefi_live_32bit_grub.cfg boot/grub/grub.cfg
+mkdir ISO
+cd ISO
+mkdir KANOTIX
+cd
+echo copying kanotix iso image
+cp -v /home/live/kanotix64-steelfire-nightly-KDE.iso /mnt/ISO/KANOTIX
+echo
+echo check with efibootmgr -v
+echo unmounting
+cd
+umount /mnt
+

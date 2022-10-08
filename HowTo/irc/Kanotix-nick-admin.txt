@@ -1,0 +1,43 @@
+# HowTos: Manage irc nicks
+# Kanotix Guide
+## Thu 18 Mar 2021 01:17:05 AM UTC
+
+References:
+
+http://www.geekshed.net/commands/nickserv/
+https://freenode.net/kb/answer/registration
+
+
+
+1. Register Nick
+2. Group nicks: like frtorres_ frtorres__ frtorres1 frtorres2
+                     or 64 / 32 at the end ;)
+3. irc commands
+
+   Information on account: `/ns info nickname`
+   Register nick         : `/ns register`
+   Login                 : `/ns identify`
+   New nick              : `/nick new-nick`
+   Group Nicks           : `/ns group`
+
+4. Group Management.
+
+Identify to irc
+
+`/msg Nickserve IDENTIFY frtorres <pwd>`
+
+Change your nick
+
+`/nick frtorres64`
+
+Associate frtorres64 to group
+
+`/msg Nickserve GROUP frtorres <pwd>`
+
+
+5. Change nick email
+`/msg NICKSERV SET EMAIL <new-email>`
+
+and follow instructions by email
+
+EOT

@@ -1,0 +1,40 @@
+Howtos: Admin systemd
+Kanotix_Guide
+Sat Oct  1 18:06:34 AST 2016
+=============================
+
+source: http://www.howtogeek.com/216454/how-to-manage-systemd-services-on-a-linux-system/
+        https://wiki.archlinux.org/index.php/Systemd
+
+1. To see service status:
+service --status-all
+
+2. To view how long each process took to start, run this command:
+
+systemd-analyze blame
+
+
+3. To view all available unit files on your system:
+
+systemctl list-unit-files
+
+4. To list all failed units:
+systemctl --failed
+
+5. To view a list of enabled and disabled services:
+
+systemctl list-unit-files --type=service
+
+6. Use the systemctl enable command to have systemd automatically start a service (or other type of unit) at bootup. The systemctl disable command disables a services and stops it from starting automatically with your computer.
+
+systemctl enable name.service
+
+systemctl disable name.service
+
+7. You can “mask” a service or other unit to prevent it from starting up at all. You’ll need to unmask it before it can start in the future:
+
+systemctl mask name.service
+
+systemctl unmask name.service
+
+

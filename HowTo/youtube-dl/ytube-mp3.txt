@@ -1,0 +1,12 @@
+#
+# for an item in a playlist 
+# youtube-dl --playlist-start=101 <URL>
+#
+
+echo
+echo youtube-ld on $1
+echo
+youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 $1
+
+
+

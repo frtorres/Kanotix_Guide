@@ -1,0 +1,23 @@
+Commands: find 
+Kanotix_Guide
+Fri Oct 10 12:44:04 EST 2014
+=============================
+
+Look for a string in all files on the filesystem
+
+This command worked. Avoid memory exhasuted.
+
+from: http://unix.stackexchange.com/questions/90036/grep-memory-exhausted
+
+Instead of grepping all files at once, do one file at a time. Example:
+
+find /Documents -type f -exec grep -H Milledgeville "{}" \;
+
+
+
+2. grep option:
+grep --exclude-dir={.cache,.mozilla,dist} -rnw '/home/xxx/' -e 'ffmpeg'
+  
+see:https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux
+
+ 

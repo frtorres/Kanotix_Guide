@@ -1,0 +1,9 @@
+Commands: debian apt-cache #command info.
+_Kanotix_Guide
+Tue 14 May 2019 01:35:50 PM EST
+=============================
+
+1. Version of a package.
+apt-cache policy luckybackup
+
+

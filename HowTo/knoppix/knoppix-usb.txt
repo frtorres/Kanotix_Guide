@@ -1,0 +1,55 @@
+Howtos: knoppix install knoppix on a usb
+Kanotix Guide
+Sun Aug 31 23:03:14 EST 2014
+--------------------------------
+source: http://superuser.com/questions/649253/create-a-linux-knoppix-bootable-usb-with-multiple-partitions-with-linux-or-m
+
+
+Step 0. (The obvious one) Download .iso image you want to copy in your flash drive. I'm using KNOPPIX_V7.2.0CD-2013-06-16-EN.iso.
+
+Step 1. Install syslinux:
+
+$ sudo apt-get install syslinux
+
+Step 2. (Clean your USB flash drive) Plug the USB flash drive to your computer. To find out how does the system "recognizes" it, type the following command:
+
+$ fdisk -l
+
+...
+Disk /dev/sdb: 7803 MB
+241 heads, 62 sectors/track 182401 cylinders
+...
+
+===> take note of the heads and sectors/track values (in my case, 241 heads and 62 sectors / track).
+
+Now, shred the flashdrive:
+
+$ shred -z /dev/sdb
+
+Step 3. (Prepare the .iso file) Navigate to the folder where the Knoppix .iso image is, and convert it to "hybrid mode". Use the values of heads and cylinders/track you got in step 1 (if you don't remember them, use fdisk -l /dev/sdb):
+
+$ isohybrid -o 1 -h 241 -s 62 -e 1 KNOPPIX_V7.2.0CD-2013-06-16-EN.iso
+
+Step 4. Write the image to your USB flash drive:
+
+$ cat KNOPPIX_V7.2.0CD-2013-06-16-EN.iso > /dev/sdb
+
+After this command executes, check the USB partition table:
+
+$ fdisk -l /dev/sdb
+
+Disk /dev/sdb: 7803 MB
+241 heads, 62 sectors/track 182401 cylinders
+...
+Device     Boot  Start End   Blocks Id System
+/dev/sdb1    *     1    97  724686+ 17 HPFS/NTFS hidden
+
+This tells you that the /dev/sdb1 partition is a bootable HPFS/NTFS partition. Here is where your Knoppix boot drive is.
+
+Step 5. (Make the rest of your USB flash drive available for use). 
+
+$ fdisk /dev/sdb
+
+add a partition W95 FAT32
+
+        $ mkfs.vfat /dev/sdb2

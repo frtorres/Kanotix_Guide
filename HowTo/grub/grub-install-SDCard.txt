@@ -1,0 +1,21 @@
+Howtos: Installing grub on a SD card to boot linux from HD.
+Kanotix Guide
+Fri Aug 22 20:54:31 EST 2014
+=============================
+
+There is no command prepared to update grub.cfg on a 2nd device
+
+assuming SD card detected on /dev/sdb1
+
+ fdisk -l
+ mkdir -p /media/sdb1
+ mount /dev/sdb1 /media/sdb1
+ /usr/sbin/grub-install --recheck --no-floppy --root-directory=/media/sdb1 /dev/sdb
+ reboot
+
+then from HD install:
+
+ update-grub
+ /boot/grub/grub.cfg /media/sdb1
+
+

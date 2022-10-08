@@ -1,0 +1,10 @@
+Commands: battery status related
+Kanotix_Guide
+Wed Oct 15 23:13:18 EST 2014
+================================
+
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+acpi -ib
+
+
+

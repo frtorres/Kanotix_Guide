@@ -1,0 +1,27 @@
+Howtos: vlc addons
+Kanotix_Guide
+Sun Apr 23 22:48:55 EST 2017
+===============================
+
+1. Tested tunein script-
+
+Copy: tunein.lua or download tunein from vlc repo tools->plugins/extensions->find more... 
+
+in ~/.local/share/vlc/lua/sd/ 
+
+create dirs if needed. In Windows the directory is %APPDATA%\vlc\lua\sd
+Modify the script in the username and password variables
+
+Copy the playlist/radiotime.lua and playlist/streamtheworld.lua to 
+
+
+share/lua/playlist directory, 
+
+
+
+with this playlist you can browse the Podcast, news or sports directory since VLC
+
+
+2. Repo: 
+https://github.com/diegofn/TuneIn-Radio-VLC
+

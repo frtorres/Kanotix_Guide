@@ -1,0 +1,31 @@
+Howtos: streamlink
+Sun Sep 19 11:24:18 EST 2021
+=============================
+
+Reference: https://opencollective.com/streamlink
+https://streamlink.github.io/
+https://github.com/streamlink/streamlink
+https://www.youtube.com/watch?v=QtzB6ZqpfLc&t=108s
+
+#Interesting to study
+#Carlos gomes  streamlinks as a pipe to tvheadend
+#https://cgomesu.com/blog/Tvhlink/
+#https://github.com/cgomesu/tvhlink
+#curated m3u lists
+#https://github.com/cgomesu/tvhlink/tree/master/m3u
+
+1. HowTo install.
+
+pip3 install --user --upgrade streamlink
+
+--user install on .local/bin
+
+Building wheels for collected packages: iso-639
+  Running setup.py bdist_wheel for iso-639 ... done
+  Stored in directory: /home/omvault/.cache/pip/wheels/52/60/07/73aed7d23ae9b5729970632922ed5e45b535bcd4b8df77ebe9
+Successfully built iso-639
+catt 0.11.3 has requirement PyChromecast~=6.0, but you'll have pychromecast 7.1.1 which is incompatible.
+
+
+
+

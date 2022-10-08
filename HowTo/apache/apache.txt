@@ -1,0 +1,14 @@
+Howtos: apache
+Kanotix_Guide
+Fri Aug 22 17:36:02 EST 2014
+=============================
+
+php needed? 
+
+apt-get --yes install libapache2-mod-php5
+/etc/init.d/apache2 restart
+
+that would be with php5 support
+
+in /var/www even php would work then if you like, google how to enable ssl
+with self signed cert it is not that hard. https would work then

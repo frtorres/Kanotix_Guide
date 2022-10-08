@@ -1,0 +1,10 @@
+Howtos: grub booting a kanotix iso live image from disk.
+Kanotix Guide
+Fri Aug 22 20:45:07 EST 2014
+=============================
+
+see: http://kanotix.com/files/fix/grub2/config/666_kanotix_hellfire_iso
+
+also you dont write it in grub.cfg but in /boot/grub/custom.cfg or you add a file in /etc/grub.d which is executeable 
+
+

@@ -1,0 +1,34 @@
+Howtos: browsers setting up chrome
+Kanotix_Guide
+Fri Oct 10 12:58:50 EST 2014
+=============================
+
+1. !chrome: 
+
+"chrome" could be 
+(#1) https://dl.google.com/dl/linux/direct/google-chrome-stable_current_i386.deb, or 
+(#2) https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb, or 
+(#3) http://www.google.com/chrome/intl/en/w00t.html, or 
+(#4) hint: uninstall beta before: dpkg --purge google-chrome-beta, or 
+(#6) try: google-chrome --ignore-gpu-blacklist, or 
+(#7) http://www.unrealengine.com/flash/
+
+
+2. you can modify the /usr/bin/google-chrome startup script in the last line to add the ignore* option
+
+chrome://gpu/
+should be fully green then
+
+http://media.tojicode.com/q3bsp/
+this works then as well also iceweasel can run it but chrome is twice as fast here
+
+At the end of the startup script just add the line --ignore-gpu-blacklist line?
+R/
+exec -a "$0" "$HERE/chrome" "$@" --ignore-gpu-blacklist
+
+like that yes. old installs with intel only may need !s2tc
+
+"s2tc" could be apt-get --yes install libtxc-dxtn-s2tc0;test `uname -m`! = x86_64! && dpkg --add-architecture i386 && apt-get --yes install libtxc-dxtn-s2tc0:i386
+
+to let that unreal engine work with chrome
+

@@ -1,0 +1,35 @@
+HowTos: Audit Linux System
+Kanotix_Guide
+Tue Aug 18 01:58:01 UTC 2015
+----------------------------
+
+To secure debian
+source: https://www.debian.org/doc/manuals/securing-debian-howto/ch4.en.html#s-snapshot
+https://www.debian.org/doc/manuals/debian-handbook/sect.supervision.en.html
+
+
+debsums --generate=missing,keep
+
+checking against md5sums in /var/lib/dpkg/info/
+
+Verify installed packages and report only errors.
+sudo debsums -s
+
+Verify every installed package and report only changed files.
+sudo debsums -c
+
+
+
+
+Notes:
+
+You can use
+
+dpkg -V <package>
+
+I test it and it works also on configuraton files.
+
+
+
+
+

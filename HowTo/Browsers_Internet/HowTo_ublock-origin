@@ -1,0 +1,14 @@
+HowTos: Firefox ublock origin
+Kanotix Guide
+Tue 07 May 2019 08:43:49 AM -05
+----------------------------------
+
+site: https://github.com/gorhill/uBlock/
+
+For beta version, Click on ublock0.firefox.signed.xpi (latest release desirable) at
+https://github.com/gorhill/uBlock/releases
+
+
+Debian:
+apt-get install xul-ext-ublock-origin
+

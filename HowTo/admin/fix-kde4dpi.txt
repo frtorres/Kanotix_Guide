@@ -1,0 +1,13 @@
+Howtos: fix dpi-kdm for kd4 coming from kde3
+Kanotix_Guide
+Fri Aug 22 19:38:02 EST 2014
+=============================
+
+
+1. To use fix-dpi-kdm
+
+sed -i s/kde3/kde4/g $(which fix-dpi-kdm)
+ 
+
+
+

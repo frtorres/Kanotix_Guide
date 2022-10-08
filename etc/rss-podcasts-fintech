@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+<title>rss podcasts Francisco Torres</title> 
+<link>https://github.com/frtorres/</link> 
+<description>Favorites Fintech Rss feeds</description> 
+<language>en-us</language> 
+<copyright>Copyright 2017, frtorres.</copyright> 
+<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+<image>
+	<title>favorites finthech podcasts</title> 
+	<url>http://pngimg.com/uploads/audio_speakers/audio_speakers_PNG11124.png</url> 
+	<link>https://github.com/frtorres/</link> 
+	<width>100</width> 
+	<height>80</height> 
+	<description>frtorres Fintech favorite podcasts</description> 
+</image>
+<item>
+	<title>American Banker</title> 
+	<link>rss://americanbanker.libsyn.com/rss/</link> 
+	<description>audio cast for american bankers</description> 
+	<media:thumbnail url="http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg"/>
+	<fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+	<title>Breaking Banks</title>
+	<link>rss://breakingbanks.com/feed/</link>
+	<description>famous audio fintech cast.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16089.png"/>
+	<fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+	<title>Fintech Insider</title>
+	<link>rss://11fs.co.uk/podcasts/feed/fintechinsiderpodcasts/</link>
+	<description>From United Kingdom fintecch status.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16092.png"/>
+	<fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Exchanges at Goldman Sachs</title>
+        <link>rss://www.goldmansachs.com/our-thinking/podcasts/</link>
+        <description>Goldman Saachs state of podcast industry</description>
+        <media:thumbnail url="https://r.hswstatic.com/w_907/gif/rss-stuff-crop.jpg"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Marketplace Podcast</title>
+        <link>rss://www.marketplace.org/podcasts/</link>
+        <description>Marketplace for Fintech Industry</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16092.png"/>
+        <fanart>https://r.hswstatic.com/w_907/gif/rss-stuff-crop.jpg</fanart>
+</item>
+<item>
+        <title>recode</title>
+        <link>rss://www.recode.net/podcasts/</link>
+        <description>recode podcast about fintech.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16092.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>BBC Podcasts Weekly</title>
+        <link>rss://podcasts.files.bbci.co.uk/p05ltqxn.rss</link>
+        <description>best audio podcasts from BBC</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16092.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Tech Tent BBC Podcast</title>
+        <link>rss://podcasts.files.bbci.co.uk/p01plr2p.rss</link>
+        <description>famous tech podcast from BBC.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16102.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>chip with everything the guardiian</title>
+        <link>rss://www.theguardian.com/technology/series/chips-with-everything/podcast.xml</link>
+        <description>tech podcast from the guardian</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_cassette/audio_cassette_PNG16098.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>This week in Tech Leo Laporte</title>
+        <link>rss://feeds.twit.tv/twit.xml</link>
+        <description>Leo Laporte presents a week in tech</description>
+        <media:thumbnail url="https://r.hswstatic.com/w_907/gif/rss-stuff-crop.jpg"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Everything from HowStuffWorks </title>
+        <link>rss://syndication.howstuffworks.com/rss/HSW</link>
+        <description>All of the newest content on HowStuffWorks</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_speakers/audio_speakers_PNG11135.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Stuff You Should Read</title>
+        <link>rss://syndication.howstuffworks.com/rss/HSW?type[]=article&type[]=list</link>
+        <description>The latest articles on HowStuffWorks</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_speakers/audio_speakers_PNG11142.png"/>
+        <fanart>https://r.hswstatic.com/w_907/gif/rss-stuff-crop.jpg</fanart>
+</item>
+
+<item>
+        <title>The latest videos from HowStuffWorks</title>
+        <link>rss://feeds.twit.tv/code_video_hd.xml</link>
+        <description>Stuff You Should Watch</description>
+        <media:thumbnail url="https://r.hswstatic.com/w_907/gif/rss-stuff-crop.jpg"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Marketplace all in one</title>
+        <link>http://feeds.americanpublicmedia.org/marketplaceallinone</link>
+        <description>world finance videos</description>
+        <media:thumbnail url="http://pngimg.com/uploads/audio_speakers/audio_speakers_PNG11115.png"/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>GSMA Mobile for development</title>
+        <link>rss://https://feeds.feedburner.com/GSMAMobileforDevelopmentBlog</link>
+        <description>Podcast from gsma.</description>
+        <media:thumbnail url=""/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>GSMA MobileMoney</title>
+        <link>rss://feeds.feedburner.com/GSMAMobileMoneyBlog</link>
+        <description>Podcast from GSMA for mobile money.</description>
+        <media:thumbnail url=""/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+<item>
+        <title>Around the Coin Podcast</title>
+        <link>rss://aroundthecoin.com/feed/</link>
+        <description>award winning fintech podcasst.</description>
+        <media:thumbnail url=""/>
+        <fanart>http://www.verticalresponse.com/blog/wp-content/uploads/2013/07/164901096.jpg</fanart>
+</item>
+</channel>
+</rss>

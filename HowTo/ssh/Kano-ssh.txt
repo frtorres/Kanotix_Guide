@@ -1,0 +1,79 @@
+Howtos: ssh general
+Kanotix_Guide
+Mon Sep  1 00:10:06 EST 2014
+=============================
+
+1.- Recommendations:
+ssh for low speed
+vnc for highspeed
+
+2.- for a router you need port forward 22 tcp to the linux box in the router
+
+3.- the other just /etc/init.d/ssh restart
+
+4. and you connect using: ssh root@ip for just console use you can run screen and the other ones runs then: screen -x
+
+to watch you
+but you cant run X apps
+basically you could using ssh -X but thats terribly slow
+and vnc? is it used to run X applications?
+that works really bad over slow connections
+i use that only when the speed is reasonable fast
+to show where to click ;)
+sometime i just use it to configure the router and acess then via ssh
+ssh is much faster as not graphical
+with less than 512 kbit upload you can basically forget it
+
+do you have got 2 pcs at home?
+!vnc
+
+"vnc" could be (#1) apt-get install xtightvncviewer, or (#2) vncviewer -encodings corre -listen, or (#3) apt-get install x11vnc, or (#4) x11vnc -connect helper-ip, or (#5) forward 5500 TCP needed for helper (on default port), or (#6) http://www.heise.de/netze/tools/fernwartung, or (#7) for dialup-connections use: vncviewer -bgr233 -encodings corre -listen
+
+is the other way
+on your pc, the helper pc, you do first
+apt-get remove --purge vnc-java
+I have 3.
+
+then you install what is mentioned at point 1
+run as USER then
+vncviewer -bgr233 -listen
+the -bgr233 converts truecolor to 8 bit, makes it faster
+
+with lan you may not need it
+on the other pc you run
+x11vnc -connect your-ip
+when you want do do that from outside you need a tcp 5500 forward to your helper ip
+with slow connections this is really unstable
+and even on fast ones you have to restart sometimes
+but that way you can use listen mode
+that means the other one does not need to configure the router
+
+but that requires portforwarding on the server side
+
+<frtorres> ok I will give a try for your feedback later
+btw. vnc is not encrypted
+not ideal to transfer passwords
+in most cases i let the local user type em
+irc is not enc too, so usally best would be using a temp account for ssh
+and change pw later again
+but basically noone does ;)
+best is to disable ssh and only start on purpose
+also you should configure dyndns in your router
+then you can do: x11vnc -connect your-dyndns-name
+
+or put that into a script, maybe with a killall -9 x11vnc; x11vnc -connect whateve
+r
+listen mode goes thru any firewall
+at least on the side of the user who needs help
+
+on your side you need of course port 5500 tcp
+basically you could change that port too, but some apps will calc the used port relatively to 5500, thats a bit confusing
+
+as USER - do not run as root
+do not install packages with flash or swf in the name, if you did: remove em!
+because that causes conflicts with the plugin in your home!
+ do refer to apt-get install *-fash?
+flash 9 works fine with that combination
+perfect kano. Thanks a lot for your help
+ good night
+<frtorres> bye

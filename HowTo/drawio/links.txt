@@ -1,0 +1,10 @@
+https://snapcraft.io/install/drawio/arch
+https://snapcraft.io/install/drawio/debian
+#
+#parent site to github deb program different from snap approach
+#
+https://snapcraft.io/drawio
+
+#
+https://aur.archlinux.org/packages/drawio-desktop/
+

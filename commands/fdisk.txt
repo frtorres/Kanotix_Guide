@@ -1,0 +1,7 @@
+fdisk and related
+Sun Jun 20 14:01:45 EST 2021
+------------------------------
+[14:34:21] <Kano> you should not use cfdisk
+[14:34:28] <Kano> it does not aligin to 1mb
+[14:35:52] <Kano> fdisk -ul
+[14:36:14] <Kano> shows everything you need

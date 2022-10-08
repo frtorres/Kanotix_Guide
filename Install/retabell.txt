@@ -1,0 +1,7 @@
+Install: retabell repo for kernels
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=========================================
+
+
+http://retabell.adhara.uberspace.de/ws/

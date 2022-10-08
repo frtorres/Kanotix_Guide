@@ -1,0 +1,23 @@
+Howtos: dlna
+Kanotix_Guide
+Thu Jan 11 20:05:13 EST 2018
+-----------------------------
+
+references: 
+----------
+
+https://realmike.org/blog/2011/02/09/live-desktop-streaming-via-dlna-on-gnulinux/#usage
+
+http://jorgenmodin.net/index_html/archive/2009/12/26/list-of-open-source-dlnaupnp-av-software-devices
+
+Gupnp:
+------
+Gupnp is a project that provides components for upnp applications.
+
+commands:
+gupnp-av-cp
+
+see: https://stackoverflow.com/questions/18363833/how-can-i-list-upnp-server-renderer-in-command-line-console-mode-on-linux
+
+https://github.com/matt1/CLIMediaRenderer
+

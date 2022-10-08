@@ -1,0 +1,13 @@
+Howtos: flexget to download
+Kanotix_Guide
+Fri Jan 30 15:03:46 EST 2015
+=============================
+
+0. Install:
+1. Create ~/.flexget
+2. edit and install ~/.config.yml
+
+flexget check                       ;parse and check config file.
+flexget --test execute -v           ;test config file results
+
+

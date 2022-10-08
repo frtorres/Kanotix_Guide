@@ -1,0 +1,56 @@
+Howtos: mate install
+Kanotix_Guide
+Sat Jul  2 09:31:03 AST 2016
+=============================
+
+Take into account debian supported mate version is 0.8
+
+1. install:
+
+  apt-get install mate-desktop-environment
+  apt-get install mate-desktop-environment-extras
+  apt-get install mate-themes
+  apt-get install mate-desktop-environment-core
+  apt-get install mate-applets
+  apt-get install mate-gnome-main-menu-applet
+  apt-get install fortune
+  apt-get install fortunes
+  apt-get install mate-panel
+  apt-get install mate-utils
+
+2. local configuration can be done through:   
+apt-get install dconf-tools
+
+see:
+
+2. then install the “linuxmint-keyring” package.
+
+apt-get install cinnamon muffin
+
+3. Personalization and Customizations:
+--------------------------------------
+see: http://hacklog.mu/customize-mate-menu/
+icons at: https://github.com/mate-desktop/mate-icon-theme-faenza
+
+
+cd /usr/share/icons/matefaenza/places/24
+$ sudo mv start-here.png start-here-backup.png
+$ sudo cp opensuse-logo.png start-here.png
+
+
+9. Extras.
+
+I installed a moving fih on a panel. fortune is needed.
+
+Install both packages. fortunes install the cookie messages.
+
+  apt-get install fortune
+  apt-get install fortunes
+
+Edited. July 2,2015.
+
+
+
+
+
+

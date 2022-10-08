@@ -1,0 +1,79 @@
+Howtos: grub Recovering grub for an EFI install.
+Kanotix Guide
+Mon Jul 11 11:22:25 AST 2016
+=============================
+
+Assuming kanotix installed on sda. 
+
+Boot live install first and:
+
+su
+mount /dev/sda1 /mnt
+mount --bind /dev /mnt/dev
+chroot /mnt
+#
+# This is the additional step mount /boot/efi in chroot before grub-install 
+#
+mount /dev/sdX  /boot/efi
+grub-install /dev/sda
+
+now reboot
+# see additional steps below to mount/umount aditional partitions
+
+-------------------------------------------------------------
+References:
+<help-me> Kano: "grub" could be (#1) http://kanotix.com/index.php?module=pnWikka&tag=Grub2Reparieren, or (#2)http://kanotix.com/index.php?module=pnWikka&tag=Grub2recovery
+[15:26] <Kano> mount /boot/efi
+[15:27] <Kano> in chroot before grub-install
+
+
+See: https://help.ubuntu.com/community/Grub2/Installing
+** Not tested this advice:
+cant just run grub-install from the live session and point to --boot-directory=
+see via the LiveCD terminal
+
+
+------------------------------------------------------------------------------------------------
+
+
+Fri Oct 14 19:50:46 AST 2016
+Recovery and install acritox install on EFI. SeaGate External 1TB Disk
+
+EFI did not install>
+
+sources:
+https://wiki.debian.org/GrubEFIReinstall
+http://superuser.com/questions/376470/how-to-reinstall-grub2-efi
+
+STEPS:
+as root:
+
+/dev/sdXy is partition with / mounted.
+/dev/sdZn is partition for EFI boot.
+
+mount /dev/sdXy /mnt
+mount /dev/sdZn /mnt/boot/efi #
+for i in /dev /dev/pts /proc /sys; do sudo mount -B $i /mnt/$i; done
+
+cp /etc/resolv.conf /mnt/etc/ #makes the network available after chrooting
+modprobe efivars # make sure this is loaded
+sudo chroot /mnt
+
+apt-get install --reinstall grub-efi  ; to reinstall efi grub
+grub-install /dev/sdX ; disk /dev/sdc, for example to install efi grub
+update-grub; Re create a grub config file based on your disk partitioning schema
+ 
+--> finally check that /boot/efi/EFI  has a bootloader.
+
+efibootmgr --verbose 
+
+To END:
+
+;type Ctrl+D to exit chroot, unmount everything and reboot:
+
+for i in /sys /proc /dev/pts /dev; do sudo umount /mnt/$i; done
+
+umount /mnt/boot/efi #please do this. Corrupted efi partitions are not nice
+umount /mnt
+reboot
+

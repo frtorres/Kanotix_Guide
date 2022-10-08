@@ -1,0 +1,32 @@
+Howtos: dropbox trouble on jessie
+Kanotix Guide
+Wed Nov  5 13:55:16 EST 2014
+---------------------------------
+
+This is what happens:
+
+cd path to/dropbox$ dropbox start -i
+Starting Dropbox...Attempt to unlock mutex that was not locked
+Aborted
+
+seems ther is a bug for jessie.
+
+1. Installing from source.
+
+https://linux.dropbox.com/packages/
+https://linux.dropbox.com/packages/dropbox.py
+tar xjf ./nautilus-dropbox-1.6.1.tar.bz2
+cd ./nautilus-dropbox-1.6.1; ./configure; make; make install;
+
+
+2. Going back to install binaries.....
+-
+64-bit:
+
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+
+Next, run the Dropbox daemon from the newly created .dropbox-dist folder.
+
+~/.dropbox-dist/dropboxd
+
+

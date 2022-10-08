@@ -1,0 +1,44 @@
+Howtos: networking - bridge-repeater
+Kanotix_Guide
+Mon Apr 30 21:50:26 EST 2018
+-----------------------------------
+
+Repeater Bridge allows wireless AND wired clients to connect to a the Repeater Bridge router, and through that device wirelessly to a primary router.
+
+References:
+----------
+main:  https://www.dd-wrt.com/wiki/index.php/Repeater_Bridge
+
+good videos:
+-----------
+	https://youtu.be/oJaYE9Yk7gc
+	https://www.youtube.com/watch?v=oJaYE9Yk7gc&t=4s
+
+	https://www.youtube.com/watch?v=kR9tmWS-wog
+	https://youtu.be/kR9tmWS-wog
+
+Steps:
+
+0. RESET 30-30-30 router.
+1. First part up to define a virtual interfase... is ok. dhcp offers for clients coneected by cable!
+2. After was defined the virtual interfase no DHCP to get ip address.
+seems an error on some dd-wrt buidls
+3. Check in advance routing is set to router. It wass needed in order to see from router, the new settins 
+
+https://www.dd-wrt.com/wiki/index.php/Repeater
+https://www.youtube.com/watch?v=KE1mr-TXUPo
+
+
+
+
+An alternative as a repeater:
+https://superuser.com/questions/614419/running-a-dhcp-server-on-dd-wrt-in-repeater-bridge-mode
+
+
+
+
+
+
+
+
+

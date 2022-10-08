@@ -1,0 +1,19 @@
+Howtos: pxe pxe-server
+Kanotix Guide
+Fri Aug 22 18:19:29 EST 2014
+=============================
+
+1. If you have got more than 1 pc available, you can configure a server with static ip.
+
+2. Disable dhcp in the router
+
+3. Change values for ip/network settings in
+
+http://kanotix.com/files/fix/ipxe/simple-pxe-server-single.sh
+
+and by default you get a boot menu that allows you to boot memtest (after 10s)
+but you can also set the servername then you can boot just like you did with the customized ipxe variant. You just dont need that.
+
+It has got already a sample option for sanboot (over iscsi) but i did not write a howto how to use that yet.
+
+

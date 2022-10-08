@@ -1,0 +1,10 @@
+Howtos: Favorite Linux Commands.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+If kdesu not running: 
+
+1. as user:
+
+kwriteconfig --file kdesurc --group super-user-command --key super-user-command su

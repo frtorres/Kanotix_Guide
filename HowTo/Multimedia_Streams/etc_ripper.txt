@@ -1,0 +1,33 @@
+Howtos: etc_ripper Multimedia Streams Handling
+Kanotix_Guide
+Sat Jan  9 18:35:22 EST 202
+ =============================
+
+Reference: https://unix.stackexchange.com/questions/85812/how-i-can-record-stream-radio-in-linux
+
+1. using curl
+curl --output ~/Downloads/Radio/CostaDelMar.mp3 http://sc-costadelmar.1.fm:10156
+
+Useful options are --max-time <seconds> and --max-filesize <bytes>.
+
+2. using wget
+
+wget -O stream.mp3 "http://stream-90.shoutcast.com:80"
+
+3. using ffmpeg
+
+ffmpeg -i "http://audio.wbhm.org:8000/live.mp3" out.mp3
+
+To record a particular program you can do the following:
+
+Set a cron job. For example:
+20 11 * * 0 /path/sermon-recording.sh
+
+Script:
+
+#!/bin/bash
+today=$(date +%Y-%m-%d)
+timeout 65m ffmpeg -i http://briarwood.primcast.com:5182 Sermon_${today}.wav > /dev/null 2>&1
+
+I use the timeout command to end recording after a certain amount of time. I redirect the output to /dev/null to avoid getting a system mail message with the output.
+

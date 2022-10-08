@@ -1,0 +1,43 @@
+Howtos: ranger basics
+Kanotix_Guide
+Mon Aug 17 20:19:14 EST 2015
+-----------------------------
+
+references: 
+
+https://github.com/hut/ranger/wiki/Official-user-guide
+http://ranger.nongnu.org/
+http://bloerg.net/2012/10/17/ranger-file-manager.html
+https://wiki.archlinux.org/index.php/Ranger
+
+1.- Generates a local configuration file:
+
+ranger --copy-config=al
+
+This generates under /.config/ranger a set of config files.
+
+
+2.- Fore image preview:
+apt-get install w3m-img
+set preview_images true in  ~/.config/ranger/rc.conf
+
+4.- Customize xterm
+ 
+http://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
+set fontsize=22
+
+See attached file
+
+
+NOTES:
+------
+- the following entry will open a tex file with kile: 
+
+edit ~/.config/ranger/rifle.conf
+
+ext tex = kile "$@"
+
+
+
+
+

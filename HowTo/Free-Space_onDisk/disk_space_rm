@@ -1,0 +1,203 @@
+Howtos: disk - erasing and wiping data.
+Kanotix_Guide
+Tue Oct  7 19:03:34 EST 2014
+=============================
+
+Options:
+
+1.   du can be depth-restricted: du -d 5.   Will only recurse to depth 5.
+
+2.   du -h <dir> | grep '[0-9]G'
+
+3.   quota -v.     to find users that are hogging the disk.
+
+It can also scan remote folders via SSH, FTP, SMB and WebDAV. – Colonel Sponsz Dec 2 '08 at 16:34
+feedback
+
+Finding the biggest files on the filesystem is always going to take a long time. By definition you have to traverse the whole filesystem looking for big files. The only solution is probably to run a cron job on all your systems to have the file ready ahead of time.
+
+I'd like to have a system that builds a tree of file sizes at the same time as building the database for the locate command, as this also has to traverse the whole filesystem once per night.
+
+One other thing, the x option of du is useful to keep du from following mount points into other filesystems. I.e:
+
+ du -x [path]
+
+I always use du -sm * | sort -n, which gives you a sorted list of how much the subdirectories of the current working directory use up, in mebibytes.
+
+find / -size +10000k
+
+Try feeding the output of du into a simple awk script that checks to see if the size of the directory is larger than some threshold, if so it prints it. You don't have to wait for the entire tree to be traversed before you start getting info.
+
+For example, the following displays any directories that consume more than about 500 MB ( assuming du units are in KB)
+
+du -x / | awk '{ if ($1 > 500000) { print $0} }'
+
+To make the above a little more reusable, you can define a function in your .bashrc, ( or you could make it into a standalone script).
+
+dubig() {  
+   [ -z "$1" ] && echo "usage: dubig sizethreshKB [duargs]" && return  
+   du $2 | awk '{ if ($1 > '$1') { print $0} }'  
+}
+
+The following example checks my home directory for any directories that have more than 200 MB, without going onto another file-system (e.g. symlink to a different nfs mount)
+
+dubig 200e3 "$HOME -x"
+
+
+I use
+
+du -ch --max-depth=2 .
+
+and I change the max-depth to suit my needs. The "c" option prints totals for the folders and the "h" option prints the sizes in K, M, or G as appropriate. As others have said, it still scans all the directories, but it limits the output in a way that I find easier to find the large directories.
+	
+I'm going to second xdiskusage. But I'm going to add in the note that it is actually a du frontend and can read the du output from a file. So you can run du -ax /home > ~/home-du on your server, scp the file back, and then analyze it graphically. Or pipe it through ssh.
+
+Try ncdu, an excellent command-line disk usage analyser:
+
+http://dev.yorhel.nl/ncdu
+
+I've had success tracking down the worst offender(s) piping the du output in human readable form to egrep and matching to a regular expression.
+
+For example:
+
+du -h | egrep "[0-9]+G.*|[5-9][0-9][0-9]M.*"
+
+which should give you back everything 500 megs or higher.
+link|improve this answer
+	
+I use this for the top 25 worst offenders below the current directory
+
+# -S to not include subdir size, sorted and limited to top 25
+du -S . | sort -nr | head -25
+
+At first I check the size of directories, like so:
+
+du -sh /var/cache/*/
+
+If you want speed, you can enable quotas on the filesystems you want to monitor (you need not set quotas for any user), and use a script that uses the quota command to list the disk space being used by each user. For instance:
+
+quota -v $user | grep $filesystem | awk '{ print $2 }'
+
+would give you the disk usage in blocks for the particular user on the particular filesystem. You should be able to check usages in a matter of seconds this way.
+
+To enable quotas you will need to add usrquota to the filesystem options in your /etc/fstab file and then probably reboot so that quotacheck can be run on a idle filesystem before quotaon is called.
+
+I can't take credit for this, but I found it just yesterday:
+
+$ find <path> -size +10000k -print0 | xargs -0 ls -l
+
+Here is a tiny app that uses deep sampling to find tumors in any disk or directory. It walks the directory tree twice, once to measure it, and the second time to print out the paths to 20 "random" bytes under the directory.
+
+void walk(string sDir, int iPass, int64& n, int64& n1, int64 step){
+    foreach(string sSubDir in sDir){
+        walk(sDir + "/" + sSubDir, iPass, n, n1, step);
+    }
+    foreach(string sFile in sDir){
+        string sPath = sDir + "/" + sFile;
+        int64 len = File.Size(sPath);
+        if (iPass == 2){
+            while(n1 <= n+len){
+               print sPath;
+               n1 += step;
+            }
+        }
+        n += len;
+    }
+}
+
+void dscan(){
+    int64 n = 0, n1 = 0, step = 0;
+    // pass 1, measure
+    walk(".", 1, n, n1);
+    print n;
+    // pass 2, print
+    step = n/20; n1 = step/2; n = 0;
+    walk(".", 2, n, n1);
+    print n;
+}
+
+The output looks like this for my Program Files directory:
+
+ 7,908,634,694
+.\ArcSoft\PhotoStudio 2000\Samples\3.jpg
+.\Common Files\Java\Update\Base Images\j2re1.4.2-b28\core1.zip
+.\Common Files\Wise Installation Wizard\WISDED53B0BB67C4244AE6AD6FD3C28D1EF_7_0_2_7.MSI
+.\Insightful\splus62\java\jre\lib\jaws.jar
+.\Intel\Compiler\Fortran\9.1\em64t\bin\tselect.exe
+.\Intel\Download\IntelFortranProCompiler91\Compiler\Itanium\Data1.cab
+.\Intel\MKL\8.0.1\em64t\bin\mkl_lapack32.dll
+.\Java\jre1.6.0\bin\client\classes.jsa
+.\Microsoft SQL Server\90\Setup Bootstrap\sqlsval.dll
+.\Microsoft Visual Studio\DF98\DOC\TAPI.CHM
+.\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE\sqlce20sql2ksp1.exe
+.\Microsoft Visual Studio .NET 2003\SDK\v1.1\Tool Developers Guide\docs\Partition II Metadata.doc
+.\Microsoft Visual Studio .NET 2003\Visual Studio .NET Enterprise Architect 2003 - English\Logs\VSMsiLog0A34.txt
+.\Microsoft Visual Studio 8\Microsoft Visual Studio 2005 Professional Edition - ENU\Logs\VSMsiLog1A9E.txt
+.\Microsoft Visual Studio 8\SmartDevices\SDK\CompactFramework\2.0\v2.0\WindowsCE\wce500\mipsiv\NETCFv2.wce5.mipsiv.cab
+.\Microsoft Visual Studio 8\VC\ce\atlmfc\lib\armv4i\UafxcW.lib
+.\Microsoft Visual Studio 8\VC\ce\Dll\mipsii\mfc80ud.pdb
+.\Movie Maker\MUI\0409\moviemk.chm
+.\TheCompany\TheProduct\docs\TheProduct User's Guide.pdf
+.\VNI\CTT6.0\help\StatV1.pdf
+7,908,634,694
+
+It tells me that the directory is 7.9gb, of which
+
+    ~15% goes to the Intel Fortran compiler
+    ~15% goes to VS .NET 2003
+    ~20% goes to VS 8
+
+It is simple enough to ask if any of these can be unloaded.
+
+It also tells about file types that are distributed across the file system, but taken together represent an opportunity for space saving:
+
+    ~15% roughly goes to .cab and .MSI files
+    ~10% roughly goes to logging text files
+
+It shows plenty of other things in there also, that I could probably do without, like "SmartDevices" and "ce" support (~15%).
+
+It does take linear time, but it doesn't have to be done often.
+
+Examples of things it has found:
+
+    backup copies of DLLs in many saved code repositories, that don't really need to be saved
+    a backup copy of someone's hard drive on the server, under an obscure directory
+    voluminous temporary internet files
+    ancient doc and help files long past being needed
+
+
+I'm surprised that no one has mentioned the -k option to du... du natuarly prints in blocks (either .5 or 2 k, I never remember) and it's hard to read. -k makes it output in kb...
+link|improve this answer
+	
+If you know that the large files have been added in the last few days (say, 3), then you can use a find command in conjunction with "ls -ltra" to discover those recently added files:
+
+find /some/dir -type f -mtime -3 -exec ls -lart {} \;
+
+This will give you just the files ("-type f"), not directories; just the files with modification time over the last 3 days ("-mtime -3") and execute "ls -lart" against each found file ("-exec" part).
+
+To understand disproportionate disk space usage it's often useful to start at the root directory and walk up through some of its largest children.
+
+We can do this by
+
+    saving the output of du into a file
+    grepping through the result iteratively
+
+That is:
+
+# sum up the size of all files and directories under the root filesystem
+du -a -h -x / > disk_usage.txt
+# display the size of root items
+grep $'\t/[^/]*$' disk_usage.txt
+
+now let's say /usr appear too large
+
+# display the size of /usr items
+grep $'\t/usr/[^/]*$' disk_usage.txt
+
+now if /usr/local is suspiciously large
+
+# display the size /usr/local items
+grep $'\t/usr/local/[^/]*$' disk_usage.txt
+
+and so on...
+ 

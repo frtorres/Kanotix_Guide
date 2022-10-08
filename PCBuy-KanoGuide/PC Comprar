@@ -1,0 +1,306 @@
+
+
+[13:25] <frtorres> Kano, the problem with 4Gb RAM in this board seems it is related to a limitation.
+[13:26] <Kano> not even 64 bit?
+[13:26] <frtorres> is it true? please see #2.2.1 on the motherboard manual.
+[13:26] <frtorres> http://download.viglen.co.uk/files/Motherboards/D945PLM/Manual/D945PLM_Motherboard_Manual_D1407101US.pdf
+[13:26] <frtorres> Is it true?
+[13:28] <frtorres> RAM overlap. Any way the available RAM to Kanotix agree with the manual. 705mb
+[13:28] <Kano> newer boards support memory remapping
+[13:28] <frtorres> CPU[Dual Intel Pentium D clocked at 2400.000 Mhz]  Kernel[Linux 3.0.0-999-generic i686]  Up[-5:28-]  Mem[-568.3/3277.1MB-]  HDD[-330GB(6%used)-]  Procs[-152-]  Client[Unknown Perl client]
+[13:28] <Kano> which would be used in pae/ 64 bit mode
+[13:29] <frtorres> aha
+[13:29] <frtorres> so It is true no way to use 4gb on this board. Strange.... I did not know.
+[13:31] <Kano> ich7 is pretty old, was used in netbooks too however
+[13:32] <Kano> basically a useless upgrade+
+[13:32] <Kano> your cpu is very slow compared to new ones
+[13:32] <Kano> the ram was definitely no problem 1 gb is usually enough without vbox
+[13:32] <Kano> when you run linux
+[13:35] <frtorres> yes. If you have some time during the day. Please could you advise me a good processor + motherboard  with the best ratio price/performance.
+[13:35] <frtorres> In Panama I have this store with good local prices.
+[13:35] <Kano> depends how much money you want to spend and if you want to oc or not
+[13:35] <frtorres> For available processors> http://www.yoytec.com/index.php/cPath/26_34
+[13:36] <frtorres> For Motherboards. http://www.yoytec.com/index.php/cPath/26_33
+[13:36] <Kano> how much for both together?
+[13:37] <Kano> and how many sata ports needed
+[13:37] <Kano> 4 or 6
+[13:37] <frtorres> Both: between US$300-US$400
+[13:38] <frtorres> 4 sata it is enough for me
+[13:38] <Kano> thats easy
+[13:38] <frtorres> or less money If you see something
+[13:39] <frtorres> I do not have a lot of money ;)
+[13:39] <Kano> full size atx or matx
+[13:42] <frtorres> sorry what is matx?  I know fuill atx
+
+********************************************
+[13:42] <Kano> matx is smaller
+[13:42] <Kano> like
+[13:42] <Kano> http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6656
+
+
+
+[13:43] <frtorres> mmmm Ic. 
+[13:43] <Kano> this is full size
+[13:43] <frtorres> I have a full size Computer Box. Seems does not matter
+  [13:44] <Kano> http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6796
+
+
+
+[13:44] <frtorres> computer case I mean
+[13:44] <Kano> if you want pci slots the 2nd is better
+
+
+[13:45] <frtorres> yes pci slots are necessary for video capture cards I have the more, the better
+[13:45] <Kano> http://www.yoytec.com/product_info.php/cPath/26_34_152/products_id/6405
+[13:45] <Kano> thats a fast cpu, not the fastest,but would fit into your price range
+
+
+[13:45] <frtorres> ok. 
+[13:46] <Kano> 10% less than the fastest possible for the boards
+[13:46] <frtorres> I see it has graphics included. Withe the gfx on the motherboard. another screen can be used?
+[13:46] <frtorres> 10% and a good price then.
+[13:47] <Kano> well not every game works with it
+[13:47] <Kano> quake live works
+[13:48] <Kano> trine does not
+[13:49] <Kano> the fastest cpu is 100$ more
+[13:49] <frtorres> mmmm. It is ok I think
+[13:49] <Kano> so not really best price/speed ratio
+[13:50] <Kano> if you want to upgrade it to a game station add a geforce gtx 560 ti
+[13:51] <Kano> and 8 gb ddr3
+[13:51] <Kano> well for linux you dont need 8
+
+
+
+[13:51] <frtorres> mmmm ok
+[13:51] <frtorres> does the board support 8gb?
+[13:52] <frtorres> I used mainly as you know to see videos, capture, edit, multimediua capabilities
+[13:52] <frtorres> I am not a gamer by now
+[13:52] <Kano> more likely 32 gb
+[13:53] <Kano> should be possible with 4
+[13:53] <Kano> but a bit expensive ;)
+[13:53] <Kano> 2x4 or 2x2 is cheaper
+[13:54] <Kano> the onboard vga has got a media encoder too btw. it is a bit slow with linux but there are win tools that can use it better
+[13:57] <Kano> btw. if you want to test uefi and have got w7 sp1 64 bit you can insatll it onto an emtry hd in uefi mode
+[13:57] <Kano> not really optimal for dual boot however. would be needed to use the bios bootselection to switch between win+linux
+[13:57] <Kano> but interesting to try...
+[13:58] <frtorres> ok
+[13:59] <frtorres> ok Finally and just as a reference. Which one is best cheap processor you see in those pages... still i5?
+[13:59] <Kano> on my board i just have got suspend 2 ram issues with uefi mode, but original intel may be better
+[13:59] <Kano> well i would at least use a cpu with 3ghz or more, i5 is with aes in hardware and turbo boost
+[14:00] <Kano> that will oc the cpu automatically with apps that only use 1 or 2 cores
+[14:00] <frtorres> ok,
+[14:00] <Kano> i7 is only 100 mhz faster and adds hyper threading+
+[14:00] <frtorres> Ic
+[14:01] <Kano> that means it reports 8 cores instead of 4
+[14:01] <Kano> for a simple system a i3 dual core with 3 ghz+ is enough together with a h61 board, but maybe look for usb3 support
+[14:02] <Kano> otherwise even the cheapest board would be enoug
+[14:02] <frtorres> good.
+[14:02] <Kano> office apps do not use more than 2 threads usually
+[14:04] <frtorres> Ok, As a summary. this intel board: http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6796
+[14:04] <frtorres> This processor: http://www.yoytec.com/product_info.php/cPath/26_34_152/products_id/6405
+[14:04] <Kano> has got 3 pci slots yes
+[14:04] <Kano> and a fast cpu 
+[14:04] <frtorres> Then I do not need a gfx card.
+[14:04] <Kano> needs ddr 3 ram
+[14:04] <Kano> if you dont play games not
+[14:05] <frtorres> for video editing is it fine?
+[14:05] <Kano> sure
+[14:05] <frtorres> no additional gfx card I mean. Ok.
+[14:05] <Kano> you dont need vdpau with that gpu
+[14:05] <Kano> it is fast 
+[14:05] <frtorres> good Kano. Thanks a lot for your advice.
+[14:05] <frtorres> You have been very kind.
+[14:05] <Kano> for h264 xbmc could use even vaapi
+[14:06] <Kano> vc1 with xbmc and vaapi is broken however
+[14:06] <frtorres> ok
+[14:06] <Kano> but the cpu is so fast youwould not need gpu accelleration
+[14:07] <frtorres> good
+[14:07] <frtorres> time to have a decent PC for kanotix :)
+[14:07] <Kano> compared to your system the cpu is about 5x faster
+[14:07] <Kano> if you use all cores
+[14:07] <Kano> or even more
+[14:07] <frtorres> yes I think I deserve it :) why work then? jajaja
+[14:08] <Kano> firefox will not be much faster, thats internet limited ;)
+[14:08] <frtorres> yes :)
+[14:08] <Kano> even my atom is fast enough for webbrow[13:25] <frtorres> Kano, the problem with 4Gb RAM in this board seems it is related to a limitation.
+[13:26] <Kano> not even 64 bit?
+[13:26] <frtorres> is it true? please see #2.2.1 on the motherboard manual.
+[13:26] <frtorres> http://download.viglen.co.uk/files/Motherboards/D945PLM/Manual/D945PLM_Motherboard_Manual_D1407101US.pdf
+[13:26] <frtorres> Is it true?
+[13:28] <frtorres> RAM overlap. Any way the available RAM to Kanotix agree with the manual. 705mb
+[13:28] <Kano> newer boards support memory remapping
+[13:28] <frtorres> CPU[Dual Intel Pentium D clocked at 2400.000 Mhz]  Kernel[Linux 3.0.0-999-generic i686]  Up[-5:28-]  Mem[-568.3/3277.1MB-]  HDD[-330GB(6%used)-]  Procs[-152-]  Client[Unknown Perl client]
+[13:28] <Kano> which would be used in pae/ 64 bit mode
+[13:29] <frtorres> aha
+[13:29] <frtorres> so It is true no way to use 4gb on this board. Strange.... I did not know.
+[13:31] <Kano> ich7 is pretty old, was used in netbooks too however
+[13:32] <Kano> basically a useless upgrade+
+[13:32] <Kano> your cpu is very slow compared to new ones
+[13:32] <Kano> the ram was definitely no problem 1 gb is usually enough without vbox
+[13:32] <Kano> when you run linux
+[13:35] <frtorres> yes. If you have some time during the day. Please could you advise me a good processor + motherboard  with the best ratio price/performance.
+[13:35] <frtorres> In Panama I have this store with good local prices.
+[13:35] <Kano> depends how much money you want to spend and if you want to oc or not
+[13:35] <frtorres> For available processors> http://www.yoytec.com/index.php/cPath/26_34
+[13:36] <frtorres> For Motherboards. http://www.yoytec.com/index.php/cPath/26_33
+[13:36] <Kano> how much for both together?
+[13:37] <Kano> and how many sata ports needed
+[13:37] <Kano> 4 or 6
+[13:37] <frtorres> Both: between US$300-US$400
+[13:38] <frtorres> 4 sata it is enough for me
+[13:38] <Kano> thats easy
+[13:38] <frtorres> or less money If you see something
+[13:39] <frtorres> I do not have a lot of money ;)
+[13:39] <Kano> full size atx or matx
+[13:42] <frtorres> sorry what is matx?  I know fuill atx
+[13:42] <Kano> matx is smaller
+[13:42] <Kano> like
+[13:42] <Kano> http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6656
+[13:43] <frtorres> mmmm Ic. 
+[13:43] <Kano> this is full size
+[13:43] <frtorres> I have a full size Computer Box. Seems does not matter
+[13:44] <Kano> http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6796
+[13:44] <frtorres> computer case I mean
+[13:44] <Kano> if you want pci slots the 2nd is better
+[13:45] <frtorres> yes pci slots are necessary for video capture cards I have the more, the better
+[13:45] <Kano> http://www.yoytec.com/product_info.php/cPath/26_34_152/products_id/6405
+[13:45] <Kano> thats a fast cpu, not the fastest,but would fit into your price range
+[13:45] <frtorres> ok. 
+[13:46] <Kano> 10% less than the fastest possible for the boards
+[13:46] <frtorres> I see it has graphics included. Withe the gfx on the motherboard. another screen can be used?
+[13:46] <frtorres> 10% and a good price then.
+[13:47] <Kano> well not every game works with it
+[13:47] <Kano> quake live works
+[13:48] <Kano> trine does not
+[13:49] <Kano> the fastest cpu is 100$ more
+[13:49] <frtorres> mmmm. It is ok I think
+[13:49] <Kano> so not really best price/speed ratio
+[13:50] <Kano> if you want to upgrade it to a game station add a geforce gtx 560 ti
+[13:51] <Kano> and 8 gb ddr3
+[13:51] <Kano> well for linux you dont need 8
+[13:51] <frtorres> mmmm ok
+[13:51] <frtorres> does the board support 8gb?
+[13:52] <frtorres> I used mainly as you know to see videos, capture, edit, multimediua capabilities
+[13:52] <frtorres> I am not a gamer by now
+[13:52] <Kano> more likely 32 gb
+[13:53] <Kano> should be possible with 4
+[13:53] <Kano> but a bit expensive ;)
+[13:53] <Kano> 2x4 or 2x2 is cheaper
+[13:54] <Kano> the onboard vga has got a media encoder too btw. it is a bit slow with linux but there are win tools that can use it better
+[13:57] <Kano> btw. if you want to test uefi and have got w7 sp1 64 bit you can insatll it onto an emtry hd in uefi mode
+[13:57] <Kano> not really optimal for dual boot however. would be needed to use the bios bootselection to switch between win+linux
+[13:57] <Kano> but interesting to try...
+[13:58] <frtorres> ok
+[13:59] <frtorres> ok Finally and just as a reference. Which one is best cheap processor you see in those pages... still i5?
+[13:59] <Kano> on my board i just have got suspend 2 ram issues with uefi mode, but original intel may be better
+[13:59] <Kano> well i would at least use a cpu with 3ghz or more, i5 is with aes in hardware and turbo boost
+[14:00] <Kano> that will oc the cpu automatically with apps that only use 1 or 2 cores
+[14:00] <frtorres> ok,
+[14:00] <Kano> i7 is only 100 mhz faster and adds hyper threading+
+[14:00] <frtorres> Ic
+[14:01] <Kano> that means it reports 8 cores instead of 4
+[14:01] <Kano> for a simple system a i3 dual core with 3 ghz+ is enough together with a h61 board, but maybe look for usb3 support
+[14:02] <Kano> otherwise even the cheapest board would be enoug
+[14:02] <frtorres> good.
+[14:02] <Kano> office apps do not use more than 2 threads usually
+[14:04] <frtorres> Ok, As a summary. this intel board: http://www.yoytec.com/product_info.php/cPath/26_33_153/products_id/6796
+[14:04] <frtorres> This processor: http://www.yoytec.com/product_info.php/cPath/26_34_152/products_id/6405
+[14:04] <Kano> has got 3 pci slots yes
+[14:04] <Kano> and a fast cpu 
+[14:04] <frtorres> Then I do not need a gfx card.
+[14:04] <Kano> needs ddr 3 ram
+[14:04] <Kano> if you dont play games not
+[14:05] <frtorres> for video editing is it fine?
+[14:05] <Kano> sure
+[14:05] <frtorres> no additional gfx card I mean. Ok.
+[14:05] <Kano> you dont need vdpau with that gpu
+[14:05] <Kano> it is fast 
+[14:05] <frtorres> good Kano. Thanks a lot for your advice.
+[14:05] <frtorres> You have been very kind.
+[14:05] <Kano> for h264 xbmc could use even vaapi
+[14:06] <Kano> vc1 with xbmc and vaapi is broken however
+[14:06] <frtorres> ok
+[14:06] <Kano> but the cpu is so fast youwould not need gpu accelleration
+[14:07] <frtorres> good
+[14:07] <frtorres> time to have a decent PC for kanotix :)
+[14:07] <Kano> compared to your system the cpu is about 5x faster
+[14:07] <Kano> if you use all cores
+[14:07] <Kano> or even more
+[14:07] <frtorres> yes I think I deserve it :) why work then? jajaja
+[14:08] <Kano> firefox will not be much faster, thats internet limited ;)
+[14:08] <frtorres> yes :)
+[14:08] <Kano> even my atom is fast enough for webbrowing. only flash is a bit slow
+[14:10] <frtorres> Did you see this board I think AMD similar to Atom processor all-in/one board?
+[14:10] <frtorres> http://www.yoytec.com/product_info.php/products_id/6846
+[14:11] <Kano> thats no good choice
+[14:11] <Kano> e350 is really not faster than intel atom
+[14:11] <frtorres> Ohh I see.
+[14:12] <Kano> if you really want to cheap get am3 board 880g + am3 cpu for the same price
+[14:13] <Kano> well maybe 200$ if you get a quad core phenom
+[14:13] <Kano> but that would be 10x or more faster
+[14:13] <frtorres> mm ok. This people sells an atom board but not HDMI connectors,
+[14:14] <frtorres> http://www.yoytec.com/product_info.php/products_id/6527
+[14:14] <Kano> i would NEVER buy a atom board
+[14:14] <Kano> it is ok for a netbook if you want it cheap
+[14:14] <frtorres> ok
+[14:15] <frtorres> How do you use atom processor then? in another motherboard?
+[14:15] <Kano> Host/Kernel/OS "Kanotix" running Linux 3.0.0-999-generic i686 [ Kanotix Hellfire 20110511-14:43 ]
+[14:15] <Kano> CPU Info       (1) Intel Atom N270 @ clocked at [ 1067.000 MHz ]
+[14:16] <Kano>               (2) Intel Atom N270 @ clocked at [ 800.000 MHz ]
+[14:16] <Kano> Videocard       Intel Mobile 945GME Express Integrated Graphics Controller  X.Org 1.7.7  [ 1024x600 ]
+[14:16] <Kano> Processes 118 | Uptime 2:54 | Memory 341.0/990.9MB | HDD Size 80GB (73%used) | Client Unknown Perl client | Infobash v2.67.2
+[14:16] <Kano> netbook
+[14:16] <Kano> its a bit slow for youtube however
+[14:18] <Kano> but fast enough to play dvd iso images or divx with xbmc
+[14:18] <Kano> h264 is no good idea ;)
+[14:18] <frtorres> Ic
+[14:21] <frtorres> I need a very small PC aqt side of my TV to capture TV shows. Direct TC charges me US$15 monthly for a box to rewind and store TV.
+[14:21] <frtorres> DirectTV I mean
+[14:22] <Kano> then get a am3 board 
+[14:22] <frtorres> Interesting.... good advice Kano. I appreciate your help. Will collect $$$ to have my new PC.
+[14:22] <Kano> dual core athlon x2 with over 3 ghz
+[14:22] <Kano> 880g
+[14:23] <frtorres> ok
+[14:23] <frtorres> good
+[14:23] <Kano> or if you watn to do more things
+[14:23] <Kano> the cheapest phenom x4
+[14:23] <Kano> that would be really fast even for compilinging. only flash is a bit slow
+[14:10] <frtorres> Did you see this board I think AMD similar to Atom processor all-in/one board?
+[14:10] <frtorres> http://www.yoytec.com/product_info.php/products_id/6846
+[14:11] <Kano> thats no good choice
+[14:11] <Kano> e350 is really not faster than intel atom
+[14:11] <frtorres> Ohh I see.
+[14:12] <Kano> if you really want to cheap get am3 board 880g + am3 cpu for the same price
+[14:13] <Kano> well maybe 200$ if you get a quad core phenom
+[14:13] <Kano> but that would be 10x or more faster
+[14:13] <frtorres> mm ok. This people sells an atom board but not HDMI connectors,
+[14:14] <frtorres> http://www.yoytec.com/product_info.php/products_id/6527
+[14:14] <Kano> i would NEVER buy a atom board
+[14:14] <Kano> it is ok for a netbook if you want it cheap
+[14:14] <frtorres> ok
+[14:15] <frtorres> How do you use atom processor then? in another motherboard?
+[14:15] <Kano> Host/Kernel/OS "Kanotix" running Linux 3.0.0-999-generic i686 [ Kanotix Hellfire 20110511-14:43 ]
+[14:15] <Kano> CPU Info       (1) Intel Atom N270 @ clocked at [ 1067.000 MHz ]
+[14:16] <Kano>               (2) Intel Atom N270 @ clocked at [ 800.000 MHz ]
+[14:16] <Kano> Videocard       Intel Mobile 945GME Express Integrated Graphics Controller  X.Org 1.7.7  [ 1024x600 ]
+[14:16] <Kano> Processes 118 | Uptime 2:54 | Memory 341.0/990.9MB | HDD Size 80GB (73%used) | Client Unknown Perl client | Infobash v2.67.2
+[14:16] <Kano> netbook
+[14:16] <Kano> its a bit slow for youtube however
+[14:18] <Kano> but fast enough to play dvd iso images or divx with xbmc
+[14:18] <Kano> h264 is no good idea ;)
+[14:18] <frtorres> Ic
+[14:21] <frtorres> I need a very small PC aqt side of my TV to capture TV shows. Direct TC charges me US$15 monthly for a box to rewind and store TV.
+[14:21] <frtorres> DirectTV I mean
+[14:22] <Kano> then get a am3 board 
+[14:22] <frtorres> Interesting.... good advice Kano. I appreciate your help. Will collect $$$ to have my new PC.
+[14:22] <Kano> dual core athlon x2 with over 3 ghz[14:25] <frtorres> good. Thanks :)
+[14:22] <Kano> 880g
+[14:23] <frtorres> ok
+[14:23] <frtorres> good
+[14:23] <Kano> or if you watn to do more things
+[14:23] <Kano> the cheapest phenom x4
+[14:23] <Kano> that would be really fast even for compiling
+[14:25] <frtorres> good. Thanks :)
+
+
+

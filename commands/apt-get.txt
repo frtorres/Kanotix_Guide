@@ -1,0 +1,17 @@
+Commands: apt-get debian info
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
+1. To put a package to hold:
+echo "package_name hold"|dpkg --set-selections
+
+2. to 'unhold' it:
+echo "package_name install"|dpkg --set-selecions
+
+3. to upgrade just one package. Security Priority for bandwidth's sake):
+
+apt-get update && apt-get install --only-upgrade bash
+
+apt-get update --allow-releaseinfo-change
+

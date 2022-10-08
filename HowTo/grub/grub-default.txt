@@ -1,0 +1,12 @@
+Howtos: grub defulat settings.
+Kanotix Guide
+Fri Aug 22 18:31:36 EST 2014
+=============================
+
+Add those options to the kernel line in /etc/default/grub
+
+The default reads GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+See https://wiki.ubuntu.com/Grub2 for details
+
+

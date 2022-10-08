@@ -1,0 +1,26 @@
+Howto kde_plasma5 sddm
+changing avatar.
+Sat 11 May 2019 03:51:43 PM -05
+=================================
+
+1. Install sddm. 
+apt-get install sddm
+apt-get install sddm-theme-breeze
+apt-get install kde-config-sddm
+
+2. Install kde-config-sddm
+use in config startup/shuitdown option to config theme.
+
+3. Config sddm files at:  
+/etc/sddm.conf
+/etc/sddm/Xsession
+
+4. Install themes at:
+ /usr/share/sddm/themes/XXXX
+
+Where XXXX=Theme's name.
+
+5. Activate Theme at config.
+
+
+

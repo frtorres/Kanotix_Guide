@@ -1,0 +1,41 @@
+Howtos: encrypt partition
+Kanotix_Guide
+Mon Sep  1 00:10:06 EST 2014
+=============================
+
+1. Install LUKS/crypt-setup
+      apt-get install cryptsetup
+
+
+2. Setup your LUKS Partition
+      cryptsetup --verbose --verify-passphrase luksFormat /dev/sdXN
+
+      cryptsetup luksOpen /dev/md2 mylukspartition
+
+You can change "mylukspartition" to whatever you would like to call it, it just controls the name created in /dev/mapper which is the device you will use to mount the encrypted LUKS partition.
+You'll find that the above command creates "/dev/mapper/mylukspartition"
+
+
+3. CREATE the filesystem on the LUKS device
+      mkfs.ext3 /dev/mapper/mylukspartition
+
+Mount the LUKS Partition
+
+      mkdir /mnt/luks
+      mount /dev/mapper/mylukspartition /mnt/luks
+
+      cryptsetup luksClose /dev/mapper/mylukspartition
+
+
+umount -l /mnt/sdX for a race conditioin happenning (device busy error)
+
+Notes (Kano):
+1. you have to use gpt
+   just dont format one partition with gparted
+   leave it empty and use cryptsetup with it
+
+2. cryptsetup -c aes-xts-plain -s 512 luksFormat /dev/sdX1
+3. cryptsetup luksOpen /dev/sdX1 luks
+4. mkfs.ext4 /dev/mapper/luks 
+   like that
+

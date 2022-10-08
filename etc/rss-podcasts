@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+	<title>rss podcasts Francisco Torres</title> 
+	<link>https://github.com/frtorres/</link> 
+	<description>Favorites Radio Rss feeds</description> 
+	<language>en-us</language> 
+	<copyright>Copyright 2017, frtorres.</copyright> 
+	<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+	<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+	<image>
+	 	<title>radio podcasts Colombia</title> 
+	 	<url>http://pngimg.com/uploads/radio/radio_PNG19295.png</url> 
+	 	<link>https://github.com/frtorres/</link> 
+	 	<width>100</width> 
+	 	<height>100</height> 
+	 	<description>frtorres Radio favorite podcasts</description> 
+	</image>
+	<item>
+		<title>Wradio Colombia</title> 
+		<link>rss://www.wradio.com.co/feed.aspx/?id=PROG_14085</link> 
+		<description>Julio Sanchez Cristo en la WRadio</description> 
+ 		<media:thumbnail url="https://pbs.twimg.com/profile_images/441573492639559680/PX93UT60_400x400.png"/>
+		<fanart>http://www.wradio.com.co/images/3408039_n_vir1.jpg</fanart>
+	</item>
+
+        <item>
+                <title>antena 2 Colombia</title>
+                <link>rss://feeds.feedburner.com/RcnRadio-PodcastAntena2/</link>
+                <description>Deportes en Colombia</description>
+                <media:thumbnail url="http://www.antena2.com.co/sites/default/files/imagenes/logo_antena2_agosto30_1472694438.jpg"/>
+                <fanart>http://www.thetvdb.com/banners/fanart/original/316838-1.jpg </fanart>
+        </item>
+	<item>
+		<title>Historia del Mundo con Diana Uribe </title> 
+		<link>rss://feeds.feedburner.com/HistoriaMundoCaracol</link>
+		<description>Historia del Mundo en narraciones.</description>
+ 		<media:thumbnail url="http://www.elpais.com.co/files/article_main/uploads/2017/01/31/589164ede8d86.jpeg" />
+                <fanart>http://www.lacasadelahistoria.com/wp-content/uploads/22042327_1578899108832939_4962407367673384363_o-1.jpg</fanart>
+	</item>
+        <item>
+                <title>PEGA Pelaez Gardeazabal</title>
+                <link>rss://www.spreaker.com/show/1681514/episodes/feed</link>
+                <description>Conversaciones de actualidad colombiana.</description>
+                <media:thumbnail url="http://www.aipazcomun.org/wp-content/uploads/2017/05/eljodario-miamidespierta2.jpg" />
+                <fanart>https://www.las2orillas.co/wp-content/uploads/2017/08/gardeazabal-peladez-pel.jpg</fanart>
+        </item>
+        <item>
+                <title>Julio Sánchez Cristo DJ</title>
+                <link>rss://www.wradio.com.co/feed.aspx?id=PROG_2917578</link>
+                <description>Audios de Julio Sánchez Cristo DJ</description>
+                <media:thumbnail url="http://www.wradio.com.co/images/2015090351036a4b.jpg" />
+                <fanart>http://www.wradio.com.co/images/3408039_n_vir1.jpg</fanart>
+        </item>
+        <item>
+                <title>A vivir que son dos dias</title>
+                <link>rss://feeds.feedburner.com/A-Vivir-Que-Son-Dos-Dias</link>
+                <description>Andres Lopez presenta mi banda sonora</description>
+                <media:thumbnail url="http://blogs.caracol.com.co/avivir/files/2013/11/cabezote.png" />
+                <fanart>http://blogs.caracol.com.co/avivir/files/2014/04/cabe-concurso1.jpg</fanart>
+        </item>
+        <item>
+                <title>Cafe Caracol</title>
+                <link>rss://www.caracol.com.co/feed.aspx/?id=PROG_539701</link>
+                <description>Conversaciones de Futbol con un cafe</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/417.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/417.jpg</fanart>
+        </item>
+        <item>
+                <title>El pulso del Futbol</title>
+                <link>rss://feeds.feedburner.com/El-Pulso-Del-Futbol</link>
+                <description>Dia a dia del Futbol con Ivan Mejia</description>
+                <media:thumbnail url="http://caracol.com.co/especiales/podcasts/images/pc-pulsofutbol2.jpg"/>
+                <fanart>http://caracol.com.co/especiales/podcasts/images/pc-pulsofutbol2.jpg</fanart>
+        </item>
+        <item>
+                <title>La Luciernaga</title>
+                <link>rss://feeds.feedburner.com/La-Luciernaga</link>
+                <description>Realidad hecha ficción</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg</fanart>'
+        </item>
+        <item>
+                <title>Radio Red</title>
+                <link>rss://feeds.feedburner.com/radioredco</link>
+                <description>Radio Red Colombia</description>
+                <media:thumbnail url="http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg"/>
+                <fanart>http://cr00.epimg.net/iconos/v1.x/v1.0/podcasts/409.jpg</fanart>'
+        </item>
+</channel>
+</rss>

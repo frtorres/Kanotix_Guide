@@ -1,0 +1,17 @@
+Howtos: ntfs backup
+Kanotix Guide
+Mon Nov  3 07:34:34 EST 2014
+=============================
+
+1. NTFS is better to store movies and dvds. 10% savings in space.
+2. You can use 
+
+   tune2fs -m 0 /dev/sdxy 
+
+to get 5% more space for non root users
+
+The default is 5% reserved for root for linux filesystems.
+
+3. If your linux installs only have got 1 user the user is always 1000
+   so changeing id to chown 1000:1000 -R /hd
+   will allow your default user to write

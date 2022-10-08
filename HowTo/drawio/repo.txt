@@ -1,0 +1,9 @@
+#Work offline on your diagrams and save locally using the draw.io/diagrams.net Desktop app for Windows.
+
+#install .deb from
+https://github.com/jgraph/drawio-desktop/releases
+
+#Windows
+https://www.microsoft.com/en-us/p/drawio-diagrams/9mvvszk43qqw?activetab=pivot:overviewtab
+
+

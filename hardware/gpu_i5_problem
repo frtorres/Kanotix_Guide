@@ -1,0 +1,31 @@
+Kanotix_Guid  HowTo
+Install SNA GFX
+Tue Sep  1 20:44:40 EST 2015
+-----------------------
+
+
+I was getting 
+
+I had to recompile the driver
+intel-oss-test.sh
+
+<Kano> now the defaut is without SNA
+ok OSS now
+<Kano> grep UXA /var/log/Xorg.0.log
+<Kano> if you want SNA:
+<Kano> wget -O /etc/X11/xorg.conf http://kanotix.com/files/fix/oss-test/xorg.conf.intel.sna
+<Kano> screen /etc/init.d/kdm restart
+<Kano> grep SNA /var/log/Xorg.0.log
+
+
+<Kano> you had sna with the other driver
+<Kano> sna is faster
+	If I got problems, then I can revert to oss with the script I run ok?
+<Kano> the script deletes the xorg.conf
+<Kano> what it does is to compile the latest intel ddx driver
+<Kano> maybe i package a new one
+
+
+[16:46:32] <Kano> you did not activate sna
+[16:46:42] <Kano> that would restart x
+

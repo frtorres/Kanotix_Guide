@@ -1,0 +1,14 @@
+Howtos: Install experimental iceweasel
+Kanotix_Guide
+Sat Aug 23 14:08:33 EST 2014
+=============================
+
+Dragonfire ONLY!
+
+(needs !exp): apt-get install -t experimental iceweasel
+factoid: !exp
+
+printf 'deb http://ftp.de.debian.org/debian experimental main contrib non-free\ndeb-src http://ftp.de.debian.org/debian experimental main contrib non-free\n' > /etc/apt/sources.list.d/experimental.list;apt-get update
+
+then iceweasel. To Update you need that manually.  it does not update by apt-get
+ 

@@ -1,0 +1,17 @@
+Howtos: reordering grub menu item list.
+Kanotix Guide
+Fri Aug 22 18:31:36 EST 2014
+=============================
+author: acritox
+
+So you just want to reorder the list? (as root)
+
+mv /etc/grub.d/30_os-prober /etc/grub.d/05_os-prober
+update-grub
+
+There are files in this directory. You can rename them update-grub will process this folder alphabetically.
+
+grep -i windows /etc/grub.d/*
+
+try that.
+

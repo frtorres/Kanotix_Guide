@@ -1,0 +1,14 @@
+HowTo gpg
+Tue Feb  6 15:35:19 EST 2018
+----------------------------
+
+howto renew a key after expiration
+
+https://superuser.com/questions/813421/can-you-extend-the-expiration-date-of-an-already-expired-gpg-key
+
+
+unrevoking 
+https://superuser.com/questions/608336/un-revoke-pgp-key
+gpg --expert --delete-key E589E9FE
+and re import.
+

@@ -1,0 +1,12 @@
+Howtos: Jekyll
+Kanotix_Guide
+Sun Oct 15 18:34:43 EST 2017
+----------------------------
+
+1. apt-get install ruby ruby-dev
+
+2. # Install Jekyll and Bundler gems through RubyGems
+gem install jekyll bundler
+
+
+

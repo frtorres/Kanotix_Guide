@@ -1,0 +1,73 @@
+Hardware: Lenovo laptop - Driver for Lenovo - Hellfire
+Kanotix_Guide
+Fri Aug 22 18:37:02 EST 2014
+=============================
+
+wget http://kanotix.com/files/fix/mainline/install-39a.sh
+
+http://kanotix.com/files/fix/oss-test/readme.txt
+------------------------------------------------------------------------------------
+0) be sure your /etc/apt/sources.list has deb-src entries, for Hellfire just do:
+
+wget -NP /etc/apt http://kanotix.com/files/hellfire/sources.list
+
+1) purge binary driver (not needed for intel)
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/purge-binary-driver.sh
+sh /tmp/purge-binary-driver.sh
+
+a) use new libdrm
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/install-libdrm.sh
+sh /tmp/install-libdrm.sh
+
+b) use new ddx (ati,intel or nouveau)
+
+hint: you can disable swapbufferwait with any option for ati+intel driver - for higher speed
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/ati-oss-test.sh
+sh /tmp/ati-oss-test.sh
+
+or
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/intel-oss-test.sh
+sh /tmp/intel-oss-test.sh
+
+or
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/nouveau-oss-test.sh
+sh /tmp/nouveau-oss-test.sh
+
+c) use mesa
+
+the script can compile gallium when any option is added.
+gallium will not work with intel series 4 and newer.
+
+intel series 4 or newer:
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/mesa-oss-test.sh
+sh /tmp/mesa-oss-test.sh
+
+rest:
+
+wget -NP /tmp http://kanotix.com/files/fix/oss-test/mesa-oss-test.sh
+sh /tmp/mesa-oss-test.sh g
+
+hint for r300g:
+
+you get more speed with
+
+RADION_HYPERZ=1 RADEON_DEBUG=info glxgears
+
+the debug option is just to verify that hyperz is really active, works only with 1 app at a time.
+
+d) use latest kernel -> see !daily
+
+e) try latest vaapi - especially snb
+
+wget -NP /tmp http://kanotix.com/files/fix/mplayer-vaapi-latest.txt
+sh /tmp/mplayer-vaapi-latest.txt
+
+check then as user:
+
+vainfo

@@ -1,0 +1,9 @@
+etc: kanotix branding
+Kanotix_Guide
+Mon Sep  1 00:17:05 EST 2014
+=============================
+
+http://kanotix.com/files/fix-hellfire-branding.sh
+
+you have to select background + ksplash on your own
+

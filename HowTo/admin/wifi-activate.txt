@@ -1,0 +1,12 @@
+Howtos: admin-acttivate wifi from the command line
+Kanotix_Guide
+Fri Oct 10 12:57:23 EST 2014
+=============================
+
+1. wifi activation from command line
+  
+iwconfig wlan0 essid Gilgal-N key c7894784b3
+dhclient wlan0
+
+  
+

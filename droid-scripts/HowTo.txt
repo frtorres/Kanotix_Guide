@@ -1,0 +1,18 @@
+see:https://android.stackexchange.com/questions/42801/home-screen-icon-for-terminal-program
+
+if you happen to use Terminal Emulator for Android app. It allows a widget which can be used to execute a script.
+
+    choose Term Shortcut widget in your current launcher.
+
+    Corresponding to Arguments enter:
+
+    sh <FILEPATH>
+
+    In my case, the query was:
+
+    sh  /sdcard/airdroid/dd.sh
+
+    As for the root access, you can either provide su access from inside the script and use the aforesaid command for execution, or do:
+
+    su -c "sh  /sdcard/airdroid/dd.sh"
+

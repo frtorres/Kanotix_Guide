@@ -1,0 +1,19 @@
+Howtos: youtube-dl update.
+Kanotix_Guide
+Fri Nov 20 21:55:42 EST 2020
+=============================
+
+see:https://github.com/ytdl-org/youtube-dl
+
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+If you do not have curl, you can alternatively use a recent wget:
+
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+To download 256SUMS:
+https://github.com/ytdl-org/youtube-dl/releases/download/2020.11.19/SHA2-256SUMS
+
+

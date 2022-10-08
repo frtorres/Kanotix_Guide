@@ -1,0 +1,3 @@
+https://help.ubuntu.com/community/DataRecovery#Imaging_a_damaged_device.2C_filesystem_or_drive
+
+

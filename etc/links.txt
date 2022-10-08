@@ -1,0 +1,11 @@
+etc: General purpose rss interesting links
+Kanotix_Guide
+Sat 11 May 2019 04:01:47 PM -05
+=============================
+
+https://validator.w3.org/feed/docs/rss2.html
+http://www.rssboard.org/rss-specification#sampleFiles
+http://www.rssboard.org/media-rss#media-thumbnails
+https://fanart.tv/fanart/music/b0d037e8-00c8-4e37-aeec-58422ed345aa/artistbackground/spagna-5933367a17f88.jpg
+
+

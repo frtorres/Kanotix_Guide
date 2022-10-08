@@ -1,0 +1,23 @@
+Howtos: ssh on mc (midnight commander).
+Kanotix_Guide
+Tue 28 May 2019 10:45:28 PM EST
+-------------------------------
+
+
+Take righ side panel  and click on menu at
+Drop Menu:
+
+right --> Shell link.
+
+type sinonimous or ALIAS fron .ssh/config
+
+example:
+          lapdir
+#requires public keys
+
+or
+          root@192.168.X.X:50XXX
+              then start interactive session on Port 50xxx to provide password.,
+
+
+

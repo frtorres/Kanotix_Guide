@@ -1,0 +1,10 @@
+Signing with a specific key.
+
+http://stackoverflow.com/questions/9624384/ddg#9624501
+
+I needed the --local-user option.
+
+gpg --debug-level=none --armor --local-user E589E9FE --output OUTFILE.sig --detach-sig INPUT-FILE
+
+
+

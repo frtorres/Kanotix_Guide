@@ -1,0 +1,29 @@
+Install: Recommended Steps after a new Install.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+===============================================
+
+What to do after install to HD: l 
+
+1. "locale":   
+
+echo $LANG UTF-8 > /etc/locale.gen
+dist-upgrade
+
+2. For DVD playback:
+"css":  sh /usr/share/doc/kaffeine/install-css.sh
+
+3. For some extra win codecs:
+!w32:  /usr/share/mplayer/scripts/binary_codecs.sh install
+
+4. for extra win fonts:
+apt-get install msttcorefonts
+
+5. if you want adobe reader:
+http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.3/enu/AdobeReader_enu-8.1.3-1.i386.deb
+
+6. flash
+wget -qO- http://kanotix.com/files/install-flash-local.sh|sh, 
+as user
+
+

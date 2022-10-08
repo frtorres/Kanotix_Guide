@@ -1,0 +1,14 @@
+echo -n "installing Kernel from: "
+echo "http://retabell.adhara.uberspace.de/ws/bot/5.0.0-14.15kanotix1/"
+#
+wget http://retabell.adhara.uberspace.de/spitfire/linux-5.0.0-14.15kanotix1-retabell/linux-modules-5.0.0-14-generic_5.0.0-14.15kanotix1_amd64.deb 
+dpkg -i linux-modules-5.0.0-14-generic_5.0.0-14.15kanotix1_amd64.deb
+#
+wget http://retabell.adhara.uberspace.de/spitfire/linux-5.0.0-14.15kanotix1-retabell/linux-image-5.0.0-14-generic_5.0.0-14.15kanotix1_amd64.deb
+dpkg -i linux-image-5.0.0-14-generic_5.0.0-14.15kanotix1_amd64.deb
+#
+wget http://retabell.adhara.uberspace.de/spitfire/linux-5.0.0-14.15kanotix1-retabell/linux-headers-5.0.0-14_5.0.0-14.15kanotix1_all.deb
+dpkg -i linux-headers-5.0.0-14_5.0.0-14.15kanotix1_all.deb
+echo
+echo "done."
+

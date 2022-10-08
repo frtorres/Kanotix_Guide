@@ -1,0 +1,7 @@
+https://alexcabal.com/creating-the-perfect-gpg-keypair
+https://www.paulfurley.com/extend-pgp-key-expiry-with-gpg/
+
+
+
+https://blog.eleven-labs.com/en/openpgp-almost-perfect-key-pair-part-1/
+

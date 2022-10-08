@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+	<title>rss podcasts Francisco Torres</title> 
+	<link>https://github.com/frtorres/</link> 
+	<description>Favorites Christians Rss feeds</description> 
+	<language>en-us</language> 
+	<copyright>Copyright 2017, frtorres.</copyright> 
+	<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+	<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+	<image>
+	 	<title>christians podcasts</title> 
+	 	<url>http://pngimg.com/uploads/bible/bible_PNG32.png</url> 
+	 	<link>https://github.com/frtorres/</link> 
+	 	<width>100</width> 
+	 	<height>180</height> 
+	 	<description>frtorres favorite Christians podcasts</description> 
+	</image>
+        <item>
+                <title>A traves de la Biblia</title>               
+                <link>rss://ttb.twr.org/rss/espanol_1_300.xml</link>
+                <description>Estudios biblicos Dr. J. Vernon McGee,</description>
+                <media:thumbnail url="http://pngimg.com/uploads/bible/bible_PNG48.png"/>
+                <fanart>http://www.ttb.org/images/default-source/Homepage-banners/how-can-i-know-god_fielde29e70bc3a386c16a304ff00002a62bc.jpg</fanart>
+        </item>
+        <item>
+                <title>1 Year Daily Audio Bible</title>               
+                <link>rss://feeds.feedburner.com/dailyaudiobible</link>
+                <description>Daily Bible Lectures by Brian Hardin</description>
+                <media:thumbnail url="http://pngimg.com/uploads/bible/bible_PNG48.png"/>
+                <fanart>https://twr360.org/files/library/DailyAudioBible.png</fanart>
+        </item>
+	<item>
+		<title>Principios David Hormachea</title> 
+		<link>rss://mx.ivoox.com/es/principios-david-hormachea_fg_f1160355_filtro_1.xml</link> 
+		<description>Reflexiones Cristianas con David Hormachea</description> 
+ 		<media:thumbnail url="http://www.radioarmonia.cl/inicio/images/extranjeros/principios-2.jpg"/>
+		<fanart>https://i0.wp.com/revistaactitud.com/wp-content/uploads/2016/08/David-Hormachea-2.jpg</fanart>
+	</item>
+</channel>
+</rss>

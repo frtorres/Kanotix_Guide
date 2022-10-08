@@ -1,0 +1,15 @@
+Howtos: vlc skins
+Kanotix_Guide
+Mon Apr 23 00:12:10 EST 2018
+-------------------------------
+
+1. install for totem or vlc
+sudo apt-get install fluid-soundfont-gs  fluid-soundfont-gm 
+sudo apt-get install vlc-plugin-fluidsynth
+
+2. Use Timidity useful also for karaoke files
+/usr/bin/timidity -ia
+
+ 
+
+

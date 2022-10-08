@@ -1,0 +1,11 @@
+Howtos: Clone/Change MAC address.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+====================================
+
+1. as root:
+
+ifdown eth0
+ifconfig eth0 hw ether 00:80:FF:FF:98:F5
+ifup eth0
+

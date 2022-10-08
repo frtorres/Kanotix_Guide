@@ -1,0 +1,13 @@
+Howtos: vlc direct 
+Kanotix_Guide
+Mon Sep  1 00:17:05 EST 2014
+=============================
+
+
+
+#
+# passwd can be changed from vlc interfase (advance settings)
+# see: 
+#
+cvlc --extraintf=http --http-password=vlcdirect
+

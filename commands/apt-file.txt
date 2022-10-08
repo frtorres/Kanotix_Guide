@@ -1,0 +1,26 @@
+Commands: debian apt-file command info.
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
+source:
+http://superuser.com/questions/10997/find-what-package-a-file-belongs-to-in-ubuntu-debian
+-------------------------------
+
+apt:   Find what package a file belongs to
+
+1. To install apt-file, use: sudo apt-get install apt-file
+You will need to update its database before you can use it:
+     
+      sudo apt-file update
+
+
+2. Find package with:
+
+apt-file search filename
+
+or
+
+apt-file search /path/to/file
+
+

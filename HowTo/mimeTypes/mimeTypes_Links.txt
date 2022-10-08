@@ -1,0 +1,7 @@
+mymeTypes HowTo
+Kanotix_Guide
+Tue Oct 26 17:05:15 EST 2021
+----------------------------
+Script to associate .mpv.edl files with MPV (including by header)
+https://gist.github.com/ssokolow/4c190df14ec0fd1e2e3d6a24bf5be693
+

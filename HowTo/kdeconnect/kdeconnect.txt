@@ -1,0 +1,8 @@
+Kanotix_Guide
+HowTo kdeconnect
+Mon Jan 29 01:10:31 UTC 2018
+--------------------
+kdeconnect-cli --id-only -a 
+
+
+

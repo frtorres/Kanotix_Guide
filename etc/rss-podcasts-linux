@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+<title>rss podcasts Francisco Torres</title> 
+<link>https://github.com/frtorres/</link> 
+<description>Favorites Fintech Rss feeds</description> 
+<language>en-us</language> 
+<copyright>Copyright 2017, frtorres.</copyright> 
+<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+<image>
+	<title>favorites linux podcasts</title> 
+	<url>http://pngimg.com/uploads/linux/linux_PNG13.png</url> 
+	<link>https://github.com/frtorres/</link> 
+	<width>100</width> 
+	<height>80</height> 
+	<description>frtorres Fintech favorite podcasts</description> 
+</image>
+<item>
+	<title>Linux Action Show</title>
+	<link>rss://feeds.feedburner.com/linuxashd</link>
+	<description>The linux reference on the net.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG30.png"/>
+	<fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+	<title>FLOSS weekly</title>
+	<link>rss://feeds.twit.tv/floss_video_hd.xml</link>
+	<description>twit FLOSS status.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG2.png"/>
+	<fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+        <title>Bad voltage Linux </title>
+        <link>rss://www.badvoltage.org/feed/mp3/</link>
+        <description>Show from the net</description>
+        <media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG30.png"/>
+        <fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+        <title>GNU world order</title>
+        <link>rss://gnuworldorder.info/ogg.xml</link>
+        <description>GNU status from the boss</description>
+        <media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG41.png"/>
+        <fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+        <title>ubuntu podcast</title>
+        <link>rss://ubuntupodcast.org/feed/ogg/</link>
+        <description>news from ubuntu world.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG2.png"/>
+        <fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+        <title>Linux Voice</title>
+        <link>rss://www.linuxvoice.com/podcast_mp3.rss</link>
+        <description>The Linux VOICE on the net</description>
+        <media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG30.png"/>
+        <fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+<item>
+        <title>Linux Action News</title>
+        <link>rss://linuxactionnews.com/rss</link>
+        <description>Linux in a new show.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/linux/linux_PNG41.png"/>
+        <fanart>http://pngimg.com/uploads/linux/linux_PNG11.png</fanart>
+</item>
+</channel>
+</rss>

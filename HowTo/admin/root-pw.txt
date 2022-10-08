@@ -1,0 +1,12 @@
+Howtos: recover root pw at kernel boot
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
+1. at grub menu, change the kernel command line (key E) with:
+
+init=/bin/bash rw
+
+as extra option onboot, then passwd to set a new pw.
+
+

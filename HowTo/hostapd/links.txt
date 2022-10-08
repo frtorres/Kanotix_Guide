@@ -1,0 +1,17 @@
+References used:
+---------------
+
+git for script.
+https://github.com/oblique/create_ap
+
+https://help.ubuntu.com/community/WifiDocs/WirelessAccessPoint#Install_Ubuntu_Server
+http://www.cyberciti.biz/faq/debian-ubuntu-linux-setting-wireless-access-point/
+
+https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
+
+#
+# arch script used here
+#
+
+https://bbs.archlinux.org/viewtopic.php?id=162895
+

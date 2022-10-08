@@ -1,0 +1,28 @@
+Howtos avidemux - video utils install and tips 
+Kanotix_Guide
+Sun Jan  4 12:46:54 EST 2015
+----------------------------
+
+
+avidemux
+
+http://avidemux.org/admWiki/doku.php?id=build:install_2.6
+
+unpack
+build dependencies
+note>   bash bootStrap.bash --deb  had a compressione error
+
+build as:
+
+bash bootStrap.bash 
+
+see install/usr/bin
+install/usr/lib
+
+moved executables and 
+
+error while loading shared libraries: libADM_coreSocket6.so: cannot open shared object file: No such file or directory
+
+I moved lib* from install/usr/lib to /usr/lib
+
+all ok

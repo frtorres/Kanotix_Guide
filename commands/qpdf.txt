@@ -1,0 +1,127 @@
+qpdf examples.
+Sun Feb 13 09:21:34 EST 2022
+============================
+
+References:
+https://qpdf.readthedocs.io/en/stable/cli.html#overlay-underlay
+https://github.com/qpdf/qpdf
+
+
+Overlay Examples
+----------------
+Overlay the first three pages from file o.pdf onto the first three pages of the output, then overlay page 4 from o.pdf onto pages 4 and 5 of the output. Leave remaining output pages untouched.
+
+    qpdf in.pdf --overlay o.pdf --to=1-5 --from=1-3 --repeat=4 -- out.pdf
+
+Underlay page 1 of footer.pdf on all odd output pages, and underlay page 2 of footer.pdf on all even output pages.
+
+    qpdf in.pdf --underlay footer.pdf --from= --repeat=1,2 -- out.pdf
+
+Combine two files and overlay the single page from watermark.pdf on the result.
+
+    qpdf --empty --pages a.pdf b.pdf -- \
+         --overlay watermark.pdf --from= --repeat=1 -- out.pdf
+
+Split Pages
+----------
+Here are some examples. In these examples, infile.pdf has 12 pages.
+
+    qpdf --split-pages infile.pdf %d-out: output files are 01-out through 12-out with no extension.
+
+    qpdf --split-pages=2 infile.pdf outfile.pdf: output files are outfile-01-02.pdf through outfile-11-12.pdf
+
+    qpdf --split-pages infile.pdf something.else would generate files something.else-01 through something.else-12. The extension .else is not treated in any special way regarding the placement of the number.
+
+
+Rotate Pages
+------------
+Examples:
+
+    qpdf in.pdf out.pdf --rotate=+90:2,4,6 --rotate=+180:7-8: rotate pages 2, 4, and 6 by 90 degrees clockwise from their original rotation
+
+    qpdf in.pdf out.pdf --rotate=+180: rotate all pages by 180 degrees
+
+    qpdf in.pdf out.pdf --rotate=0: force each page to be displayed in its natural orientation, which would undo the effect of any rotations previously applied in page metadata.
+
+Page Selection
+-------------
+
+Examples
+
+    Start with in.pdf and append all pages from a.pdf and the even pages from b.pdf, and write the output to out.pdf. Document-level information from in.pdf is retained. Note the use of . to refer to in.pdf.
+
+    qpdf in.pdf --pages . a.pdf b.pdf:even -- out.pdf
+
+    Take all the pages from a.pdf, all the pages from b.pdf in reverse, and only pages 3 and 6 from c.pdf and write the result to out.pdf. Document-level metadata is discarded from all input files. The password x is used to open b.pdf.
+
+    qpdf --empty --pages a.pdf b.pdf --password=x z-1 c.pdf 3,6
+
+    Scan a document with double-sided printing by scanning the fronts into odd.pdf and the backs into even.pdf. Collate the results into all.pdf. This takes the first page of odd.pdf, the first page of even.pdf, the second page of odd.pdf, the second page of even.pdf, etc.
+
+    qpdf --collate odd.pdf --pages . even.pdf -- all.pdf
+      OR
+    qpdf --collate --empty --pages odd.pdf even.pdf -- all.pdf
+
+    When collating, any number of files and page ranges can be specified. If any file has fewer pages, that file is just skipped when its pages have all been included. For example, if you ran
+
+    qpdf --collate --empty --pages a.pdf 1-5 b.pdf 6-4 c.pdf r1 -- out.pdf
+
+    you would get the following pages in this order:
+
+        a.pdf page 1
+
+        b.pdf page 6
+
+        c.pdf last page
+
+        a.pdf page 2
+
+        b.pdf page 5
+
+        a.pdf page 3
+
+        b.pdf page 4
+
+        a.pdf page 4
+
+        a.pdf page 5
+
+    You can specify a numeric parameter to --collate. With --collate=n, pull groups of n pages from each file, as always, stopping when there are no more pages. For example, if you ran
+
+    qpdf --collate=2 --empty --pages a.pdf 1-5 b.pdf 6-4 c.pdf r1 -- out.pdf
+
+    you would get the following pages in this order:
+
+        a.pdf page 1
+
+        a.pdf page 2
+
+        b.pdf page 6
+
+        b.pdf page 5
+
+        c.pdf last page
+
+        a.pdf page 3
+
+        a.pdf page 4
+
+        b.pdf page 4
+
+        a.pdf page 5
+
+    Take pages 1 through 5 from file1.pdf and pages 11 through 15 in reverse from file2.pdf, taking document-level metadata from file2.pdf.
+
+    qpdf file2.pdf --pages file1.pdf 1-5 . 15-11 -- outfile.pdf
+
+    Here’s a more contrived example. If, for some reason, you wanted to take the first page of an encrypted file called encrypted.pdf with password pass and repeat it twice in an output file without any shared data between the two copies of page 1, and if you wanted to drop document-level metadata but preserve encryption, you could run
+
+    qpdf --empty --copy-encryption=encrypted.pdf \
+         --encryption-file-password=pass \
+         --pages encrypted.pdf --password=pass 1 \
+               ./encrypted.pdf --password=pass 1 -- \
+         outfile.pdf
+
+    Note that we had to specify the password all three times because giving a password as --encryption-file-password doesn’t count for page selection, and as far as qpdf is concerned, encrypted.pdf and ./encrypted.pdf are separate files. (This is by design. See Limitations for a discussion.) These are all corner cases that most users should hopefully never have to be bothered with.
+
+

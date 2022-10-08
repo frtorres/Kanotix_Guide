@@ -1,0 +1,10 @@
+auto lo wlan0
+iface lo inet loopback
+#access point
+iface wlan0 inet static
+address 10.0.0.1
+netmask 255.255.255.240
+gateway 10.0.0.1
+dns-nameservers 192.168.1.1
+wireless-mode Master
+

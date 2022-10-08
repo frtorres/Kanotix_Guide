@@ -1,0 +1,27 @@
+Howtos: manage grub with new installs on other partitions.
+Kanotix Guide
+Fri Aug 22 18:31:36 EST 2014
+=============================
+
+If you have a kanotix/linux install on other partition:
+
+if you update the kernel in another install, you boot the default install,then
+
+    update-grub and reboot
+
+but that grub can boot every other install
+
+if there is a kernel update problem is only in OTHER installs. then you reboot. without any other selection and run in that install
+
+update-grub
+
+then you reboot and can select the new kernel for the other install
+
+thats the way it was for ages and will be the default install you want. boot it then 
+
+grub-install /dev/sda
+
+when you only have got 1 hd
+
+
+

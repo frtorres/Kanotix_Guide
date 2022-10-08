@@ -1,0 +1,224 @@
+/*
+ --------------------------------------------------------
+*	base styles for screen media
+*	FileName:    minimo.css
+*	Version:     2003.06.13
+*
+*	Créditos:
+*	Parte de este código CSS2, fue inspirado y copiado de los artículos:
+*	http://devedge.netscape.com/viewsource/2003/devedge-redesign-css/
+*	http://www.zeldman.com/
+*	http://www.meyerweb.com/eric/css/edge/
+*	
+*	Gracias a Eric Meyer por animarme a reprogramar mi sitio. CSS funciona!
+*	Gracias a G Zeldman por desempolvar mis crudas habilidades de diseño gráfico. :-)
+*	Francisco Torres R. http://frtorres.virtualave.net
+*
+*	Colores del Esquema:
+*	#99c   : Azul para Fondo del Encabezado.
+*	#93809d: Azul Oscuor para font-colors.
+*	#fff8d9: Amarillo Claro.
+*	#f0d9ff: Violeta Claro.
+*	#ffe380: Amarillo Casa.
+*	#ffd080: Para links "hover".
+*	#c46cff: Violeta Oscuro.
+*	#bcadcb; Azul para footer.
+---------------------------------------------------------
+*/
+
+body {
+	color:#333;
+	background-color:white; 
+	margin:20px; 
+	padding:0px;
+	font: 12px Verdana, sans-serif;
+	}
+
+
+* {
+	font-size: 1em;
+}
+
+#skipper {
+	display: none !important;
+	}
+
+/*
+* -------------------------------------------
+* Encabezado
+* -------------------------------------------
+*/
+.encabezado {
+	position:relative;
+/*
+	background: #99c url(aqua.gif) 50% 10% no-repeat fixed; 
+*/
+	background: #99c url(arroba.jpg) 50% 10% repeat fixed; 
+	border: 1px solid;
+	border-bottom: 5px double #557; 
+	border-top: 3px double #CCF; 
+	font-family: Arial, sans-serif;
+	padding: 0.6em 0.33em 0.6em; 			
+	margin: 0;
+	border-color: rgb(11%,13%,34%);
+	}
+
+/* Encabezado de Página Principal Título Grande */
+.encabezado h1 {
+	font-weight: normal; font-size: 250%;
+	letter-spacing: 0.075em; 
+	text-transform: lowercase;
+	position: relative; 
+	z-index: 10;
+	margin: 0 12em -0.1em 0; 
+	padding: 0.5em 0.25em 0;
+	}
+
+.encabezado h1 a {
+	text-decoration: none;
+	color: #446;
+	}
+
+.encabezado h1 a:hover {
+	background-color:transparent;
+	}
+
+/* Encabezado de Página Principal Mi nombre */
+.encabezado h1 span {
+	position: absolute; 
+	top: 0.3em; 
+	left: 1.75em; 
+	font-size: 50%; 
+	letter-spacing: 0.075em;
+	color: rgb(31%,35%,77%);
+	}
+
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font-size:150%;
+	font-weight:900;
+	color:#446;
+	}
+
+h2 {
+	margin:0px 0px 5px 0px;
+	font-size:130%;
+	color:#446;
+	padding:0px;
+	}
+p {
+	margin:0px 0px 16px 0px;
+	font-size: 0.95em;
+	padding:0px;
+	}
+
+.contenido>p {margin:0px;}
+.contenido>p+p {text-indent:30px;}
+
+a {
+	color:#99c;
+	font-size: 0.95em;
+	font-family:verdana, arial, helvetica, sans-serif;
+	font-weight:normal;
+	text-decoration:none;
+	}
+
+a:link {color:#002999;}
+a:visited {color:#00676d;}
+a:hover {background-color:#f0d9ff;}
+  
+
+/* All the contenido boxes belong to the contenido class. */
+.contenido {
+	position:relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+	width:auto;
+	min-width:120px;
+	font-family: Arial, Helvetica, sans-serif; 
+	font: 1em/1.25em Verdana, sans-serif;
+	margin:1.5em 210px 20px 170px;
+	border-left:1px solid silver;
+	border-right:1px solid silver;
+	background-color:white;
+	padding:10px;
+	z-index:3; /* This allows the contenido to overlap the right menu in narrow windows in good browsers. */
+	}
+
+#links {
+	position:absolute;
+	width:150px;
+	top:9em;
+	left:20px;
+/*	border:1px dashed black; */
+	text-align: right;
+/*	background-color: white;  */
+	background-color: #ffe380;  
+	padding:10px;
+	z-index:2;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:128px;
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#links {width:128px;}
+		
+#side_derecho {
+	position:absolute;
+	background: #99c url(arroba.jpg) 50% 10% no-repeat fixed; 
+	width:190px;
+	top:9em;
+	color:white;
+	right:20px;
+/*	border:1px dashed black; */
+	padding:10px;
+	z-index:1;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:168px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#side_derecho {width:168px;}
+
+#side_derecho h2 {
+	color:#000055;
+	}
+
+#side_derecho a {
+	color:#00008f;
+	}
+
+#side_derecho a:hover {
+	background-color:#d9e3ff;
+	}
+
+/*
+* -------------------------------------------
+* pie
+* -------------------------------------------
+*/
+
+#pie {
+	position: absolute;
+	border-top:  3px solid; 
+	background:#bcadcb;
+	width: 100%;
+	padding: 0.25em 0.1em 0.5em; 
+	margin: 0;
+	margin-top: 1em;
+	font: 0.75em Verdana, sans-serif; 
+	text-align: left; 
+	clear: both;
+	}
+
+#CommandBox { color: lightgrey; background: black; padding: 4px; border: ridge; width:90%; margin-top: .2em; margin-bottom: .6em; }
+#Command { color: yellow; font-size: 1.15em; };

@@ -1,0 +1,32 @@
+Howtos: nerd fonts
+Kanotix_Guide
+Sun Sep 19 20:50:15 EST 2021
+-----------------------------
+
+nerd fonts git repository:
+
+https://www.youtube.com/watch?v=fR4ThXzhQYI
+
+I installed hack font
+
+https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+
+1. Download: all set for hack font>>> Regular, bold , bold italic, italic.
+
+https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Bold/complete/Hack%20Bold%20Nerd%20Font%20Complete.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/BoldItalic/complete/Hack%20Bold%20Italic%20Nerd%20Font%20Complete.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Italic/complete/Hack%20Italic%20Nerd%20Font%20Complete.ttf
+
+2. Move all files as root to /usr/local/share/fonts
+
+3. Define this font as default in KDE Konsole terminals.
+
+----
+To copy Special Characters: https://www.nerdfonts.com/cheat-sheet
+----
+
+References to learn:
+https://wiki.kubuntu.org/Fonts
+
+

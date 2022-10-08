@@ -1,0 +1,17 @@
+Howtos: Favorite Linux Commands.
+Kanotix_Guide
+Mon Nov  3 07:35:25 EST 2014
+=============================
+
+fix a partition used by OS. Mounted cannot be fixed so a live install is needed.
+
+1. reboot now to a live system
+2. what you do then is fsck -f /dev/sda2
+3. well before sudo -i then
+   fsck -f /dev/sda2
+   mount /dev/sda2 /mnt
+   cd /mnt/media
+   then use mc to delete all dirs + files exept the sda1 dir
+   remote the .mtab-hal too
+4. then boot hd if you are lucky it works again. if not, no idea what is wrong on your pc
+

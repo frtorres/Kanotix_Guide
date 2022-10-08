@@ -1,0 +1,39 @@
+Howtos: encrypt rescue-install
+Kanotix_Guide
+Mon Sep  1 00:10:06 EST 2014
+=================================
+
+-----------------------------------------------------------------------------
+Rescue from live linux.
+
+      apt-get install lvm2 cryptsetup
+
+probe required module using the following command
+
+      sudo modprobe dm-crypt
+
+setup the crypto module to recognise the partition
+
+      sudo cryptsetup luksOpen /dev/hda5 crypt1
+
+Enter your passphrase. You should get the following message:
+
+      key slot 0 unlocked.
+      Command successful.
+      If not, something has gone wrong.
+
+Scan for volume groups
+
+      sudo vgscan --mknodes
+      sudo vgchange -ay
+
+REMEMBER the name of the volume group, as you will need it later.
+Create a mount point
+
+      sudo mkdir /volume
+      sudo mount /dev/mapper/.../root /volume
+
+The volume is mounted, now you can chroot or whatever else you need to do. 
+-----------------------------------------------------------------------------
+
+

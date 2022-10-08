@@ -1,0 +1,26 @@
+Install: Virtual Box.
+Kanotix_Guide
+Thu Aug 20 17:22:30 EST 2015
+=============================
+
+See factoid: !vbox
+
+"vbox" could be echo deb http://download.virtualbox.org/virtualbox/debian wheezy contrib > /etc/apt/sources.list.d/vbox.list;wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -;apt-get update && apt-get install --yes virtualbox-5.0;adduser $(getent passwd 1000|sed 's/:.*//') vboxusers
+
+***CAUTION***** factoid: !va: http://kanotix.com/files/install-vbox-addons.sh
+<Kano> never va in a system! never ever!
+<Kano> install-vbox-extpack  is what you need
+
+!extpack: "extpack" could be wget -qO- http://kanotix.com/files/install-vbox-extpack.sh|sh
+
+extpack script is preinstalled, you dont need any factoid
+
+In order to check: dkms status
+ndiswrapper, 1.59, 4.2.0-16-generic, x86_64: installed
+vboxhost, 4.3.28, 4.2.0-16-generic, x86_64: installed
+
+current version: should be vbox 5, to delete the old one:
+
+dpkg --purge virtualbox-4.3
+reboot
+

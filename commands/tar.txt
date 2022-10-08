@@ -1,0 +1,22 @@
+Commands: tar 
+Kanotix_Guide
+Fri Oct 10 12:44:04 EST 2014
+=============================
+
+tar -zxvf <filename>.tar.gz
+
+Download to a directory such as /user/downloads or something. 
+start another session as root. 
+Then you generally (in the console) tar -zxvf filename.tar.gz paying attention to case. 
+Then, cd to the directory you need to compile the program in then ./configure then make then make install then exit. 
+Then you can run the program from the command line in the usr session. 
+
+When using the tar command given above, make sure that the -f option is the last one on the list before the file name. 
+One thing different about the tar command is that the dash before the options is optional.
+
+There are two commands that you will probably use in the future where the command letter does not use a dash but the options do. These are the rar and par commands.
+
+for rar:
+rar x -kb filename.rar will extract the files preserving subdirectories. The -kb option will keep broken (partial) files. Adding a dash before the x will not work.
+
+  

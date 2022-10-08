@@ -1,0 +1,17 @@
+Howtos: disk wipe disk. taking into account filenames with problematic spaces
+Kanotix_Guide
+Fri Oct 10 12:54:57 EST 2014
+=============================
+
+#1. Handling of spaces in filenames
+
+find /media/usbdisk -type f -print | while read -r file; do /usr/bin/shred -v -z -n12 -u "$file"; done
+
+#2. Previous regular commands.
+
+find /media/usbdisk -type f -print | xargs /bin/rm -f 
+
+find /media/usbdisk -type f -print | xargs /usr/bin/shred -v -n12 -z {} \;
+
+
+ 

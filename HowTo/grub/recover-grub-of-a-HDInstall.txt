@@ -1,0 +1,19 @@
+Howtos: grub Recovering grub for a kanotix HD install.
+Kanotix Guide
+Fri Aug 22 21:04:00 EST 2014
+=============================
+
+Recovering grub for a HD Install.
+
+Assuming kanotix installed on sda. 
+
+Boot live install first and:
+
+su
+mount /dev/sda1 /mnt
+mount --bind /dev /mnt/dev
+chroot /mnt
+grub-install /dev/sda
+
+now reboot
+

@@ -1,0 +1,19 @@
+Howtos: admin script to update flash
+Kanotix_Guide
+Fri Oct 10 12:44:04 EST 2014
+=============================
+    
+"flash" could be 
+(#1) wget -qO- http://kanotix.com/files/install-flash-local.sh|sh, or 
+(#2) for excalibur: just run as USER (not root!): install-flash-local.sh, or (#3) use update-scripts-kanotix.sh as root to update and to run it on kde start as USER: ln -fsv /usr/local/bin/install-flash-local.sh ~/.kde/Autostart/
+
+Problem: #1 in !flash is reporting: "Waiting for internet connection (up to 600 s, check every 10 s)" message since days ago.
+
+the script ping opton: 
+well the ping check is usually only problematic when you use a firewall that blocks icmp or you use kvm/qemu
+
+you can disable it using. use -p option
+rm /usr/local/bin/*
+
+btw, the ping check is used to verify that you are online for automated updates
+

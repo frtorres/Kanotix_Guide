@@ -1,0 +1,38 @@
+Howtos: Install SeaMonkey
+Kanotix_Guide
+Wed Sep 24 23:46:42 EST 2014
+=============================
+
+It is not available on Debian repos. Not present on jesse repos.
+	
+https://www.seamonkey-project.org/
+
+See: 
+
+http://www.linuxquestions.org/questions/debian-26/no-seamonkey-no-iceape-either-4175516361/
+
+Download 64 bit version from:
+
+https://ftp.mozilla.org/pub/seamonkey/releases/2.29/contrib/seamonkey-2.29.en-US.linux-x86_64.tar.bz2
+
+Default download is a 32 bit version, got problems: Couldn't load XPCOM 
+
+see https://bugzilla.mozilla.org/show_bug.cgi?id=829604
+
+To install
+
+1. Download the binaries as suggested. Extract it in /opt , which is usually the best place for statically compiled stuff, or if you must, somewhere like /usr/local/mozilla
+
+# cd /opt
+# wget https://download-installer.cdn.mozilla.net/pub/seamonkey/releases/2.26.1/linux-i686/en-US/seamonkey-2.26.1.tar.bz2
+# tar jxvf seamonk*
+# cd seamonk*
+# ln -s /opt/seamonkey/seamonkey /usr/local/bin/seamonkey
+
+You should then be able to run it from the cli as a user e.g.
+Code:
+
+$ seamonkey
+
+
+

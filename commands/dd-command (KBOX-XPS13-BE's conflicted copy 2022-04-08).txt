@@ -1,0 +1,52 @@
+Commands: dd info||:w
+Kanotix_Guide
+Sun Aug 24 19:51:08 EST 2014
+=============================
+
+http://www.debianhelp.co.uk/ddcommand.htm
+-------------------------------
+
+status=progress
+
+full hard disk copy
+
+dd if=/dev/hdx of=/dev/hdy
+dd if=/dev/hdx of=/path/to/image
+-dd if=/dev/hdx | gzip > /path/to/image.gz
+
+Hdx could be hda, hdb etc. In the second example gzip is used to compress the image if it is really just a backup.
+
+Restore Backup of hard disk copy
+
+dd if=/path/to/image of=/dev/hdx
+
+gzip -dc /path/to/image.gz | dd of=/dev/hdx
+
+MBR backup
+
+In order to backup only the first few bytes containing the MBR and the partition table you can use dd as well.
+
+dd if=/dev/hdx of=/path/to/image count=1 bs=512
+
+MBR restore
+
+dd if=/path/to/image of=/dev/hdx
+
+Add "count=1 bs=446" to exclude the partition table from being written to disk. You can manually restore the table.
+
+-------------------------------------------------------
+http://blog.bravi.org/?p=856#more-856
+
+The following command is used to back-up MBR stored on /dev/sdX on a file:
+
+dd if=/dev/sdX of=/tmp/sda-mbr.bin bs=512 count=1
+
+The following command will restore partition table to disk:
+
+dd if= sda-mbr.bin of=/dev/sdX bs=1 count=64 skip=446 seek=446
+
+--------------------------------------------------------
+To clean : going to be in the right sdX.
+dd if=/dev/zero of=/dev/sdX iflag=nocache oflag=direct bs=4096
+
+

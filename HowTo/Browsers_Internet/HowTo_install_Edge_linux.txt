@@ -1,0 +1,14 @@
+HowTo install Edge on Linux
+Kanotix_Guide
+Sat Apr  3 11:21:19 EST 2021
+------------------------------
+
+See:https://podcast.asknoahshow.com/203
+
+Edge for Linux Download
+
+Version 88 https://go.microsoft.com/fwlink/?LinkID=2124602
+
+https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/
+
+https://packages.microsoft.com/yumrepos/edge/microsoft-edge-dev-88.0.673.0-1.x86_64.rpm

@@ -1,0 +1,17 @@
+Howtos: ssh on .bashrc processing.
+Kanotix_Guide
+Sun Mar  7 20:39:05 EST 2021
+==================================
+
+see: https://stackoverflow.com/questions/820517/bashrc-at-ssh-login
+
+.bashrc is not sourced when you log in using SSH. You need to source it in your .bash_profile like this:
+
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+
+
+
+

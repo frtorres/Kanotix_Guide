@@ -1,0 +1,21 @@
+Howtos: exiftool 
+Kanotix_Guide
+Sat Jul  2 09:31:03 AST 2016
+=============================
+
+exiftool to manipulate picture tags.
+
+Reference: http://owl.phy.queensu.ca/~phil/exiftool/examples.html
+
+1. install:
+apt-get install exiftool
+
+examples:
+see: http://owl.phy.queensu.ca/~phil/exiftool/examples.html
+
+exiftool -artist="Francisco Torres" -copyright="2014 Francisco Torres Panama" 20140719_132207.jpg
+
+see:https://www.linux.com/news/how-add-metadata-digital-pictures-command-line
+for scripts examples
+
+

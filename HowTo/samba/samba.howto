@@ -1,0 +1,10 @@
+From Installation.
+
+1. apt-get install samba samba-tools smbclient cifs-utils samba-common-bin
+
+	Generating /etc/default/samba...
+	Adding group `sambashare' (GID 122) ...
+	update-alternatives: using /usr/bin/smbstatus.samba3 to provide /usr/bin/smbstatus (smbstatus) in auto mode
+	[ ok ] Starting Samba daemons: nmbd smbd.
+
+

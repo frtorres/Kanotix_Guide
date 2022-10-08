@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+<title>rss podcasts Francisco Torres</title> 
+<link>https://github.com/frtorres/</link> 
+<description>Favorites Video Rss feeds</description> 
+<language>en-us</language> 
+<copyright>Copyright 2017, frtorres.</copyright> 
+<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+<image>
+	<title>favorites video podcasts</title> 
+	<url>http://pngimg.com/uploads/radio/radio_PNG91675.png</url> 
+	<link>https://github.com/frtorres/</link> 
+	<width>100</width> 
+	<height>80</height> 
+	<description>frtorres Radio favorite podcasts</description> 
+</image>
+<item>
+	<title>Julio Sanchez Cristo DJ</title> 
+	<link>rss://fapi-top.prisasd.com/podcast/wradiocolombia/14_wradiocolombia/itunes/julio_sanchez_cristo_dj/audios.xml</link> 
+	<description>La mejor selección musical con la voz de siempre, la voz original de La W</description> 
+	<media:thumbnail url="https://recursosweb.prisaradio.com/fotos/original/010002676109.png"/>
+	<fanart>https://www.wradio.com.co/images/3991292_n_vir3.jpg?u=140647</fanart>
+</item>
+<item>
+	<title>Diana UribeN ten minutes brief</title>
+	<link>rss://dianauribefm.libsyn.com/rss</link>
+	<description>Podcast de Diana Uribe, historias del Mundo.</description>
+	<media:thumbnail url="https://s3.amazonaws.com/rtvc-assets-qa-sistemasenalcolombia.gov.co/diana_uribe_5644.jpg"/>
+	<fanart>https://www.elcolombiano.com/documents/10157/0/580x387/0c11/580d365/none/11101/BILJ/image_content_32009689_20181012181233.jpg</fanart>
+</item>
+</channel>
+</rss>

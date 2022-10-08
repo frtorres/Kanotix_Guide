@@ -1,0 +1,38 @@
+Howtos: knoppix make KNOPPIX ISO DVD Hybrid.
+Kanotix Guide
+Fri Aug 22 22:57:54 EST 2014
+=============================
+    
+from: http://superuser.com/questions/649253/create-a-linux-knoppix-bootable-usb-with-multiple-partitions-with-linux-or-m
+
+
+Step 1. Install syslinux:
+
+$ sudo apt-get install syslinux
+
+Step 2. (Clean your USB flash drive) Plug the USB flash drive to your computer. To find out how does the system "recognizes" it, type the following command:
+
+$ fdisk -l
+
+Once you are sure you know which device is your USB flash drive (in my case /dev/sdb), take note of the heads and sectors/track values (in my case, 241 heads and 62 sectors / track).
+
+Now, shred the flashdrive:
+
+$ shred -z /dev/sdb
+
+Step 3. (Prepare the .iso file) Navigate to the folder where the Knoppix .iso image is, and convert it to "hybrid mode". Use the values of heads and cylinders/track you got in step 1 (if you don't remember them, use fdisk -l /dev/sdb):
+
+$ isohybrid -o 1 -h 241 -s 62 -e 1 KNOPPIX_V7.2.0CD-2013-06-16-EN.iso
+
+Step 4. Write the image to your USB flash drive:
+
+$ cat KNOPPIX_V7.2.0CD-2013-06-16-EN.iso > /dev/sdb
+
+Step 5. (Make the rest of your USB flash drive available for use). If you don't mind that the remaining space in your flash drive is wasted, then skip this. But if you (like me) are greedy about these precious extra MB, you'll need to add a second partition to your drive. So, let's edit the partition table:
+
+$ fdisk /dev/sdb
+
+add a FAT primary partition.
+
+$ mkfs.vfat /dev/sdb2
+

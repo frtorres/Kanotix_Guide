@@ -1,0 +1,112 @@
+Install games
+Kanotx Guide
+Tue Nov 25 15:51:18 EST 2014
+--------------------------------
+
+[15:15:39] <Kano> zerby: now
+[15:15:42] <Kano> !prime
+[15:15:43] <help-me> Kano: "prime" could be (#1) xrandr --setprovideroffloadsink $(xrandr --listproviders|awk '/id:/{print $4}'|sort -u), or (#2) Disable KDE FX (Alt+Shift+F12) - Steam: Set Launch Options: DRI_PRIME=1 %command%
+[15:15:50] <Kano> run first xrandr command as user
+[15:15:57] <zerby> k
+[15:15:58] <Kano> do you have got any error?
+[15:16:23] <Kano> in case of problems show me
+[15:16:26] <Kano> xrandr --listproviders
+[15:16:27] <zerby> never ever ;)
+[15:16:41] <Kano> then press the alt+shift+f12 shortcut
+[15:16:45] <Kano> and then
+[15:16:55] <Kano> /cmd DRI_PRIME=1 infobash -v
+[15:17:22] <zerby> ?
+[15:17:26] <Kano> just do it
+[15:17:36] <zerby> first 1 then 2
+[15:17:52] <Kano> well 2 is basically how you force it with steam
+[15:18:11] <Kano> but you can use DRI_PRIME=1 override manuelly as well per app
+[15:18:17] <Kano> for gl2benchmark as well
+[15:18:51] <Kano> maybe you need to remove fglrx completely
+[15:18:54] <Kano> !amddebrm
+[15:18:54] <help-me> Kano: "amddebrm" could be apt-get remove --yes --purge $(dpkg -l|awk '/fglrx|nvidia-i/{print $2}');rm -vf /etc/X11/xorg.conf
+[15:18:57] <Kano> !nvdebrm
+[15:18:58] <help-me> Kano: "nvdebrm" could be apt-get remove --yes --purge $(dpkg -l|awk '/nvidia|vdpau-va/{print $2}'|grep -v -e libkwinnvidiahack4 -e nvidia-libopencl1 );rm -vf /etc/X11/xorg.conf
+[15:19:03] <Kano> apt-get autoremove --purge
+
+[15:19:14] <Kano> update-initramfs -utk all
+[15:19:15] <zerby> cmd:                 Advanced Micro Devices, [AMD/ATI] Seymour [Radeon HD 6400M/7400M Series]
+[15:19:17] <zerby> cmd: Processes 205 | Uptime 10min | Memory 1033.7/7891.7MB | HDD Size 500GB (60%used) | GLX Renderer Gallium 0.4 on AMD CAICOS | GLX Version Yes | Client Shell wrapper | Infobash v2.67.2
+
+[15:19:28] <Kano> fine, do you see that
+[15:19:31] <Kano> gallium 
+[15:19:38] <Kano> now just use
+[15:20:36] <Kano> printf '#!/bin/sh\nxrandr --setprovideroffloadsink $(xrandr --listproviders|awk '/id:/{print $4}'|sort -u)\n' > .kde/Autostart/prime.sh
+[15:20:43] <Kano> chmod +x .kde/Autostart/prime.sh
+[15:21:01] <Kano> and you only need to switch kde fx off and use DRI_PRIME=1 app
+[15:21:17] <zerby> as root
+[15:21:23] <Kano> user
+[15:21:42] <Kano> just if you want to kill the binary drivers completely then the other commands as root
+[15:21:55] <Kano> it is useless anyway for muxless systems
+[15:22:07] <Kano> apt-get install lame msttcorefonts
+[15:22:08] <Kano> !css
+[15:22:09] <help-me> Kano: "css" could be 32 bit: http://download.videolan.org/pub/libdvdcss/1.2.10/deb/libdvdcss2_1.2.10-1_i386.deb - 64 bit: http://download.videolan.org/pub/libdvdcss/1.2.10/deb/libdvdcss2_1.2.10-1_amd64.deb
+[15:22:14] <Kano> the 2nd one is 64 bit
+[15:22:15] <Kano> done
+[15:22:28] <Kano> and for vbox you just run: install-vbox-extpack
+[15:22:35] <Kano> then you have got usb 2 support
+[15:22:39] <Kano> (as root)
+[15:23:07] <Kano> radeon is really fast
+[15:23:23] <Kano> at least for source engine it should be absolutely no problem
+[15:24:11] <Kano> i mean team fortress 2, even dota 2, l4d2, counter strike go...
+[15:24:16] <zerby> how do i use DRI_PRIME=1
+[15:24:24] <Kano> in steam like
+[15:24:26] <Kano> !prime
+[15:24:27] <help-me> Kano: "prime" could be (#1) xrandr --setprovideroffloadsink $(xrandr --listproviders|awk '/id:/{print $4}'|sort -u), or (#2) Disable KDE FX (Alt+Shift+F12) - Steam: Set Launch Options: DRI_PRIME=1 %command%
+[15:24:30] <Kano> described in 2
+[15:24:38] <Kano> in the launch option setting
+[15:24:54] <Kano> otherwise you just start your app from commandline (as user!!) with
+[15:25:02] <Kano> DRI_PRIME=1 appname
+[15:25:23] <Kano> or create a shortcut for that
+[15:25:41] <Kano> just dont forget to disable kde fx
+[15:26:00] <zerby> i did
+[15:26:24] <Kano> i would set it globally off in case i would play lots of games,but thats up to you
+[15:26:24] <zerby> steam DRI_PRIME=1
+[15:26:26] <zerby> Running Steam on debian  64-bit
+[15:26:27] <zerby> STEAM_RUNTIME is enabled automatically
+[15:26:29] <Kano> no
+[15:26:39] <Kano> it is not possible to run steam that way
+[15:26:46] <Kano> you change it per game
+[15:26:56] <zerby> mm ok
+[15:26:56] <Kano> also you wrote it behind the app name
+[15:27:09] <Kano> and you would have to write it in front
+[15:27:16] <Kano> zerby: btw. after you installed steam
+[15:27:20] <Kano> !steam-fix
+[15:27:20] <help-me> Kano: "steam-fix" could be (#1) perl -pi -e 's|.*http://repo.*\n||' /etc/apt/sources.list, or (#2) find ~/.local/share/Steam/ubuntu12_32 \( -name libstdc++.so.6 -o -name libgcc_s.so.1 \) -exec rm -vf {} \;
+[15:27:28] <Kano> use steam-fix 2 for radeon
+[15:27:33] <Kano> otherwise it wont work
+[15:27:53] <Kano> required for all gallium drivers (not for intel nor for binary)
+[15:28:07] <zerby> tx
+[15:28:12] <Kano> the find is executed as user of course
+[15:28:19] <zerby> yep
+[15:28:39] <Kano> everytime you get an update for the steam runtime repeat this step
+[15:29:19] <Kano> its releated to the llvm version
+[15:29:32] --> niteghost (~meins@ppp-188-174-91-85.dynamic.mnet-online.de) has joined this channel.
+[15:29:34] <Kano> when it is different to the one mesa is compiled you have got problems
+[15:29:57] <zerby> oops
+[15:29:59] <zerby> ok
+[15:30:12] <Kano> that why you need that hack
+[15:30:21] <Kano> or a preload of the global files
+[15:30:28] <Kano> i think deleting is simpler
+[15:32:47] <zerby> eu4 runs good!
+[15:33:05] <Kano> whats that
+[15:33:21] <zerby> europa universalis 4 steam game
+[15:33:54] <Kano> something like civ?
+[15:35:00] <Kano> some others here play often l4d2
+[15:35:39] <Kano> in 4 hs i can play goat simulator with linux again... my internet is so slow
+[15:35:44] <Kano> and 1.9 gb updates take time
+[15:35:51] <zerby> better than civ
+[15:35:51] <Kano> with 45 kbyte/s
+[15:36:05] <Kano> serious sam 3
+[15:36:08] <zerby> crusader kings 2 seem to run better than under windows 
+[15:36:28] <Kano> killing floor (not now,but informer) worked perfectly with radeon
+[15:36:38] <Kano> i did not geht what do do with ck2
+[15:36:52] <Kano> i have the game...
+[15:38:55] <Kano> well i need a break, have fun with steam
+[15:39:18] <Kano> bbl
+
+

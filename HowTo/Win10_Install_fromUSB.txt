@@ -1,0 +1,8 @@
+Install: Windows 10 from USB stick
+Kanotix_Guide
+Tue Jan 18 15:39:00 EST 2022
+=============================
+
+Windows10 ISO Image: https://www.microsoft.com/en-in/software-download/windows10ISO
+
+reference: https://www.makeuseof.com/tag/windows-10-usb-boot-drive/

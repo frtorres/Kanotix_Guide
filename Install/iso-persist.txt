@@ -1,0 +1,19 @@
+Install: Persist Change font size at boot
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+Kano, to set up a persistent /home using a live kanotix usb: 
+
+On a 2nd stick it might work, if if format it as home-rw (label)
+
+blkid
+
+define a partition with live-rw as a label is also possible on HD
+
+tune2fs -L home-rw /dev/sda5
+
+Reference: you need the debian live howto persistent is the option you need.
+that should find partitions with those names.
+
+

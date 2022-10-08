@@ -1,0 +1,53 @@
+Howtos: fix swap partition
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+swapon -a
+
+1. if error is shown as:
+
+swapon: /dev/sda6: Invalid argument
+swapon: cannot find the device for UUID=0ad8a0c4-cf61-4d60-b062-d9525d497eb8
+
+2. fdisk -l
+Disk /dev/sda: 160.0 GB, 160041885696 bytes
+255 heads, 63 sectors/track, 19457 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x2bd2c32a
+Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1       13054   104856223+   7  HPFS/NTFS
+/dev/sda2           13055       15665    20972857+  83  Linux
+/dev/sda3           15666       19457    30459240    5  Extended
+/dev/sda5           15666       16318     5245191   83  Linux
+/dev/sda6           16319       16579     2096451   82  Linux swap / Solaris
+/dev/sda7           16580       19457    23117503+  83  Linux
+
+3. free -m
+   total       used       free     shared    buffers     cached
+   Mem:           992        487        504          0         19        189
+   -/+ buffers/cache:        278        713
+   Swap:            0          0          0
+
+4. mkswap /dev/sda6
+5. swapon -a
+    Setting up swapspace version 1, size = 2146758 kB
+    no label, UUID=764360d6-69e8-42e0-8bc5-38cf38405eb7
+
+6. grep swap /etc/fstab
+UUID=8deaf99a-d765-494c-8070-e6c713bd1095 none            swap    sw              0       0
+
+7. sed -i s/8deaf99a-d765-494c-8070-e6c713bd1095/764360d6-69e8-42e0-8bc5-38cf38405eb7/ /etc/fstab
+
+8. swapon -a
+
+free -m
+              total       used       free     shared    buffers     cached
+Mem:           992        493        498          0         20        193
+               -/+ buffers/cache:        279        712
+              Swap:         2047          0       2047
+
+so fixed.
+
+
+

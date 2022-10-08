@@ -1,0 +1,11 @@
+Howtos: pdf pdf repair
+Kanotix Guide
+Thu Mar 28 19:43:49 EST 2019
+============================
+
+see: https://superuser.com/questions/278562/how-can-i-fix-repair-a-corrupted-pdf-file
+     http://jhove.openpreservation.org/getting-started/
+
+
+
+gs -o /tmp/repaired.pdf -SDEVICE=pdfwrite -dPDFSETTINGS=/prepress corrupted.pdf

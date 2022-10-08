@@ -1,0 +1,39 @@
+Howtos: java - installing java 8.
+Kanotix_Guide
+Thu Jun 15 20:51:13 EST 2017
+=============================
+
+
+1. kanotix factoid !java install java 1.7 --- v7.
+
+2. filebot requires java 8.
+
+see: https://linux-tips.com/t/how-to-install-java-8-on-debian-jessie/349/2
+
+2.1  Add jessie-backports into apt if it is not added previously:
+
+use factoid: !bpo-j
+
+echo deb http://http.debian.net/debian jessie-backports main >/etc/apt/sources.list.d/bpo.list;echo deb-src http://http.debian.net/debian jessie-backports main >>/etc/apt/sources.list.d/bpo.list;apt-get update
+
+2.2. apt-get update
+2.3. apt-get install -t jessie-backports openjdk-8-jdk
+2.4. And optionally, set default java version to newly installed 1.8:
+
+update-java-alternatives -s java-1.8.0-openjdk-amd64
+
+3. steps 1-2 do not install openjfx 
+
+See tese urls to install dependencies (backports)
+
+https://packages.debian.org/jessie-backports/libopenjfx-jni
+https://packages.debian.org/jessie-backports/libopenjfx-java
+https://packages.debian.org/jessie-backports/openjfx
+
+Files:
+
+libopenjfx-jni_8u102-b14-1~bpo8+1_amd64.deb
+libopenjfx-java_8u102-b14-1~bpo8+1_all.deb
+openjfx_8u102-b14-1~bpo8+1_amd64.deb
+
+

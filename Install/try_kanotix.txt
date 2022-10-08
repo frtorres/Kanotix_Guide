@@ -1,0 +1,38 @@
+Install: bios information.
+Kanotix_Guide
+Tue Nov  3 15:33:33 EST 2015
+=============================
+
+
+Question, I'm thinking on trying kanotix for my pen drive, to substitute knoppix which is "old". So I want to try acritox's daily builds (based on jessie), but I can't find the difference between "normal" kde images and "special" images. Any idea what's the difference?
+
+Not that I'm sure yet if I want to go with kde over lxde, but I wonder what the diff is
+
+<Kano> :
+special has xbmc preinstalled and vbox and binary drivers in gfxdetect modee and the steam client.
+
+Last question, would Kanotix be able to read/use a knoppix persistence image?
+
+<Kano>: no
+
+and it is no file. you dd the image and enable persistence.
+on reboot you have got persictence active.
+
+kanotix has no knoppix code inside, but is based on debian live.
+
+So it's a partition?
+
+it will be automacticallly created and a config file written the file will have got the last times used boot options in it.
+
+btw. best would be using utc on every system, even windows on the boxes you run the stick
+!timefix :  "timefix" could be http://kanotix.com/files/fix/Timefix.zip
+
+contains a windows reg file to do that. you can add timezone override via bootoption.
+
+The problem is, if you let kanotix shutdown it will most likely update your system clock to utcon a hd install you could just run: dpkg-reconfigure tzdata and then fix-time -l to enforce local time
+
+thats why i would suggest to install it, it can be installed onto usb hd too
+new systems need gpt, fat32 300 mb in case you boot with efi (checked with: sudo efibootmgr -v)
+and ext4 for linux itself
+
+

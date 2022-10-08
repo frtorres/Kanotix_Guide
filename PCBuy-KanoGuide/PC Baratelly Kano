@@ -1,0 +1,50 @@
+
+
+AS OF 14JAN19
+Budget: US$200?
+$200 motherboard plus processor plus memory
+
+
+1. two ways, i3 with better single core performance
+   or phenom x4 965 with better quad performance
+   for the first you can use h61 board
+   for the 2nd you would use amd 970
+   the onboard gfx speed is a bit higher with amd
+   but intel can use vaapi on linux for video acc
+   in xbmc depends on use case
+
+
+2. do you use your i5 with intel oss drivers now or not
+
+----------------------------------------------------------------------------------------------------------
+
+phenom x4 965  US$149.95.  3.4Ghz
+Gigabyte GA-970A-D3 - USB 3.0, SATA3 $119.90.
+http://www.yoytec.com/product_info.php/cPath/26_33_142/products_id/7005  $119.90 
+Intel Core i3-2100 a 3.1Ghz (Sandy Bridge) - Doble Núcleo, Socket LGA1155  $139.90
+Intel Core i3-2120 a 3.3Ghz (Sandy Bridge) - Doble Núcleo, Socket LGA1155  $171.10
+ASRock H61M/U3S3 - Socket LGA1155, Chipset Intel H61, $93.80.
+ASRock H61M-S - Socket LGA1155, Chipset Intel H61, USB2  $69.90
+
+----------------------------------------------------------------------------------------------------------
+
+3.  what do yoy think about this boards with processor?
+    forget it
+    well maybe use athlon x4 then
+    and only 2 gb ram
+    how much is the board?
+    870 might be working too if 970 is to expensive
+
+
+
+    97 is the cheapest?
+    phenom x4 955 would be the same
+    from the price but faster when you use 4 cores
+    phenom x4 965  US$149.95.
+    well use 955 then
+
+ phenom x2 555 instead of 955 would be most likely 200$
+ US$10 more compared to i3. and get quad. seems much better.
+ you can get a usb 3 card later too for pci-e
+ but if you really want 4 use the x4
+

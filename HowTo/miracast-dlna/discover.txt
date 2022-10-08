@@ -1,0 +1,9 @@
+#gssdp-discover (from gupnp-tools) will list devices and services advertized over SSDP:
+
+gssdp-discover -i wlan0 --timeout=3
+
+#You can also specify the target (as uuid or a service/device type):
+
+gssdp-discover -i wlan0  --timeout=3 --target=urn:schemas-upnp-org:device:MediaRenderer:1
+
+

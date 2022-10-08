@@ -1,0 +1,9 @@
+Howtos: vlc skins
+Kanotix_Guide
+Sun Apr 23 22:48:55 EST 2017
+-------------------------------
+
+1. all skins from: 
+http://www.videolan.org/vlc/download-skins2-go.php?url=vlc-skins.zip
+
+

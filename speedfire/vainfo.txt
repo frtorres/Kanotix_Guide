@@ -1,0 +1,43 @@
+# HowTo: vainfo 
+# Kanotix Guide
+## Wed 17 Mar 2021 09:32:48 PM EST
+
+
+Problem: No hevc present.
+
+even with silverfire+ mesa backports
+
+1. VP9 is needed for youtube, but you may need youtube-dl to dl it before or a youtube addon for kodi
+maybe vlc works too
+
+`LIBVA_DRIVER_NAME=i965 vainfo`
+
+or without the other LIBVA... override
+
+2. To know available res:
+
+`youtube-dl https://www.youtube.com/watch?v=LXb3EKWsInQ -F`
+
+3. To downlaod and play:
+
+`youtube-dl https://www.youtube.com/watch?v=LXb3EKWsInQ -f 337`
+
+(install mediainfo and youtube-dl)
+
+4. Play movie to see video hwenc
+`mpv COSTA\ RICA\ IN\ 4K\ 60fps\ HDR\ \(ULTRA\ HD\)-LXb3EKWsInQ.webm`
+
+when you press i then it should show hwdec vaapi
+
+can uise also:
+
+LIBVA_DRIVER_NAME=i965 mpv...
+
+
+5. Usually iHD is better
+even with silverfire+ mesa backports
+VP9 is needed for youtube, but you may need youtube-dl to dl it before or a youtube addon for kodi
+maybe vlc works too
+
+`LIBVA_DRIVER_NAME=i965 vainfo`
+

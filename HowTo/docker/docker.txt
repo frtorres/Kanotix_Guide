@@ -1,0 +1,37 @@
+HowTos docker - Installation fixes and tips
+Kanotix_Guide
+Sun Dec  7 15:59:17 EST 2014
+-------------------------------------------
+
+2 Problem at install on SpitFire:
+
+a) ERROR: Your kernel does not support cgroup swap limit.
+
+see: https://docs.docker.com/installation/ubuntulinux/
+
+Edit /etc/default/grub and extending GRUB_CMDLINE_LINUX. Look for the following line:
+
+GRUB_CMDLINE_LINUX=""
+
+And replace it by the following one:
+
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+
+Then run sudo update-grub, and reboot.
+
+b)  ERROR: Error loading docker apparmor profile
+
+apt-get install apparmor
+
+
+Hint: check /etc/init.d/docker status
+
+
+Pending to try if this works.
+
+from: https://github.com/docker/docker/issues/4743
+
+try to run the daemon with
+
+docker -d -g /var/lib/docker-new ?
+

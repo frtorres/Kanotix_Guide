@@ -1,0 +1,57 @@
+Howtos: cinnamon install
+Kanotix_Guide
+Mon Sep  1 00:20:19 EST 2014
+=============================
+
+
+#only supports sid or debian wheeze
+
+1. create repo ldme.list:
+deb http://packages.linuxmint.com/ debian main upstream import
+
+2. then install the “linuxmint-keyring” package.
+
+apt-get install cinnamon muffin
+
+3. Additional Steps:
+----------------
+
+apt-get install gnome-themes
+apt-get install gnome-session
+# I did not start cinnamon session
+
+cat ~/.xinitrc 
+#!/bin/sh
+#exec startkde
+exec gnome-session
+
+Notes:
+------
+
+Inside kde on a terminal tested:
+
+cinnamon --replace 
+
+and got menus.
+
+
+run in terminal cinnamon=settings
+I got: No gconf module exist message
+
+apt-get install python-gconf
+
+Finnally, seems this has to be installed OVER Gnome 3.x
+
+apt-get install gnome-desktop-environment 
+
+And I choosed kdm as desktop manager 
+
+cinnamon settings is ok now :)
+
+Edited. April 6,2012.
+
+
+
+
+
+

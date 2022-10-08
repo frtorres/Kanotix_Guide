@@ -1,0 +1,22 @@
+HowTos: vivaldi browser hacking tips and tasks
+Kanotix Guide
+Thu May 26 07:53:28 EST 2016
+---------------------------------------------
+
+uBlock Origin ad stopper.
+
+Google Chrome Settings location: ~/.config/vivaldi
+
+Source: https://github.com/gorhill/uBlock/tree/master/dist#install 
+
+Extension: session manager,
+
+0. rename dir to ublock
+1. enter vivaldi://extensions
+2. Click on developer mode. 
+
+So choose dir : (load unpacked extension)
+
+
+
+

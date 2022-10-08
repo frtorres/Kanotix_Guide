@@ -1,0 +1,7 @@
+commands: dpkg.
+Kanotix_Guide
+Sun Jul 17 17:59:10 AST 2016
+===============================================
+
+dpkg --purge <package>
+ 

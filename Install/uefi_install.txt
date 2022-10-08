@@ -1,0 +1,28 @@
+Install: UEFI install.
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+
+1. Inside windows 8: 
+
+use powercfg -h off
+
+as admin cmd and disable secure boot
+
+2. Install in efi mode
+
+mount the fat partition over /boot/efi
+
+3. efibootmgr -v
+
+4. you rebootet using win shift reboto? then the ntfs partition is most likely in suspend
+in win use powercfg -h off
+
+5. gpt has no limit to primary partitions. All partitions are primäre
+
+just resize but disable hibernat fire first.
+you have unlmited primary partitions with gtp
+well usuallynot more than 15
+but thats enough
+

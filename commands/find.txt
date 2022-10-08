@@ -1,0 +1,55 @@
+Commands: find
+Kanotix_Guide
+Sun Nov 23 18:04:55 EST 2014
+=============================
+
+Good sources:
+
+-performance comparison exec vs xargs
+https://www.everythingcli.org/find-exec-vs-find-xargs/
+
+-*** Find duplicates ***
+https://unix.stackexchange.com/questions/71176/find-duplicate-files/71178#71178
+fdupes
+fslint
+
+-printf options:
+https://unix.stackexchange.com/questions/215234/explanation-of-directives-in-find-printf
+
+-25 Examples.
+https://www.binarytides.com/linux-find-command-examples/
+
+-find duplicate files.
+https://stackoverflow.com/questions/19551908/finding-duplicate-files-according-to-md5-with-bash
+
+
+
+-------------------------------------------------------------------------------
+
+Good Examples:
+--------------
+
+Find all *.bak files in the current directory and removes them with confirmation from user:
+$ find . -type f -name "*.bak" -exec rm -i {} \;
+
+find . -exec touch {} \;
+
+The sem-colon is a command terminus in the UNIX shell.
+However, it is required to be passed into the find command
+as a terminus for the -exec option.
+
+If it is not escaped by the backslash, the find command fails.
+try typing:
+
+echo ;
+
+and
+
+echo \;
+
+to see the difference.
+
+http://www.unix.com/unix-for-dummies-questions-and-answers/108598-touch-all-files-subdirectories-recursive-touch.html
+
+
+

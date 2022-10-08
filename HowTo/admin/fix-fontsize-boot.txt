@@ -1,0 +1,24 @@
+Howtos: Change font size at boot
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+Changing font size. Boot time.
+
+cat /proc/cmdline
+
+BOOT_IMAGE=/boot/vmlinuz-2.6.35-02063504-generic root=UUID=34c0ec53-a206-461f-b47b-2b5e8cea3b4a ro quiet vga=791 splash quiet
+
+change /etc/default/grub
+
+you want 80x25?
+
+you can remove the "vga=791 splash quiet"  and you can remove the # in the line
+GRUB_DISABLE_LINUX_RECOVERY="true"
+the # remove it then save
+
+update-grub
+
+and reboot
+
+                                      

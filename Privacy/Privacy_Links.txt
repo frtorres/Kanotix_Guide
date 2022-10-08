@@ -1,0 +1,23 @@
+Privacy: set of useful links (browser addons).
+Kanotix Guide 
+Wed Nov  5 13:26:24 EST 2014
+----------------------------
+
+Mozilla addons for privacy
+
+Ghostery
+--------
+chrome://ghostery/content/wizard.html
+https://addons.mozilla.org/en-US/firefox/addon/ghostery/ 
+
+BetterPrivacy
+-------------
+https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/
+chrome://bprivacy/content/BetterPrivacy.html
+
+
+Add blockers
+------------
+Forget about the traditional ones..
+As of April, 2016 -- ublock Origin
+

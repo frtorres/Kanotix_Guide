@@ -1,0 +1,21 @@
+HowTos: Firefox hacking tips
+Kanotix Guide
+Sun Dec  9 23:17:28 EST 2018
+----------------------------------
+
+Firefox Settings location: ~/.mozilla
+
+old version to download: 
+
+http://ftp.mozilla.org/pub/firefox/releases/
+
+Session Manager got inactivated at:
+Unpacking firefox-esr (60.3.0esr-1~deb8u1) over (52.9.0esr-1~deb8u1) ...
+
+cd ~/
+rm -rf firefox/
+wget http://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/linux-x86_64/en-US/firefox-52.9.0esr.tar.bz2
+tar xjf firefox-52.9.0esr.tar.bz2 
+cd firefox
+./firefox
+	

@@ -1,0 +1,26 @@
+Howtos: Recovering lost files.
+Kanotix_Guide
+Sun Nov 27 09:24:13 EST 2016
+=============================
+
+from:
+http://www.linuxquestions.org/questions/linux-general-1/recovering-deleted-files-on-vfat-partition-456880
+
+1. as root 
+
+apt-get install foremost
+
+2. Use foremost
+foremost -a -d -v -T -t all -i /dev/hda1 -o /tmp/foremost
+
+Without the "-T" flag this works for me. I'm not sure you need the "-d" flag too.
+
+check -t option to recover specific file types.
+
+It is disk consuming.. -o generates a foremost-DDDMMMM dir at destination.
+
+Tested to recover files from a msd card (android)
+
+3. Not tested but mentioned: http://www.piriform.com/recuva
+
+

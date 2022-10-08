@@ -1,0 +1,11 @@
+Howtos: nvidia install
+Kanotix Guide
+Fri Aug 22 17:36:04 EST 2014
+=============================
+
+On OLD Kanotix Systems (2011):
+
+su
+DISPLAY= screen install-nvidia-debian.sh 
+
+then use !splash-off and !daily to activate console at ctrl-f1

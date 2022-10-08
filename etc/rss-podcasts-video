@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+<title>rss podcasts Francisco Torres</title> 
+<link>https://github.com/frtorres/</link> 
+<description>Favorites Video Rss feeds</description> 
+<language>en-us</language> 
+<copyright>Copyright 2017, frtorres.</copyright> 
+<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+<image>
+	<title>favorites video podcasts</title> 
+	<url>http://pngimg.com/uploads/tv/tv_PNG480.png</url> 
+	<link>https://github.com/frtorres/</link> 
+	<width>100</width> 
+	<height>80</height> 
+	<description>frtorres Radio favorite podcasts</description> 
+</image>
+<item>
+	<title>Video Cord Killer</title> 
+	<link>rss://feeds.feedburner.com/videocordkillerspodcast</link> 
+	<description>Video Chapters from different sources</description> 
+	<media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7891.png"/>
+	<fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+	<title>CNN ten minutes brief</title>
+	<link>rss://rss.cnn.com/services/podcasting/studentnews/rss.xml</link>
+	<description>CNN brief news on demand 10 minutes long.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+	<fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+	<title>All CNET video podcasts</title>
+	<link>rss://http://feed.cnet.com/feed/podcast/all/hd.xml</link>
+	<description>CNET Technology video podcasts.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+	<fanart>http://pluto.tv.s3.amazonaws.com/assets/images/channels/7cd92dbc-3121-2ec3-774e-a46148805439-CNET-channel-feature.jpg</fanart>
+</item>
+<item>
+	<title>nasa video cast</title>
+	<link>rss://www.nasa.gov/rss/dyn/NASAcast_vodcast.rss</link>
+	<description>nasa space videos.</description>
+	<media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+	<fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>Stanford entrepreneurs</title>
+        <link>rss://ecorner-legacy.stanford.edu/VideoPodcastRssFeed.xml</link>
+        <description>stanford business videos entrepreneurship.</description>
+        <media:thumbnail url="http://ecorner-legacy.stanford.edu/VideoPodcastRssFeed.xml"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>night attack</title>
+        <link>rss://nightattack.tv/feed/video</link>
+        <description>night attack</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>how stuff works</title>
+        <link>rss://www.howstuffworks.com/podcasts/stuff-you-should-know-video.rss</link>
+        <description>stuff you should know (videos).</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>New York Times Videos</title>
+        <link>rss://www.nytsyn.com/rss/custom_itunes/4</link>
+        <description>NYT Videos</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>cnet videos</title>
+        <link>rss://feed.cnet.com/feed/podcast/all/hd.xml</link>
+        <description>whole cnet videos list. </description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>do it yourseelf videos</title>
+        <link>rss://feeds.feedburner.com/diyvideoguytv</link>
+        <description>do it yourself video guy tv</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>android videos</title>
+        <link>rss://feeds.twit.tv/aaa_video_large.xml</link>
+        <description>android videos.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>geeks news central</title>
+        <link>rss://geeknewscentral.com/video.xml</link>
+        <description>geeks news central info.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>linux videos</title>
+        <link>rss://feeds.feedburner.com/linuxunvid</link>
+        <description>linux videos.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+
+<item>
+        <title>code video</title>
+        <link>rss://feeds.twit.tv/code_video_hd.xml</link>
+        <description>code video information.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>world finance videos</title>
+        <link>rss://www.worldfinance.com/podcast-files/podcasts-video.xml</link>
+        <description>world finance videos</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>NYT videos</title>
+        <link>rss://feeds.twit.tv/aaa_video_large.xml</link>
+        <description>New York Times vidos.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>wired magazine science</title>
+        <link>rss://downloads.wired.com/podcasts/xml/wiredscience.xml</link>
+        <description>wired magazine science articules.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>millonaries histories</title>
+        <link>rss://eventualmillionaire.com/feed/case-studies-millionaire-business-owners/</link>
+        <description>millonaries histories.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>business english vocabulary</title>
+        <link>rss://feeds.feedburner.com/businessenglishvocab</link>
+        <description>Business english vocablary.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+<item>
+        <title>macroeconomics concepts</title>
+        <link>rss://www.mruniversity.com/courses/principles-macroeconomics/videocast </link>
+        <description>Principles of macroeconomics.</description>
+        <media:thumbnail url="http://pngimg.com/uploads/video_camera/video_camera_PNG7894.png"/>
+        <fanart>http://pngimg.com/uploads/video_camera/video_camera_PNG7864.png</fanart>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,12 @@
+Howtos: disk check USB stick
+Kanotix_Guide
+Sun Aug 31 23:11:06 EST 2014
+----------------------------
+
+Reference: http://superuser.com/questions/376274/check-the-physical-health-of-a-usb-stick-in-linux
+
+Example syntax, for a USB stick enumerated as /dev/sdz, outputting progress information, with a data-destructive write test and error log written to usbstick.log:
+
+sudo badblocks -w -s -o usbstick.log /dev/sdz
+
+

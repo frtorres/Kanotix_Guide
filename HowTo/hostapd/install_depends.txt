@@ -1,0 +1,28 @@
+#!/bin/bash
+# https://bbs.archlinux.org/viewtopic.php?id=162895
+#
+# general dependencies:
+#    bash (to run this script)
+#    util-linux (for getopt)
+#    hostapd
+#    iproute2
+#    iw
+#    iwconfig (you only need this if 'iw' can not recognize your adapter)
+#    haveged (optional)
+# dependencies for 'nat' or 'none' Internet sharing method
+#    dnsmasq
+#    iptables
+# dependencies for 'bridge' Internet sharing method
+#    bridge-utils
+
+apt-get install dnsmasq
+apt-get install hostapd
+apt-get install bash
+apt-get install util-linux
+apt-get install iproute2
+apt-get install iw
+apt-get install haveged
+apt-get install iwconfig
+apt-get install iptables
+apt-get install bridge-utils
+

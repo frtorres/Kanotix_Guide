@@ -1,0 +1,30 @@
+Howtos: youtube-dl utility.
+Kanotix_Guide
+Fri Nov 20 21:35:05 EST 2020
+=============================
+
+
+Thu Sep 16 23:34:58 EST 2021
+----------------------------
+https://github.com/ytdl-org/youtube-dl
+https://youtube-dl.org/
+
+according to: 
+
+https://www.reddit.com/r/youtubedl/comments/b94twz/which_one_is_the_real_one_ytdl_or_youtubedl/
+
+
+---
+
+The youtube-dl GitHub repository was unceremoniously taken down on October 23 2020.
+
+Finally maintained in git. Nov 20, 2020.
+
+1. Official site:  https://youtube-dl-sources.org/ IS DOWN NOW!
+
+2. https://github.com/ytdl-org/youtube-dl
+
+3. News: https://news.ycombinator.com/item?id=24872911
+
+
+

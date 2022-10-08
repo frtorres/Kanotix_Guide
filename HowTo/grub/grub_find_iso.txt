@@ -1,0 +1,12 @@
+Howtos: isolinux findiso version.
+Kanotix Guide
+Fri Aug 22 21:11:10 EST 2014
+=============================
+
+there is now a findiso version
+
+see:  http://kanotix.com/files/fix/.linuxpro/linuxpro/isolinux/kanotix.cfg
+
+instead of append initrd the initrd is in the 2nd line.
+
+

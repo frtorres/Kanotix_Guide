@@ -1,0 +1,9 @@
+Howtos: vlc midi
+Kanotix_Guide
+Thu Apr  1 16:52:38 EST 2021
+-------------------------------
+see: https://wiki.videolan.org/Midi/
+
+1. Install the soundfonts fluidsynth file
+apt install vlc-plugin-fluidsynth
+

@@ -1,0 +1,89 @@
+Kanotix_Guide
+HowTo Manage File Associations Plasma5
+Tue Nov 17 21:23:11 EST 2020
+---------------------------------------
+
+Apply for Midnight Commander and other programs.
+
+Hint: Use of xdg-utils for systemwide.
+https://wiki.archlinux.org/index.php/Xdg-utils#xdg-open
+
+1. apt-get install xdg-utils
+2. Steps to manage
+
+2.1. Determine a file's MIME type:
+
+       $ xdg-mime query filetype photo.jpeg
+         image/jpeg
+
+2.2. Determine the default application for a MIME type:
+
+       $ xdg-mime query default image/jpeg
+         gimp.desktop
+
+2.3. Change the default application for a MIME type:
+
+       $ xdg-mime default feh.desktop image/jpeg
+
+It is important to detect, find and invoque properly XX.desktop application
+
+
+
+2.4. Debug default application for MIME type:
+
+$ env XDG_UTILS_DEBUG_LEVEL=10  xdg-mime query default text/html
+
+
+3. See this: https://unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior/107508#107508
+
+to check how to identify and use .desktop file for step 2.3
+
+        $ locate -i foo.desktop to verify that foo.desktop exists
+
+I had problems setting a new default for video files.
+
+
+5. Finally.
+-----------
+
+From Plasma5 or from command line change filetype associatons.
+
+       $ kcmshell5 filetypes
+
+Worked ok.
+
+Anyway there are 3 options for video.. To be analized how priority is handled as
+vlc was giving some problems with current kernel
+
+
+6. mimeTypes for Firefox.
+
+see: https://alien.slackbook.org/blog/make-firefox-understand-downloaded-files/
+
+6.1 - Stop firefox if it is running
+6.2.- Delete or rename the mimetypes cache (where firefox keeps its file association settings):
+    $ rm ~/.mozilla/firefox/<yourprofile>/mimeTypes.rdf
+6.3.  Start firefox again
+6.4.  Download any file if you had not done this before
+
+Open that file from the “Tools > Downloads” menu (by right-clicking on it and selecting “Open“). When asked to choose the application for opening the fike, browse to “/usr/bin/xdg-open“. then check the checkbox to “Remember your choice“.
+
+
+
+7. Other hints.
+---------------
+
+Midnight commander has it own file assignments in
+       ~/.config/mc/ini
+BUT no handling defined for
+
+current associations COULD be at: $HOME/.local/share/applications/defaults.list
+but seems is not aligned with
+
+
+The .desktop files can be found in /usr/share/applications/ or you can create your own files under $HOME/.local/share/applications/. To find out the mime type of the files, run
+
+file --mime-type <some_file>
+
+
+see:https://www.freedesktop.org/wiki/Specifications/AddingMIMETutor

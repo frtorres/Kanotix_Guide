@@ -1,0 +1,100 @@
+
+index.sh: Kanotix Guide contents index as of: Sun Jul 17 18:06:52 AST 2016
+
+maintainer: frtorres
+
+             chrome-setup-df.txt-:Howtos: browsers setting up chrome
+             chrome-unstable.txt-:Howtos: Install Chrome Unstable
+       iceweasel_14_unstable.txt-:Howtos: Install experimental iceweasel
+                   seamonkey.txt-:Howtos: Install SeaMonkey
+             default_browser.txt-:Howtos: Default Browsers
+     HowTo_Chrome_Extensions.txt-:HowTos: Google Chrome hacking tips
+    HowTo_Vivaldi_Extensions.txt-:HowTos: vivaldi browser hacking tips and tasks
+         check_sig_launchpad.txt-:Howtos: admin - Checking Signatures.
+           fix-fontsize-boot.txt-:Howtos: Change font size at boot
+                   fix-hdusb.txt-:Howtos: Favorite Linux Commands.
+                 fix-kde4dpi.txt-:Howtos: fix dpi-kdm for kd4 coming from kde3
+                   fix-kdesu.txt-:Howtos: Favorite Linux Commands.
+                   fix-mount.txt-:Howtos: fix fstab after hal problems
+                     fix-res.txt-:Howtos: fix screen resolution from command line
+                    fix-swap.txt-:Howtos: fix swap partition
+                    flash-DF.txt-:Howtos: admin script to update flash
+                     root-pw.txt-:Howtos: recover root pw at kernel boot
+               wifi-activate.txt-:Howtos: admin-acttivate wifi from the command line
+                   downgrade.txt-:Howtos: downgrade packages.
+                      apache.txt-:Howtos: apache
+           ntfs_backup.howto.txt-:Howtos: ntfs backup
+              cinnamon.howto.txt-:Howtos: cinnamon install
+                          U3.txt-:Howtos: disk usb U3
+                   check-usb.txt-:Howtos: disk check USB stick
+                  shred-disk.txt-:Howtos: disk wipe disk. taking into account filenames with problematic spaces
+                    wipe-usb.txt-:Howtos: disk wipe USB sticks
+             dropbox.trouble.txt-:Howtos: dropbox trouble on jessie
+             encrypt_install.txt-:Howtos: encrypt install 
+           encrypt_partition.txt-:Howtos: encrypt partition
+               links.related.txt-:Howtos: encrypt install references
+              rescue-install.txt-:Howtos: encrypt rescue-install
+                 gfx-overlay.txt-:Howtos: gfx gfxoverlay
+      nvidia_install_insideX.txt-:Howtos: nvidia install
+                    git.info.txt-:Howtos: git basics
+         grub-install-SDCard.txt-:Howtos: Installing grub on a SD card to boot linux from HD.
+                grub-problem.txt-:Howtos: manage grub with new installs on other partitions.
+           grub-reorder-list.txt-:Howtos: reordering grub menu item list.
+               grub_find_iso.txt-:Howtos: isolinux findiso version.
+                    grub_iso.txt-:Howtos: grub booting a kanotix iso live image from disk.
+  kanotix_change_grub_splash.txt-:Howtos: grub Change Grub Splash
+         recover-grub-SDCard.txt-:Howtos: grub recover grub for a SD Card.
+ recover-grub-of-a-HDInstall.txt-:Howtos: grub Recovering grub for a kanotix HD install.
+            recover-grub-efi.txt-:Howtos: grub Recovering grub for an EFI install.
+           isohybrid.KNOPPIX.txt-:Howtos: knoppix make KNOPPIX ISO DVD Hybrid.
+                 knoppix-usb.txt-:Howtos: knoppix install knoppix on a usb
+                      mythtv.txt-:Howtos: mythtv.
+                  pxe-server.txt-:Howtos: pxe pxe-server
+                  howto.cifs.txt-:Howtos: remote mount (client) cifs/samba shares
+                   mount-nfs.txt-:Howtos: remote mount (client) cifs/samba shares
+                    Kano-ssh.txt-:Howtos: ssh general
+                SSH-Transfer.txt-:Howtos: ssh copy
+                   howto_ssh.txt-:Howtos: ssh configure and set up ssh.
+                  ahowto_ssh.txt-:Howtos: ssh configure and set up ssh.
+                       webex.txt-:Howtos: Favorite Linux Commands.
+             irfanview.howto.txt-:Howtos: wine irfanview 
+                      orphan.txt-:Howtos: deborphan
+                      docker.txt-:HowTos docker - Installation fixes and tips
+                     flexget.txt-:Howtos: flexget to download
+                    avidemux.txt-:Howtos avidemux - video utils install and tips 
+                 ranger.info.txt-:Howtos: ranger basics
+               HowTo_debsums.txt-:HowTos: Audit Linux System
+                   HowTo_ufw.txt-:HowTos: Audit Linux Systems - ufw firewall
+                  mate.howto.txt-:Howtos: mate install
+                      codecs.txt-:Install: Change font size at boot
+                 iso-persist.txt-:Install: Persist Change font size at boot
+            move-kanotix-usr.txt-:Install: Move or reuse kanotix user from default install
+                uefi_install.txt-:Install: UEFI install.
+   what_todo_afterhd_install.txt-:Install: Recommended Steps after a new Install.
+                       games.txt-:Install games
+         xorg.conf.new-intel.txt-:Install: X configuration file as reference.
+           convert_hd_to_gpt.txt-:Install: Convert a DISK to gpt.
+              UEFI-bios-test.txt-:Kanotix_Guide INSTALL
+                   bios_info.txt-:Install: bios information.
+                 try_kanotix.txt-:Install: bios information.
+                        vbox.txt-:Install: Virtual Box.
+          Addons-Recommended.txt-:Privacy: browser addons recommended.
+               Privacy_Links.txt-:Privacy: set of useful links (browser addons).
+                    APT-FILE.txt-:Commands: debian apt-file command info.
+                     APT-GET.txt-:Commands: apt-get debian info
+          FAV_Linux_Commands.txt-:Commands: Favorite Linux Commands.
+                     battery.txt-:Commands: battery status related
+                  dd-command.txt-:Commands: dd info||:w
+                 sed-command.txt-:Commands:  sed info. delete last line of a text file
+                         tar.txt-:Commands: tar 
+                       touch.txt-:Commands: apt-get debian info
+                          vi.txt-:Commands: vi editor picks
+                        find.txt-:Commands: find 
+                 regular-exp.txt-:Commands: useful regular expressions.
+               kbd_shortcuts.txt-:Commands: keyboard shortcuts
+                    find_str.txt-:Commands: find 
+                        dpkg.txt-:commands: dpkg.
+    JupiterBroadcasting-live.txt-:etc: Jupiter Broadcasting links live.
+                    branding.txt-:Howtos: kanotix branding
+                         3G+.txt-:Hardware: Modem 3G USB.
+           Lenovo-gfx-driver.txt-:Hardware: Lenovo laptop - Driver for Lenovo - Hellfire

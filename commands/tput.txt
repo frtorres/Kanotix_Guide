@@ -1,0 +1,13 @@
+Commands: tput
+Kanotix_Guide
+Tue Apr 20 11:00:05 EST 2021
+=============================
+
+Reference: http://www.linuxcommand.org/lc3_adv_tput.php
+
+https://unix.stackexchange.com/questions/269077/tput-setaf-color-table-how-to-determine-color-codes
+
+https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x405.html
+
+
+

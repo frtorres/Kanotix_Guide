@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+	<channel>
+		<title>RSS Francisco Torres</title> 
+		<link>https://github.com/frtorres/</link> 
+		<description>Favorites Rss feeds</description> 
+		<language>en-us</language> 
+		<copyright>Copyright 2017, frtorres.</copyright> 
+		<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+		<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+		<image>
+			<title>RSS Francisco Torres</title> 
+			<url>https://avatars2.githubusercontent.com/u/2061942?v=3&s=400</url> 
+			<link>https://github.com/frtorres/</link> 
+			<width>88</width> 
+			<height>31</height> 
+			<description>frtorres fravorite rss feeds</description> 
+		</image>
+		<item>
+			<title>Bad Voltage Linux</title> 
+			<link>rss://www.badvoltage.org/feed/mp3/</link> 
+			<description>BadVoltage Show.</description> 
+			</item>
+		<item>
+			<title>Linux action news</title> 
+			<link>rss://linuxactionnews.com/rss</link> 
+			<description>Linux journal news.</description>
+<media:thumbnail url="http://caracol.com.co/especiales/podcasts/images/pc-pulsofutbol3.jpg" />
+ 
+			</item>
+                <item>
+                        <title>WRadio</title>                      
+                        <link>rss://www.wradio.com.co/feed.aspx/?id=PROG_14085</link>          
+                        <description>La W con Julio Sanchez Cristo.</description>        
+                        </item>
+		</channel>
+	</rss>

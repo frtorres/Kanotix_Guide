@@ -1,0 +1,24 @@
+Commands: lsusb
+Kanotix_Guide
+Wed Aug 10 16:34:53 AST 2016
+=============================
+
+Use Cases for this command.
+
+1.- Check for 3.0 USB support:
+
+  run lsb and check for (for example): 
+	Bus 002 Device 003:
+
+  then run:
+      lsusb -D /dev/bus/usb/002/003 | grep bcdUSB
+  or
+      lsusb -v -s 2:3 | grep bcdUSB
+
+
+
+
+  should show 3.0
+
+
+      

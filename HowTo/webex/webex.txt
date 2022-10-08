@@ -1,0 +1,21 @@
+Howtos: Favorite Linux Commands.
+Kanotix_Guide
+Sat Nov  8 00:52:04 EST 2014
+=============================
+
+1. webex depends on oracle... install:
+
+Oracle is on kanotix repository
+do not install from sun. Thats outdated
+
+apt-get install oracle-j2re1.7
+
+then
+
+for x in java javaws mozilla-javaplugin.so; do update-alternatives --config $x; done
+
+and select always the thing with orcale
+
+
+
+

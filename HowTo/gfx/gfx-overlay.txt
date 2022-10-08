@@ -1,0 +1,14 @@
+Howtos: gfx gfxoverlay
+Kanotix Guide
+Fri Aug 22 17:40:02 EST 2014
+=============================
+
+1. Latest kanotix test images at: http://kanotix.acritox.com/
+   xorg, 3nv 1 fglrx driver available with gfx on mode
+   also you could try it with a mac in hybrid mode from stick
+
+   The gfx overlay called method was introduced with 2011-5 this time just the oss stack is newer from debian backports for systems with intel hd graphics if you want to buy a new system you can easyly check it if nv binary would run thats not always the case with laptops which use optimus only
+
+   btw. there is a little opengl test tool installed in the live image: gl2benchmark. It has got 4 tests, change with cursore keys left/right.
+
+

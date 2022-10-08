@@ -1,0 +1,13 @@
+Howtos: mc midnight commander
+Kanotix Guide
+Tue Nov 17 23:25:47 EST 2020
+============================
+
+see: Key HELP files 
+
+http://www.softpanorama.org/OFM/MC/extension_menu.shtml
+http://midnight-commander.org/wiki/doc
+http://www.linuxcommand.org/lc3_adv_mc.php
+
+
+

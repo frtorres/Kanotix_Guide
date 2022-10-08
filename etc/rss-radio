@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+<channel>
+	<title>RSS Francisco Torres</title> 
+	<link>https://github.com/frtorres/</link> 
+	<description>Favorites Radio Rss feeds</description> 
+	<language>en-us</language> 
+	<copyright>Copyright 2017, frtorres.</copyright> 
+	<managingEditor>pacho.torres.reyes at gmail.com</managingEditor> 
+	<webMaster>pacho.torres.reyes at gmail.com</webMaster> 
+	<image>
+	 	<title>RSS Radio feeds Francisco Torres</title> 
+	 	<url>http://pngimg.com/uploads/radio/radio_PNG19292.png </url> 
+	 	<link>https://github.com/frtorres/</link> 
+	 	<width>88</width> 
+	 	<height>31</height> 
+	 	<description>frtorres Radio favorite rss feeds</description> 
+	</image>
+	<item>
+		<title>Wradio Colombia</title> 
+		<link>rss://www.wradio.com.co/feed.aspx/?id=PROG_14085</link> 
+		<description>Julio Sanchez Cristo en la WRadio</description> 
+ 		<media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/a/ac/W_Radio_logo.png" />
+		<fanart>http://www.thetvdb.com/banners/fanart/original/316838-1.jpg </fanart>
+	</item>
+	<item>
+		<title> </title> 
+		<link>rss://feeds.feedburner.com/RcnRadio-PodcastAntena2/</link> 
+		<description>Antena2 Colombia.</description>
+ 		<media:thumbnail url="http://images.viaway.com/106036_640.png" />
+	</item>
+        <item>
+                 <title>WRadio</title>                      
+                 <link>rss://www.wradio.com.co/feed.aspx/?id=PROG_14085</link>          
+                 <description>La W con Julio Sanchez Cristo.</description>        
+         </item>
+</channel>
+	</rss>

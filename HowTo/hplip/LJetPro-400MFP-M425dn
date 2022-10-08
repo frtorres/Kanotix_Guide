@@ -1,0 +1,26 @@
+Howtos: hplip printer propietary plugin fix.
+Kanotix Guide
+Tue Nov 15 10:09:05 EST 2016
+=============================================
+
+1. Installed hplip sw ok, but to scan images a propietary plugin was required.2
+
+Got this error, running hp-plugin
+
+"hplip-3.16.9-plugin.run file does not match its checksum. File may have been corrupted or altered"
+
+
+2. Visit: 
+https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/
+
+and download proper version plugin, in kanotix distro as today:
+
+https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.16.9-plugin.run
+
+3. Choose to load manual and skip warning about .asc file to check validity.
+
+4. Sources:
+https://forum.manjaro.org/t/hp-plugin-problem/11604
+
+
+

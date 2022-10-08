@@ -1,0 +1,12 @@
+Install: Move or reuse kanotix user from default install
+Kanotix_Guide
+Fri Aug 22 17:38:02 EST 2014
+=============================
+
+Transfer default kanotix user info to a new one defined. 
+
+only kde options? thats the .kde dir
+be sure you do chown owner:owner -R /home/owner before logging in.
+
+.config directory. thats for gtk apps like chrome.
+

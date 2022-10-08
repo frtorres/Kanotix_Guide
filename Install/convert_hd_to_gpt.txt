@@ -1,0 +1,21 @@
+Install: Convert a DISK to gpt.
+Kanotix_Guide
+Sun Jul 17 17:54:28 AST 2016
+===============================================
+
+1.- Execute the isohybrid command
+
+2.- When you booted it via efi, then you need a gpt or primare fat partition in case you want to install it /boot/efi
+
+3.- If you dont have got  a primary partition, then use gdisk and convert your hd to gpt. gdisk is not preinstalled.
+
+4.- As you can not got back that easy, before you use it do:
+    dd if=/dev/sda of=backup.mbr count=1
+
+also you should have got
+
+    fdisk -l > mbr-partitions.txt
+with that disk
+
+
+

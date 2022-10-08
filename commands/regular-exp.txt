@@ -1,0 +1,100 @@
+Commands: useful regular expressions.
+Kanotix_Guide
+Sun Dec 28 20:38:24 EST 2014
+=============================
+
+from: http://www.toadworld.com/platforms/oracle/b/weblog/archive/2014/12/26/recetas-para-las-fiestas.aspx
+
+Lista de recetas útiles:
+
+-          Cómo eliminar los espacios en blanco que están al principio de la línea
+-          Cómo eliminar los espacios en blanco sobrantes que están al final de la línea
+-          Cómo eliminar las líneas en blanco o vacías de un archivo
+-          Cómo encontrar líneas que comiencen con una o más cadenas de caracteres determinadas
+-          Cómo encontrar líneas que finalicen con una o más cadenas de caracteres determinadas
+-          Cómo invertir dos columnas separadas por uno o más blancos
+-          Cómo agregar texto en lugares específicos de un texto existente
+-          Cómo generar dos o más líneas a partir de una línea
+
+- Cómo eliminar los espacios en blanco que están al principio de la línea:
+
+sed "s/^[ ]*//" recetas.txt
+
+- Cómo eliminar los espacios en blanco sobrantes que están al final de la línea:
+Extracción de los espacios en blanco:
+
+     sed "s/[ ]*$//" recetas.txt > recetas2.txt
+
+Y así queda el archivo recetas2.txt
+
+- Cómo eliminar las lineas en blanco de un archivo
+grep -v "^[ ]*$" recetas.txt > recetas2.txt
+
+
+- Busquemos las líneas que comienzan con “gato” o “perro”:
+egrep "^gato|^perro" recetas.txt
+
+- Cómo encontrar líneas que finalicen con una o más cadenas de caracteres determinadas:
+
+  Busquemos las líneas que finalizan con gato o perro
+
+egrep "gato$|perro$" recetas.txt
+
+- Cómo invertir dos columnas separadas por uno o más blancos
+
+sed "s/^\(.*\)[ ][ ]*\(.*\)/\2 \1/" recetas.txt
+
+- Cómo agregar texto en lugares específicos de un texto existente:
+
+En la posicion siete voy a agregar el texto " posicion siete "
+sed "s/^\(.\{6\}\)/\1 posicion siete /" recetas.txt
+
+- Cómo generar dos o más líneas a partir de una línea
+
+Utilizando el vi, a veces necesitamos crear dos filas a partir de una. Supongamos que tenemos esto:
+
+                      hola chau$
+                      hola chau$
+                      hola chau$
+
+                       Y lo queremos transformar en esto:
+
+                       hola$
+                       chau$
+                       hola$
+                       chau$
+                       hola$
+                       chau$
+
+                       Para lograrlo hay que ejecutar el comando:
+
+                       :%s/ /^M/g
+
+                        Para lograr el “^M” primero hay que presionar <CTRL+V> y luego presionar <Enter>.
+
+                        Este mismo truco nos permite también “transponer” filas en columnas. Por ejemplo:
+
+                        Origen (línea editada con el vi):
+
+                        Esta es una fila que voy a transformar en columna$
+
+                        Ejecucion del comando:
+
+                        :%s/ /^M/g
+
+                         Obtengo el siguiente resultado:
+
+                         Esta$
+                         es$
+                         una$
+                         fila$
+                         que$
+                         voy$
+                         a$
+                         transformar$
+                         en$
+                         columna$
+
+En definitiva, simplemente estoy reemplazando un “espacio en blanco” por un “salto de línea”.
+
+

@@ -1,0 +1,11 @@
+Kanotix_Guide
+Cloud
+Thu May 13 12:07:02 EST 2021
+==============================
+
+use docker
+make a pure debian netinstall
+and then via docker other systems
+nextcloud or whatever
+or jitsi meet
+
